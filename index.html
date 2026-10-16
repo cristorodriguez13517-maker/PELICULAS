@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1,
+      user-scalable=no">
+
+<title>SHARKTV - Películas</title>
+
+<style>
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+/* ==============================
+   BANNER PRINCIPAL
+============================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 320px;
+
+    background-color: #000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    z-index: 100;
+    transition: background-image 0.25s ease;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            #000 0%,
+            rgba(0,0,0,0.45) 30%,
+            rgba(0,0,0,0.05) 70%,
+            rgba(0,0,0,0.10) 100%
+        );
+
+    pointer-events: none;
+}
+
+.header-info {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    transition: opacity 0.2s ease;
+}
+
+.header-logo {
+    display: block;
+
+    max-width: 300px;
+    max-height: 80px;
+
+    object-fit: contain;
+    object-position: left center;
+
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 25px;
+    font-weight: bold;
+
+    margin: 0 0 8px 0;
+
+    text-shadow: 0 2px 6px #000;
+}
+
+.header-meta {
+    font-size: 13px;
+    color: #ddd;
+
+    margin-bottom: 9px;
+
+    line-height: 1.5;
+}
+
+.header-overview {
+    font-size: 13px;
+    line-height: 1.4;
+
+    max-width: 600px;
+    max-height: 55px;
+
+    overflow: hidden;
+
+    color: #eee;
+    text-shadow: 0 1px 4px #000;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 38px;
+    padding: 9px 20px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #fff;
+    color: #000;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.play-button:focus {
+    outline: 2px solid #e50914;
+    outline-offset: 3px;
+}
+
+/* ==============================
+   BUSCADOR
+============================== */
+
+.search-container {
+    position: fixed;
+
+    top: 18px;
+    right: 25px;
+
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-button {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.search-button svg {
+    width: 25px;
+    height: 25px;
+
+    stroke: #fff;
+    stroke-width: 2;
+    fill: none;
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+
+    padding: 0;
+    margin-right: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 15px;
+
+    transition:
+        width 0.25s ease,
+        opacity 0.25s ease,
+        padding 0.25s ease;
+}
+
+.search-container.active .search-input {
+    width: 220px;
+    opacity: 1;
+
+    padding: 10px 12px;
+    margin-right: 5px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+
+.search-input::placeholder {
+    color: #ccc;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+/* ==============================
+   CONTENIDO Y CATEGORÍAS
+============================== */
+
+.content {
+    position: relative;
+
+    margin-top: 320px;
+    padding: 15px 20px 40px;
+
+    z-index: 1;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    margin: 0 0 14px 0;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+.movie-row {
+    display: grid;
+
+    grid-template-columns: repeat(8, 105px);
+    gap: 12px;
+
+    align-items: start;
+
+    width: max-content;
+    max-width: 100%;
+
+    margin-top: 12px;
+}
+
+.movie {
+    width: 105px;
+    height: 160px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+
+    overflow: hidden;
+    background: #111;
+
+    transition: border-color 0.15s ease;
+}
+
+.movie img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border: none;
+    border-radius: 2px;
+}
+
+.movie:focus,
+.movie.selected {
+    border-color: #e50914;
+}
+
+.movie:focus img,
+.movie.selected img {
+    outline: none;
+}
+
+/* No agrandar las carátulas al seleccionarlas */
+
+.movie:hover,
+.movie:focus,
+.movie.selected {
+    transform: none;
+}
+
+/* ==============================
+   MENSAJES Y CARGA
+============================== */
+
+.loading {
+    padding: 25px 0;
+
+    font-size: 15px;
+    color: #ccc;
+}
+
+.error-message {
+    padding: 15px 0;
+
+    color: #ddd;
+    font-size: 14px;
+}
+
+.empty-message {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .movie-row {
+        grid-template-columns: repeat(8, 95px);
+        gap: 10px;
+    }
+
+    .movie {
+        width: 95px;
+        height: 145px;
+    }
+
+    .header {
+        height: 320px;
+    }
+
+    .content {
+        margin-top: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px;
+        height: 300px;
+    }
+
+    .content {
+        margin-top: 300px;
+        padding: 15px 12px 30px;
+    }
+
+    .header-logo {
+        max-width: 220px;
+        max-height: 65px;
+    }
+
+    .header-title {
+        font-size: 21px;
+    }
+
+    .header-overview {
+        max-width: 90%;
+        font-size: 12px;
+        max-height: 48px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .movie-row {
+        grid-template-columns: repeat(8, 85px);
+        gap: 8px;
+    }
+
+    .movie {
+        width: 85px;
+        height: 130px;
+    }
+
+    .search-container {
+        top: 10px;
+        right: 10px;
+    }
+
+    .search-container.active .search-input {
+        width: 160px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==============================
+     BANNER PRINCIPAL
+============================== -->
+
+<header class="header" id="mainHeader">
+
+    <div class="header-info" id="headerInfo">
+
+        <img
+            id="headerLogo"
+            class="header-logo"
+            src=""
+            alt=""
+            style="display:none;"
+        >
+
+        <h1 class="header-title" id="headerTitle">
+            SHARKTV
+        </h1>
+
+        <div class="header-meta" id="headerMeta">
+            Descubre películas
+        </div>
+
+        <div class="header-overview" id="headerOverview">
+            Tu catálogo de películas.
+        </div>
+
+        <div class="header-buttons">
+
+            <button
+                class="play-button"
+                id="playButton"
+                type="button"
+                tabindex="0"
+            >
+                ▶ Reproducir
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ==============================
+     BUSCADOR
+============================== -->
+
+<div class="search-container" id="searchContainer">
+
+    <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Buscar películas..."
+        autocomplete="off"
+        tabindex="-1"
+    >
+
+    <button
+        class="search-button"
+        id="searchButton"
+        type="button"
+        aria-label="Buscar"
+        tabindex="0"
+    >
+
+        <svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="M16 16 L22 22"></path>
+        </svg>
+
+    </button>
+
+</div>
+
+
+<!-- ==============================
+     CATÁLOGO
+============================== -->
+
+<main class="content" id="content">
+
+    <div class="loading" id="loading">
+        Cargando películas...
+    </div>
+
+</main>
+
+
+<script>
+/* =====================================================
+   CONFIGURACIÓN DE SHARKTV
+===================================================== */
+
+/*
+   TMDB API KEY
+
+   Recuerda que una clave incluida en HTML puede verla
+   cualquier persona que inspeccione la aplicación.
+*/
+
+const TMDB_API_KEY = "d37846975ba7a3ed227604f30b0f9c16";
+
+const TMDB_API = "https://api.themoviedb.org/3";
+const TMDB_IMAGE = "https://image.tmdb.org/t/p/";
+
+
+/* =====================================================
+   PERSONALIZACIÓN MANUAL DE IMÁGENES
+
+   Sustituye los ejemplos por el ID real de TMDB
+   y las URL de tus imágenes.
+
+   Si no configuras una imagen, se utilizará TMDB.
+===================================================== */
+
+const PERSONALIZACION = {
+
+    /*
+    "123456": {
+        poster: "https://tusitio.com/caratula.jpg",
+        banner: "https://tusitio.com/banner.jpg",
+        logo: "https://tusitio.com/logo.png"
+    },
+    */
+
+};
+
+
+/* =====================================================
+   ENLACES DE YOUTUBE
+
+   Puedes asociar un enlace por ID de TMDB o por título.
+
+   Para utilizar un ID:
+
+   "123456": "https://youtu.be/XXXXXXXXXXX"
+
+   Para utilizar un título:
+
+   "mayday": "https://youtu.be/JbrFdW_-45E"
+
+   Las claves por título se escriben en minúsculas.
+===================================================== */
+
+const ENLACES_YOUTUBE = {
+
+    "mayday": "https://youtu.be/JbrFdW_-45E"
+
+};
+
+
+/* =====================================================
+   CATÁLOGOS AUTOMÁTICOS
+===================================================== */
+
+const CATEGORIAS = [
+
+    {
+        id: "popular",
+        titulo: "Películas populares",
+        endpoint: "/movie/popular"
+    },
+
+    {
+        id: "cartelera",
+        titulo: "En cartelera",
+        endpoint: "/movie/now_playing"
+    },
+
+    {
+        id: "valoradas",
+        titulo: "Mejor valoradas",
+        endpoint: "/movie/top_rated"
+    },
+
+    {
+        id: "proximamente",
+        titulo: "Próximos estrenos",
+        endpoint: "/movie/upcoming"
+    }
+
+];
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+const content = document.getElementById("content");
+const loading = document.getElementById("loading");
+
+const mainHeader = document.getElementById("mainHeader");
+const headerInfo = document.getElementById("headerInfo");
+
+const headerLogo = document.getElementById("headerLogo");
+const headerTitle = document.getElementById("headerTitle");
+const headerMeta = document.getElementById("headerMeta");
+const headerOverview = document.getElementById("headerOverview");
+
+const playButton = document.getElementById("playButton");
+
+const searchContainer = document.getElementById("searchContainer");
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
+
+let peliculasPorCategoria = {};
+let peliculaSeleccionada = null;
+
+let ultimaSeleccion = null;
+let temporizadorBusqueda = null;
+
+let busquedaActiva = false;
+let seccionBusqueda = null;
+
+let cargandoDetalles = false;
+
+
+/* =====================================================
+   FUNCIONES GENERALES
+===================================================== */
+
+function normalizarTexto(texto) {
+
+    return String(texto || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+
+}
+
+
+function escaparHTML(texto) {
+
+    return String(texto || "").replace(/[&<>"']/g, function(caracter) {
+
+        const entidades = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        };
+
+        return entidades[caracter];
+
+    });
+
+}
+
+
+function obtenerPersonalizacion(pelicula) {
+
+    if (!pelicula) {
+        return {};
+    }
+
+    return PERSONALIZACION[String(pelicula.id)] || {};
+
+}
+
+
+function obtenerEnlaceYoutube(pelicula) {
+
+    if (!pelicula) {
+        return "";
+    }
+
+    const porId = ENLACES_YOUTUBE[String(pelicula.id)];
+
+    if (porId) {
+        return porId;
+    }
+
+    const titulo = normalizarTexto(
+        pelicula.title || pelicula.name || ""
+    );
+
+    return ENLACES_YOUTUBE[titulo] || "";
+
+}
+
+
+function obtenerPoster(pelicula) {
+
+    const personalizacion = obtenerPersonalizacion(pelicula);
+
+    if (personalizacion.poster) {
+        return personalizacion.poster;
+    }
+
+    if (pelicula && pelicula.poster_path) {
+        return TMDB_IMAGE + "w780" + pelicula.poster_path;
+    }
+
+    return "";
+
+}
+
+
+function obtenerBanner(pelicula, detalles) {
+
+    const personalizacion = obtenerPersonalizacion(pelicula);
+
+    if (personalizacion.banner) {
+        return personalizacion.banner;
+    }
+
+    const ruta = detalles && detalles.backdrop_path
+        ? detalles.backdrop_path
+        : pelicula && pelicula.backdrop_path
+            ? pelicula.backdrop_path
+            : "";
+
+    if (ruta) {
+        return TMDB_IMAGE + "original" + ruta;
+    }
+
+    return obtenerPoster(pelicula);
+
+}
+
+
+function obtenerTitulo(pelicula) {
+
+    return pelicula.title || pelicula.name || "Película";
+
+}
+
+
+function obtenerFecha(pelicula) {
+
+    return pelicula.release_date ||
+           pelicula.first_air_date ||
+           "";
+
+}
+
+
+function obtenerAnio(pelicula) {
+
+    const fecha = obtenerFecha(pelicula);
+
+    return fecha ? fecha.substring(0, 4) : "";
+
+}
+
+
+function obtenerDuracion(minutos) {
+
+    if (!minutos || minutos <= 0) {
+        return "";
+    }
+
+    const horas = Math.floor(minutos / 60);
+    const resto = minutos % 60;
+
+    if (horas === 0) {
+        return resto + " min";
+    }
+
+    if (resto === 0) {
+        return horas + " h";
+    }
+
+    return horas + " h " + resto + " min";
+
+}
+
+
+/* =====================================================
+   PETICIONES A TMDB
+===================================================== */
+
+async function consultarTMDB(endpoint, parametros = {}) {
+
+    const url = new URL(TMDB_API + endpoint);
+
+    url.searchParams.set("api_key", TMDB_API_KEY);
+    url.searchParams.set("language", "es-ES");
+
+    Object.keys(parametros).forEach(function(clave) {
+
+        url.searchParams.set(clave, parametros[clave]);
+
+    });
+
+    const respuesta = await fetch(url.toString());
+
+    if (!respuesta.ok) {
+        throw new Error("TMDB HTTP " + respuesta.status);
+    }
+
+    return await respuesta.json();
+
+}
+
+
+/* =====================================================
+   CARGAR CATEGORÍAS
+===================================================== */
+
+async function cargarCatalogo(categoria) {
+
+    const seccion = document.getElementById(
+        "section-" + categoria.id
+    );
+
+    if (!seccion) {
+        return;
+    }
+
+    const fila = seccion.querySelector(".movie-row");
+
+    try {
+
+        const datos = await consultarTMDB(categoria.endpoint, {
+            page: 1,
+            region: "ES",
+            include_adult: "false"
+        });
+
+        const peliculas = (datos.results || []).filter(function(pelicula) {
+
+            return pelicula.poster_path && pelicula.title;
+
+        });
+
+        peliculasPorCategoria[categoria.id] = peliculas;
+
+        renderizarPeliculas(fila, peliculas);
+
+        if (peliculas.length === 0) {
+
+            fila.innerHTML =
+                '<div class="empty-message">No hay películas disponibles.</div>';
+
+        }
+
+    } catch (error) {
+
+        console.error("Error cargando " + categoria.titulo, error);
+
+        fila.innerHTML =
+            '<div class="error-message">' +
+            'No se pudieron cargar las películas. Comprueba tu conexión.' +
+            '</div>';
+
+    }
+
+}
+
+
+/* =====================================================
+   CREAR SECCIONES
+===================================================== */
+
+function crearSecciones() {
+
+    content.innerHTML = "";
+
+    CATEGORIAS.forEach(function(categoria) {
+
+        const seccion = document.createElement("section");
+
+        seccion.className = "section";
+        seccion.id = "section-" + categoria.id;
+
+        seccion.innerHTML = `
+            <h2 class="section-title">
+                ${escaparHTML(categoria.titulo)}
+            </h2>
+
+            <div class="movie-row"
+                 data-categoria="${escaparHTML(categoria.id)}">
+            </div>
+        `;
+
+        content.appendChild(seccion);
+
+    });
+
+}
+
+
+/* =====================================================
+   DIBUJAR CARÁTULAS
+===================================================== */
+
+function renderizarPeliculas(fila, peliculas) {
+
+    fila.innerHTML = "";
+
+    peliculas.forEach(function(pelicula, indice) {
+
+        const tarjeta = document.createElement("div");
+
+        tarjeta.className = "movie";
+        tarjeta.tabIndex = 0;
+
+        tarjeta.dataset.movieId = pelicula.id;
+        tarjeta.dataset.indice = indice;
+
+        const imagen = obtenerPoster(pelicula);
+
+        tarjeta.innerHTML = `
+            <img
+                src="${escaparHTML(imagen)}"
+                alt="${escaparHTML(obtenerTitulo(pelicula))}"
+                loading="lazy"
+                decoding="async"
+            >
+        `;
+
+        tarjeta.addEventListener("focus", function() {
+
+            seleccionarPelicula(pelicula, tarjeta);
+
+        });
+
+        tarjeta.addEventListener("click", function() {
+
+            seleccionarPelicula(pelicula, tarjeta);
+
+            reproducirPelicula(pelicula);
+
+        });
+
+        tarjeta.addEventListener("keydown", function(evento) {
+
+            if (
+                evento.key === "Enter" ||
+                evento.key === " "
+            ) {
+
+                evento.preventDefault();
+
+                seleccionarPelicula(pelicula, tarjeta);
+                reproducirPelicula(pelicula);
+
+            }
+
+        });
+
+        const imagenElemento = tarjeta.querySelector("img");
+
+        imagenElemento.addEventListener("error", function() {
+
+            imagenElemento.style.visibility = "hidden";
+
+        });
+
+        fila.appendChild(tarjeta);
+
+    });
+
+}
+
+
+/* =====================================================
+   SELECCIONAR PELÍCULA Y ACTUALIZAR BANNER
+===================================================== */
+
+async function seleccionarPelicula(pelicula, tarjeta) {
+
+    peliculaSeleccionada = pelicula;
+    ultimaSeleccion = tarjeta;
+
+    document.querySelectorAll(".movie.selected").forEach(function(elemento) {
+
+        elemento.classList.remove("selected");
+
+    });
+
+    if (tarjeta) {
+        tarjeta.classList.add("selected");
+    }
+
+    const personalizacion = obtenerPersonalizacion(pelicula);
+
+    const titulo = obtenerTitulo(pelicula);
+    const anio = obtenerAnio(pelicula);
+
+    const valoracion = pelicula.vote_average
+        ? "★ " + Number(pelicula.vote_average).toFixed(1) + "/10"
+        : "";
+
+    headerTitle.textContent = titulo;
+
+    headerMeta.textContent = [
+        anio,
+        valoracion
+    ].filter(Boolean).join("  •  ");
+
+    headerOverview.textContent =
+        pelicula.overview || "Información no disponible.";
+
+    headerLogo.style.display = "none";
+    headerLogo.removeAttribute("src");
+
+    mainHeader.style.backgroundImage =
+        'url("' + obtenerBanner(pelicula) + '")';
+
+    if (personalizacion.logo) {
+
+        headerLogo.src = personalizacion.logo;
+        headerLogo.style.display = "block";
+
+        headerLogo.onerror = function() {
+            headerLogo.style.display = "none";
+        };
+
+    } else {
+
+        headerLogo.style.display = "none";
+
+    }
+
+    const enlace = obtenerEnlaceYoutube(pelicula);
+
+    playButton.style.display = enlace ? "inline-flex" : "none";
+
+    /*
+       Si todavía no hay detalles cargados, los solicitamos
+       para obtener duración, géneros y logotipo de TMDB.
+    */
+
+    if (!pelicula.runtime && !pelicula._detallesCargados) {
+
+        try {
+
+            const detalles = await consultarTMDB(
+                "/movie/" + pelicula.id,
+                {
+                    append_to_response: "images",
+                    include_image_language: "es,null"
+                }
+            );
+
+            pelicula._detallesCargados = true;
+            pelicula.runtime = detalles.runtime;
+            pelicula.genres = detalles.genres;
+            pelicula.backdrop_path = detalles.backdrop_path ||
+                                     pelicula.backdrop_path;
+
+            const logoPersonalizado = personalizacion.logo;
+
+            const logos = detalles.images &&
+                          detalles.images.logos
+                ? detalles.images.logos
+                : [];
+
+            const logoEspañol = logos.find(function(logo) {
+                return logo.iso_639_1 === "es";
+            });
+
+            const logoOriginal = logos.find(function(logo) {
+                return logo.iso_639_1 === null;
+            });
+
+            const logoElegido = logoEspañol || logoOriginal || logos[0];
+
+            if (!logoPersonalizado && logoElegido) {
+
+                headerLogo.src =
+                    TMDB_IMAGE + "w780" + logoElegido.file_path;
+
+                headerLogo.style.display = "block";
+
+                headerLogo.onerror = function() {
+                    headerLogo.style.display = "none";
+                };
+
+                headerTitle.style.display = "none";
+
+            } else {
+
+                headerTitle.style.display = "block";
+
+            }
+
+            const duracion = obtenerDuracion(detalles.runtime);
+
+            const generos = (detalles.genres || [])
+                .map(function(genero) {
+                    return genero.name;
+                })
+                .join(", ");
+
+            headerMeta.textContent = [
+                anio,
+                duracion,
+                generos,
+                valoracion
+            ].filter(Boolean).join("  •  ");
+
+            headerOverview.textContent =
+                detalles.overview ||
+                pelicula.overview ||
+                "Información no disponible.";
+
+            mainHeader.style.backgroundImage =
+                'url("' + obtenerBanner(pelicula, detalles) + '")';
+
+        } catch (error) {
+
+            console.warn(
+                "No se pudieron obtener los detalles de la película.",
+                error
+            );
+
+        }
+
+    } else if (pelicula._detallesCargados) {
+
+        const duracion = obtenerDuracion(pelicula.runtime);
+
+        const generos = (pelicula.genres || [])
+            .map(function(genero) {
+                return genero.name;
+            })
+            .join(", ");
+
+        headerMeta.textContent = [
+            anio,
+            duracion,
+            generos,
+            valoracion
+        ].filter(Boolean).join("  •  ");
+
+    }
+
+}
+
+
+/* =====================================================
+   REPRODUCCIÓN DE YOUTUBE
+===================================================== */
+
+function reproducirPelicula(pelicula) {
+
+    if (!pelicula) {
+        return;
+    }
+
+    const enlace = obtenerEnlaceYoutube(pelicula);
+
+    if (enlace) {
+
+        window.location.href = enlace;
+
+    } else {
+
+        /*
+           No inventamos enlaces de reproducción.
+           Solo se reproducen películas con URL configurada.
+        */
+
+        headerOverview.textContent =
+            "Esta película todavía no tiene un enlace de reproducción configurado.";
+
+    }
+
+}
+
+
+playButton.addEventListener("click", function() {
+
+    reproducirPelicula(peliculaSeleccionada);
+
+});
+
+
+/* =====================================================
+   BUSCADOR
+===================================================== */
+
+searchButton.addEventListener("click", function() {
+
+    const estaAbierto = searchContainer.classList.contains("active");
+
+    if (estaAbierto) {
+
+        if (searchInput.value.trim()) {
+
+            searchInput.value = "";
+            buscarPeliculas("");
+
+        }
+
+        searchContainer.classList.remove("active");
+        searchInput.tabIndex = -1;
+
+        if (ultimaSeleccion) {
+            ultimaSeleccion.focus();
+        }
+
+    } else {
+
+        searchContainer.classList.add("active");
+        searchInput.tabIndex = 0;
+
+        searchInput.focus();
+
+    }
+
+});
+
+
+searchInput.addEventListener("input", function() {
+
+    clearTimeout(temporizadorBusqueda);
+
+    const consulta = searchInput.value.trim();
+
+    temporizadorBusqueda = setTimeout(function() {
+
+        buscarPeliculas(consulta);
+
+    }, 400);
+
+});
+
+
+async function buscarPeliculas(consulta) {
+
+    if (!consulta) {
+
+        if (seccionBusqueda) {
+
+            seccionBusqueda.remove();
+            seccionBusqueda = null;
+
+        }
+
+        busquedaActiva = false;
+
+        document.querySelectorAll(".section").forEach(function(seccion) {
+
+            seccion.style.display = "";
+
+        });
+
+        return;
+
+    }
+
+    busquedaActiva = true;
+
+    document.querySelectorAll(".section").forEach(function(seccion) {
+
+        seccion.style.display = "none";
+
+    });
+
+    if (!seccionBusqueda) {
+
+        seccionBusqueda = document.createElement("section");
+
+        seccionBusqueda.className = "section";
+        seccionBusqueda.id = "section-busqueda";
+
+        seccionBusqueda.innerHTML = `
+            <h2 class="section-title">Resultados de búsqueda</h2>
+            <div class="movie-row"></div>
+        `;
+
+        content.prepend(seccionBusqueda);
+
+    }
+
+    seccionBusqueda.style.display = "";
+
+    seccionBusqueda.querySelector(".section-title").textContent =
+        'Resultados para: "' + consulta + '"';
+
+    const fila = seccionBusqueda.querySelector(".movie-row");
+
+    fila.innerHTML = '<div class="loading">Buscando películas...</div>';
+
+    try {
+
+        const datos = await consultarTMDB("/search/movie", {
+
+            query: consulta,
+            page: 1,
+            include_adult: "false",
+            region: "ES"
+
+        });
+
+        /*
+           Evita que una búsqueda anterior sobrescriba
+           los resultados de una consulta más reciente.
+        */
+
+        if (searchInput.value.trim() !== consulta) {
+            return;
+        }
+
+        const peliculas = (datos.results || []).filter(function(pelicula) {
+
+            return pelicula.poster_path;
+
+        });
+
+        renderizarPeliculas(fila, peliculas);
+
+        if (peliculas.length === 0) {
+
+            fila.innerHTML =
+                '<div class="empty-message">No se encontraron películas.</div>';
+
+        }
+
+    } catch (error) {
+
+        console.error("Error buscando películas:", error);
+
+        fila.innerHTML =
+            '<div class="error-message">No se pudo realizar la búsqueda.</div>';
+
+    }
+
+}
+
+
+/* =====================================================
+   NAVEGACIÓN CON EL MANDO DE ANDROID TV
+===================================================== */
+
+document.addEventListener("keydown", function(evento) {
+
+    const elementoActivo = document.activeElement;
+
+    const estaEscribiendo =
+        elementoActivo === searchInput;
+
+    /*
+       Al escribir en el buscador, no interceptamos
+       las flechas ni las teclas de texto.
+    */
+
+    if (estaEscribiendo) {
+
+        if (evento.key === "Escape" || evento.key === "Back") {
+
+            searchInput.value = "";
+            buscarPeliculas("");
+
+            searchContainer.classList.remove("active");
+            searchInput.tabIndex = -1;
+            searchButton.focus();
+
+            evento.preventDefault();
+
+        }
+
+        return;
+
+    }
+
+    const teclasNavegacion = [
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowUp",
+        "ArrowDown"
+    ];
+
+    if (!teclasNavegacion.includes(evento.key)) {
+        return;
+    }
+
+    /*
+       El mando navega entre las carátulas visibles.
+       No ampliamos las imágenes al seleccionarlas.
+    */
+
+    const tarjetas = Array.from(
+        document.querySelectorAll(
+            ".section:not([style*='display: none']) .movie"
+        )
+    );
+
+    if (!tarjetas.length) {
+        return;
+    }
+
+    let actual = tarjetas.indexOf(elementoActivo);
+
+    if (actual === -1 && ultimaSeleccion) {
+        actual = tarjetas.indexOf(ultimaSeleccion);
+    }
+
+    if (actual === -1) {
+        actual = 0;
+    }
+
+    const tarjetaActual = tarjetas[actual];
+
+    const filaActual = tarjetaActual.parentElement;
+
+    const tarjetasFila = Array.from(
+        filaActual.querySelectorAll(".movie")
+    );
+
+    const posicionFila = tarjetasFila.indexOf(tarjetaActual);
+
+    const numeroColumnas = 8;
+
+    let siguiente = actual;
+
+    if (evento.key === "ArrowRight") {
+
+        if (posicionFila < tarjetasFila.length - 1) {
+
+            siguiente = tarjetas.indexOf(
+                tarjetasFila[posicionFila + 1]
+            );
+
+        }
+
+    } else if (evento.key === "ArrowLeft") {
+
+        if (posicionFila > 0) {
+
+            siguiente = tarjetas.indexOf(
+                tarjetasFila[posicionFila - 1]
+            );
+
+        }
+
+    } else if (evento.key === "ArrowDown") {
+
+        const destino = actual + numeroColumnas;
+
+        if (destino < tarjetas.length) {
+            siguiente = destino;
+        }
+
+    } else if (evento.key === "ArrowUp") {
+
+        const destino = actual - numeroColumnas;
+
+        if (destino >= 0) {
+            siguiente = destino;
+        }
+
+    }
+
+    evento.preventDefault();
+
+    if (tarjetas[siguiente]) {
+
+        tarjetas[siguiente].focus();
+
+        tarjetas[siguiente].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+            inline: "nearest"
+        });
+
+    }
+
+});
+
+
+/* =====================================================
+   BOTÓN ATRÁS / ESCAPE
+===================================================== */
+
+document.addEventListener("keydown", function(evento) {
+
+    if (
+        evento.key === "Escape" ||
+        evento.key === "Back"
+    ) {
+
+        if (searchContainer.classList.contains("active")) {
+
+            searchInput.value = "";
+            buscarPeliculas("");
+
+            searchContainer.classList.remove("active");
+            searchInput.tabIndex = -1;
+
+        }
+
+    }
+
+});
+
+
+/* =====================================================
+   INICIO DE LA APLICACIÓN
+===================================================== */
+
+async function iniciarSharkTV() {
+
+    crearSecciones();
+
+    loading.style.display = "none";
+
+    /*
+       Carga los catálogos en paralelo.
+       Las carátulas se cargan de forma diferida.
+    */
+
+    await Promise.allSettled(
+
+        CATEGORIAS.map(function(categoria) {
+
+            return cargarCatalogo(categoria);
+
+        })
+
+    );
+
+    /*
+       Seleccionar la primera película cuando el catálogo
+       esté disponible.
+    */
+
+    const primeraPelicula = document.querySelector(".movie");
+
+    if (primeraPelicula) {
+
+        primeraPelicula.focus();
+
+    }
+
+}
+
+
+/* =====================================================
+   ARRANCAR
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", iniciarSharkTV);
+
+</script>
+
+</body>
+</html>
