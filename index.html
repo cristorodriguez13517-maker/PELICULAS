@@ -1,219 +1,227 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Netflix Smart TV - FINAL</title>
+<title>SharkTV - Películas</title>
 
 <style>
-• { box-sizing: border-box; }
-html { scroll-behavior: auto; }
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: auto;
+    background: #000;
+}
 
 body {
-margin: 0;
-background: #000;
-color: #fff;
-font-family: Arial, sans-serif;
-overflow-x: hidden;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 320px;
-background-color: #000;
-background-size: cover;
-background-position: center;
-display: flex;
-align-items: center;
-padding: 20px;
-z-index: 9999;
-overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: #000 center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+    overflow: hidden;
 }
 
 .header::before {
-content: "";
-position: absolute;
-inset: 0;
-background:
-linear-gradient(to right, rgba(0,0,0,.9) 0%, rgba(0,0,0,.75) 35%, transparent 100%),
-linear-gradient(to bottom, transparent 30%, #000 100%);
-pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to right, rgba(0,0,0,.9) 0%,
+        rgba(0,0,0,.55) 35%, transparent 100%),
+        linear-gradient(to bottom, transparent 35%, #000 100%);
+    pointer-events: none;
 }
 
 .header-info {
-position: relative;
-z-index: 2;
-max-width: 500px;
-opacity: 0;
-transition: opacity .25s ease;
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    opacity: 0;
+    transition: opacity .25s ease;
 }
+
 .header-info.visible { opacity: 1; }
+
 .header h1 { margin: 0; }
 
 .header h1 img {
-display: block;
-max-width: 300px;
-max-height: 80px;
-object-fit: contain;
-object-position: left center;
+    display: block;
+    max-width: 300px;
+    max-height: 80px;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .details {
-font-size: 14px;
-font-weight: bold;
-margin: 10px 0;
-line-height: 1.7;
-max-width: 480px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+    line-height: 1.7;
+    max-width: 480px;
 }
 
 .overview {
-font-size: 12px;
-line-height: 1.45;
-max-width: 450px;
-margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+    max-width: 450px;
+    margin: 8px 0 0;
 }
 
 .content {
-padding: 20px;
-margin-top: 320px;
-min-height: 200px;
+    padding: 20px;
+    margin-top: 320px;
+    min-height: 200px;
 }
 
 .movie-row {
-display: grid;
-grid-template-columns: repeat(8, 105px);
-gap: 12px;
-margin-top: 15px;
-align-items: start;
+    display: grid;
+    grid-template-columns: repeat(8, 105px);
+    gap: 12px;
+    margin-top: 15px;
+    align-items: start;
 }
 
 .movie {
-display: block;
-width: 105px;
-height: 160px;
-cursor: pointer;
-outline: none;
-text-decoration: none;
-background: #111;
-overflow: hidden;
-transform: translateZ(0);
+    display: block;
+    width: 105px;
+    height: 160px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    background: #111;
+    overflow: hidden;
+    transform: translateZ(0);
 }
 
 .movie[hidden] { display: none !important; }
 
 .movie img {
-display: block;
-width: 105px;
-height: 160px;
-object-fit: cover;
-border: 3px solid transparent;
-transition: border-color .15s;
+    display: block;
+    width: 105px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid transparent;
+    transition: border-color .15s;
 }
 
 .movie.selected img,
 .movie:focus-visible img {
-border-color: #E50914;
+    border-color: #e50914;
 }
 
 .search-container {
-position: fixed;
-top: 20px;
-right: 30px;
-display: flex;
-align-items: center;
-gap: 10px;
-z-index: 10001;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1001;
 }
 
 .search-button {
-background: transparent;
-border: 0;
-padding: 6px;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-outline: none;
-border-radius: 50%;
-transform-origin: center;
-transition: transform .2s ease;
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: transform .2s ease;
 }
 
 .search-button svg {
-display: block;
-width: 26px;
-height: 26px;
-fill: white;
+    display: block;
+    width: 26px;
+    height: 26px;
+    fill: white;
 }
 
 .search-button:hover,
 .search-button:focus,
 .search-button:focus-visible {
-transform: scale(1.3);
-outline: none;
+    transform: scale(1.3);
+    outline: none;
 }
 
 .search-input {
-width: 0;
-min-width: 0;
-padding: 8px 0;
-border: 0;
-border-radius: 20px;
-background: rgba(0,0,0,.9);
-color: #fff;
-outline: none;
-opacity: 0;
-pointer-events: none;
-transition: width .2s, opacity .2s, padding .2s;
+    width: 0;
+    min-width: 0;
+    padding: 8px 0;
+    border: 0;
+    border-radius: 20px;
+    background: rgba(0,0,0,.9);
+    color: #fff;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: width .2s, opacity .2s, padding .2s;
 }
 
 .search-input.active {
-width: 220px;
-padding: 9px 12px;
-border: 1px solid rgba(255,255,255,.5);
-opacity: 1;
-pointer-events: auto;
+    width: 220px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255,255,255,.5);
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.search-input:focus { border-color: rgba(255,255,255,.9); }
+.search-input:focus {
+    border-color: rgba(255,255,255,.9);
+}
 
 .status {
-color: #aaa;
-font-size: 14px;
-margin-top: 20px;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 @media (max-width: 900px) {
-.movie-row { grid-template-columns: repeat(5, 105px); }
+    .movie-row { grid-template-columns: repeat(5, 105px); }
 }
 
 @media (max-width: 600px) {
-.header { height: 320px; padding: 15px; }
+    .header { height: 320px; padding: 15px; }
 
-.header h1 img {
-max-width: 240px;
-max-height: 70px;
-}
+    .header h1 img {
+        max-width: 240px;
+        max-height: 70px;
+    }
 
-.content {
-margin-top: 320px;
-padding: 12px;
-}
+    .content {
+        margin-top: 320px;
+        padding: 12px;
+    }
 
-.movie-row {
-grid-template-columns: repeat(3, 105px);
-gap: 10px;
-}
+    .movie-row {
+        grid-template-columns: repeat(3, 105px);
+        gap: 10px;
+    }
 
-.search-container {
-right: 15px;
-top: 15px;
-}
+    .search-container {
+        right: 15px;
+        top: 15px;
+    }
 
-.search-input.active { width: 170px; }
+    .search-input.active { width: 170px; }
 }
 </style>
 </head>
@@ -221,29 +229,32 @@ top: 15px;
 <body>
 
 <div class="search-container">
-<button id="search-button" class="search-button"
-type="button" aria-label="Abrir buscador" tabindex="0">
-<svg viewBox="0 0 24 24" aria-hidden="true">
-<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/>
-</svg>
-</button>
+    <button id="search-button" class="search-button"
+        type="button" aria-label="Abrir buscador" tabindex="0">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5
+            6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5
+            4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5
+            S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/>
+        </svg>
+    </button>
 
-<input id="search" class="search-input" type="text"
-placeholder="Buscar película..." aria-label="Buscar películas"
-autocomplete="off" tabindex="0">
+    <input id="search" class="search-input" type="text"
+        placeholder="Buscar película..." aria-label="Buscar películas"
+        autocomplete="off" tabindex="0">
 </div>
 
 <div class="header" id="header">
-<div class="header-info" id="info">
-<h1 id="title"></h1>
-<div id="meta" class="details"></div>
-<p id="overview" class="overview"></p>
-</div>
+    <div class="header-info" id="info">
+        <h1 id="title"></h1>
+        <div id="meta" class="details"></div>
+        <p id="overview" class="overview"></p>
+    </div>
 </div>
 
 <div class="content">
-<div class="movie-row" id="movie-row"></div>
-<p class="status" id="status" hidden></p>
+    <div class="movie-row" id="movie-row"></div>
+    <p class="status" id="status" hidden></p>
 </div>
 
 <script>
@@ -261,459 +272,447 @@ const statusElement = document.getElementById('status');
 
 let movies = [];
 let selectedMovie = null;
-let searchWasOpened = false;
 
 /* CARGAR CATÁLOGO */
 
 async function loadMovies() {
-statusElement.hidden = false;
-statusElement.textContent = 'Cargando películas...';
+    statusElement.hidden = false;
+    statusElement.textContent = 'Cargando películas...';
 
-try {
-const response = await fetch('./peliculas.json?t=' + Date.now(), {
-cache: 'no-store'
-});
+    try {
+        const response = await fetch('./peliculas.json?t=' + Date.now(), {
+            cache: 'no-store'
+        });
 
-if (!response.ok) throw new Error('HTTP ' + response.status);
+        if (!response.ok) {
+            throw new Error('HTTP ' + response.status);
+        }
 
-const catalog = await response.json();
-if (!Array.isArray(catalog)) {
-throw new Error('El catálogo no es una lista.');
+        const catalog = await response.json();
+
+        if (!Array.isArray(catalog)) {
+            throw new Error('El catálogo no es una lista JSON válida.');
+        }
+
+        movies = catalog;
+        renderMovies();
+
+    } catch (error) {
+        console.error('Error cargando catálogo:', error);
+        statusElement.hidden = false;
+        statusElement.textContent =
+            'No se pudo cargar peliculas.json. Comprueba que esté publicado junto a index.html.';
+    }
 }
 
-movies = catalog;
-renderMovies();
+/* DATOS DE CADA PELÍCULA */
 
-} catch (error) {
-console.error('Error cargando catálogo:', error);
-statusElement.hidden = false;
-statusElement.textContent =
-'No se pudo cargar peliculas.json. Comprueba que esté publicado junto a index.html.';
+function getTitle(movie) {
+    return movie.title_manual ||
+        movie.title ||
+        movie.youtube_title ||
+        'Película';
 }
-}
-
-/* DATOS */
 
 function getYoutubeUrl(movie) {
-if (movie.youtube_url) return movie.youtube_url;
+    if (movie.youtube_url_manual) return movie.youtube_url_manual;
+    if (movie.youtube_url) return movie.youtube_url;
 
-if (movie.youtube_id) {
-return 'https://www.youtube.com/watch?v=' +
-encodeURIComponent(movie.youtube_id);
-}
+    if (movie.youtube_id) {
+        return 'https://www.youtube.com/watch?v=' +
+            encodeURIComponent(movie.youtube_id);
+    }
 
-return '';
+    return '';
 }
 
 function getYear(movie) {
-if (movie.release_date) return String(movie.release_date).slice(0, 4);
-if (movie.year) return String(movie.year);
+    if (movie.release_date) {
+        return String(movie.release_date).slice(0, 4);
+    }
 
-const match = (movie.youtube_title || movie.title || '')
-.match(/\b(19\d{2}|20\d{2})\b/);
+    if (movie.year) return String(movie.year);
 
-return match ? match[1] : '';
+    const match = (movie.youtube_title || movie.title || '')
+        .match(/\b(19\d{2}|20\d{2})\b/);
+
+    return match ? match[1] : '';
 }
 
 function getRuntime(movie) {
-const runtime = Number(movie.runtime || movie.duration_minutes || 0);
-if (!runtime || runtime <= 0) return '';
+    const runtime = Number(movie.runtime || movie.duration_minutes || 0);
 
-const hours = Math.floor(runtime / 60);
-const minutes = runtime % 60;
+    if (!runtime || runtime <= 0) return '';
 
-if (hours && minutes) return hours + ' h ' + minutes + ' min';
-if (hours) return hours + ' h';
-return minutes + ' min';
+    const hours = Math.floor(runtime / 60);
+    const minutes = runtime % 60;
+
+    if (hours && minutes) return hours + ' h ' + minutes + ' min';
+    if (hours) return hours + ' h';
+
+    return minutes + ' min';
 }
 
 function getGenres(movie) {
-if (Array.isArray(movie.genres)) {
-return movie.genres.map(g =>
-typeof g === 'string' ? g : (g && g.name ? g.name : '')
-).filter(Boolean).join(', ');
-}
+    if (Array.isArray(movie.genres)) {
+        return movie.genres.map(g =>
+            typeof g === 'string' ? g : (g && g.name ? g.name : '')
+        ).filter(Boolean).join(', ');
+    }
 
-if (typeof movie.genres === 'string') return movie.genres;
-return movie.genre || movie.genre_label || '';
+    if (typeof movie.genres === 'string') return movie.genres;
+
+    return movie.genre || movie.genre_label || '';
 }
 
 function getQuality(movie) {
-if (movie.quality) return movie.quality;
+    if (movie.quality_manual) return movie.quality_manual;
+    if (movie.quality) return movie.quality;
 
-const text = ((movie.youtube_title || '') + ' ' +
-(movie.description || '')).toLowerCase();
+    const text = ((movie.youtube_title || '') + ' ' +
+        (movie.description || '')).toLowerCase();
 
-if (/\b(4k|2160p|uhd)\b/.test(text)) return '4K';
-if (/\b(fhd|1080p|full hd)\b/.test(text)) return 'FHD';
-if (/\b(hd|720p)\b/.test(text)) return 'HD';
+    if (/\b(4k|2160p|uhd)\b/.test(text)) return '4K';
+    if (/\b(fhd|1080p|full hd)\b/.test(text)) return 'FHD';
+    if (/\b(hd|720p)\b/.test(text)) return 'HD';
 
-return '';
+    return '';
 }
-
 
 function getAgeRating(movie) {
-return movie.age_rating_manual ||
-movie.age_rating ||
-movie.age_certification ||
-movie.certification ||
-movie.certificacion ||
-'';
+    return movie.age_rating_manual ||
+        movie.age_rating ||
+        movie.age_certification ||
+        movie.certification ||
+        movie.certificacion ||
+        '';
 }
 
-
-/* CARÁTULAS */
+/* CREAR CARÁTULAS */
 
 function renderMovies() {
-movieRow.replaceChildren();
-selectedMovie = null;
+    movieRow.replaceChildren();
+    selectedMovie = null;
 
-const validMovies = movies.filter(movie =>
-movie && (movie.youtube_url || movie.youtube_id)
-);
+    const validMovies = movies.filter(movie =>
+        movie && getYoutubeUrl(movie)
+    );
 
-if (!validMovies.length) {
-statusElement.hidden = false;
-statusElement.textContent = 'Todavía no hay películas disponibles.';
-info.classList.remove('visible');
-header.style.backgroundImage = 'none';
-return;
+    if (!validMovies.length) {
+        statusElement.hidden = false;
+        statusElement.textContent = 'Todavía no hay películas disponibles.';
+        info.classList.remove('visible');
+        header.style.backgroundImage = 'none';
+        titleElement.replaceChildren();
+        metaElement.textContent = '';
+        overviewElement.textContent = '';
+        return;
+    }
+
+    statusElement.hidden = true;
+
+    validMovies.forEach(movie => {
+        const card = document.createElement('a');
+        card.className = 'movie';
+        card.tabIndex = 0;
+        card.href = getYoutubeUrl(movie);
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+
+        card.dataset.title = getTitle(movie);
+        card.dataset.logo = movie.logo_manual || movie.logo ||
+            movie.movie_logo || '';
+        card.dataset.banner = movie.backdrop_manual || movie.backdrop || '';
+        card.dataset.poster = movie.poster_manual || movie.poster || '';
+        card.dataset.overview = movie.overview || '';
+        card.dataset.year = getYear(movie);
+        card.dataset.runtime = getRuntime(movie);
+        card.dataset.genres = getGenres(movie);
+        card.dataset.quality = getQuality(movie);
+        card.dataset.age = getAgeRating(movie);
+
+        const poster = document.createElement('img');
+        poster.alt = '';
+        poster.loading = 'lazy';
+        poster.decoding = 'async';
+        poster.draggable = false;
+
+        if (card.dataset.poster) {
+            poster.src = card.dataset.poster;
+        } else {
+            poster.style.visibility = 'hidden';
+        }
+
+        poster.addEventListener('error', () => {
+            poster.style.visibility = 'hidden';
+        });
+
+        card.appendChild(poster);
+        movieRow.appendChild(card);
+
+        card.addEventListener('focus', () => selectMovie(card));
+        card.addEventListener('mouseenter', () => selectMovie(card));
+    });
+
+    filterMovies();
 }
 
-statusElement.hidden = true;
-
-validMovies.forEach(movie => {
-const card = document.createElement('a');
-card.className = 'movie';
-card.tabIndex = 0;
-
-const url = getYoutubeUrl(movie);
-if (url) {
-card.href = url;
-card.target = '_blank';
-card.rel = 'noopener noreferrer';
-}
-
-card.dataset.title = movie.title || movie.youtube_title || 'Película';
-card.dataset.logo = movie.logo || movie.movie_logo || '';
-card.dataset.banner = movie.backdrop || '';
-card.dataset.overview = movie.overview || '';
-card.dataset.year = getYear(movie);
-card.dataset.runtime = getRuntime(movie);
-card.dataset.genres = getGenres(movie);
-card.dataset.quality = getQuality(movie);
-card.dataset.age = getAgeRating(movie);
-
-const poster = document.createElement('img');
-poster.alt = '';
-poster.loading = 'lazy';
-poster.decoding = 'async';
-poster.draggable = false;
-
-if (movie.poster) {
-poster.src = movie.poster;
-} else {
-poster.style.visibility = 'hidden';
-}
-
-poster.addEventListener('error', () => {
-poster.style.visibility = 'hidden';
-});
-
-card.appendChild(poster);
-movieRow.appendChild(card);
-
-card.addEventListener('focus', () => selectMovie(card));
-card.addEventListener('mouseenter', () => selectMovie(card));
-card.addEventListener('click', event => {
-if (!card.href) event.preventDefault();
-});
-});
-
-filterMovies();
-}
-
-/* BANNER */
+/* BANNER Y LOGO */
 
 function selectMovie(card) {
-if (!card || card.hidden) return;
+    if (!card || card.hidden) return;
 
-selectedMovie = card;
+    selectedMovie = card;
 
-movieRow.querySelectorAll('.movie').forEach(movie => {
-movie.classList.toggle('selected', movie === card);
-});
+    movieRow.querySelectorAll('.movie').forEach(movie => {
+        movie.classList.toggle('selected', movie === card);
+    });
 
-const banner = card.dataset.banner;
-header.style.backgroundImage = banner ? 'url("' + banner + '")' : 'none';
+    const banner = card.dataset.banner;
+    header.style.backgroundImage = banner
+        ? 'url("' + banner.replace(/"/g, '%22') + '")'
+        : 'none';
 
-const movieTitle = card.dataset.title || 'Película';
-const logo = card.dataset.logo;
+    const movieTitle = card.dataset.title || 'Película';
+    const logo = card.dataset.logo;
 
-titleElement.replaceChildren();
+    titleElement.replaceChildren();
 
-if (logo) {
-const image = document.createElement('img');
-image.src = logo;
-image.alt = movieTitle;
+    if (logo) {
+        const image = document.createElement('img');
+        image.src = logo;
+        image.alt = movieTitle;
 
-image.addEventListener('error', () => {
-titleElement.replaceChildren();
-titleElement.textContent = movieTitle;
-}, { once: true });
+        image.addEventListener('error', () => {
+            titleElement.replaceChildren();
+            titleElement.textContent = movieTitle;
+        }, { once: true });
 
-titleElement.appendChild(image);
-} else {
-titleElement.textContent = movieTitle;
+        titleElement.appendChild(image);
+    } else {
+        titleElement.textContent = movieTitle;
+    }
+
+    metaElement.textContent = [
+        card.dataset.year,
+        card.dataset.runtime,
+        card.dataset.genres,
+        card.dataset.quality,
+        card.dataset.age
+    ].filter(Boolean).join(' | ');
+
+    overviewElement.textContent = card.dataset.overview || '';
+    info.classList.add('visible');
 }
 
-metaElement.textContent = [
-card.dataset.year,
-card.dataset.runtime,
-card.dataset.genres,
-card.dataset.quality,
-card.dataset.age
- ].filter(Boolean).join(' | ');
-
-overviewElement.textContent = card.dataset.overview || '';
-info.classList.add('visible');
-}
-
-/* NAVEGACIÓN */
+/* NAVEGACIÓN CON MANDO */
 
 function getVisibleCards() {
-return [...movieRow.querySelectorAll('.movie:not([hidden])')];
+    return [...movieRow.querySelectorAll('.movie:not([hidden])')];
 }
 
 function getColumns() {
-if (window.innerWidth <= 600) return 3;
-if (window.innerWidth <= 900) return 5;
-return 8;
+    if (window.innerWidth <= 600) return 3;
+    if (window.innerWidth <= 900) return 5;
+    return 8;
 }
 
 function scrollToMovie(card) {
-if (!card) return;
+    if (!card) return;
 
-const rect = card.getBoundingClientRect();
-const topLimit = 325;
-const bottomLimit = window.innerHeight - 12;
+    const rect = card.getBoundingClientRect();
+    const topLimit = 325;
+    const bottomLimit = window.innerHeight - 12;
 
-if (rect.top < topLimit) {
-window.scrollBy(0, rect.top - topLimit);
-} else if (rect.bottom > bottomLimit) {
-window.scrollBy(0, rect.bottom - bottomLimit);
-}
+    if (rect.top < topLimit) {
+        window.scrollBy(0, rect.top - topLimit);
+    } else if (rect.bottom > bottomLimit) {
+        window.scrollBy(0, rect.bottom - bottomLimit);
+    }
 }
 
 function focusMovie(card) {
-if (!card) return;
-card.focus({ preventScroll: true });
-selectMovie(card);
-scrollToMovie(card);
+    if (!card) return;
+
+    card.focus({ preventScroll: true });
+    selectMovie(card);
+    scrollToMovie(card);
 }
 
 function focusFirstMovie() {
-const cards = getVisibleCards();
-if (cards.length) focusMovie(cards[0]);
-}
-
-function focusSearchButton() {
-searchButton.focus({ preventScroll: true });
+    const cards = getVisibleCards();
+    if (cards.length) focusMovie(cards[0]);
 }
 
 function openSearch() {
-searchWasOpened = true;
-searchInput.classList.add('active');
-searchInput.focus();
+    searchInput.classList.add('active');
+    searchInput.focus();
 }
 
 function closeSearch() {
-searchInput.value = '';
-filterMovies();
-searchInput.classList.remove('active');
-searchInput.blur();
-searchWasOpened = false;
-focusSearchButton();
+    searchInput.value = '';
+    filterMovies();
+    searchInput.classList.remove('active');
+    searchInput.blur();
+    searchButton.focus({ preventScroll: true });
 }
-
-/*
-Un solo controlador global.
-Captura las teclas antes que otros elementos de la página.
-*/
 
 document.addEventListener('keydown', function(event) {
-const key = event.key;
-const code = event.keyCode || event.which;
+    const key = event.key;
+    const code = event.keyCode || event.which;
 
-const up = key === 'ArrowUp' || code === 38 || code === 19;
-const down = key === 'ArrowDown' || code === 40 || code === 20;
-const left = key === 'ArrowLeft' || code === 37 || code === 21;
-const right = key === 'ArrowRight' || code === 39 || code === 22;
-const enter = key === 'Enter' || code === 13 || code === 23 || code === 66;
-const escape = key === 'Escape' || code === 27 || code === 4;
+    const up = key === 'ArrowUp' || code === 38 || code === 19;
+    const down = key === 'ArrowDown' || code === 40 || code === 20;
+    const left = key === 'ArrowLeft' || code === 37 || code === 21;
+    const right = key === 'ArrowRight' || code === 39 || code === 22;
+    const enter = key === 'Enter' || code === 13 || code === 23 || code === 66;
+    const escape = key === 'Escape' || code === 27 || code === 4;
 
-const active = document.activeElement;
-const isSearchInput = active === searchInput;
-const isSearchButton = active === searchButton;
-const activeCard = active && active.closest
-? active.closest('.movie')
-: null;
+    const active = document.activeElement;
+    const isSearchInput = active === searchInput;
+    const isSearchButton = active === searchButton;
+    const activeCard = active && active.closest
+        ? active.closest('.movie')
+        : null;
 
-/* BUSCADOR: las flechas izquierda/derecha conservan
-su función normal para mover el cursor del texto. */
+    if (isSearchInput) {
+        if (escape) {
+            event.preventDefault();
+            closeSearch();
+            return;
+        }
 
-if (isSearchInput) {
-if (escape) {
-event.preventDefault();
-closeSearch();
-return;
-}
+        if (up) {
+            event.preventDefault();
+            searchButton.focus({ preventScroll: true });
+            return;
+        }
 
-if (up) {
-event.preventDefault();
-focusSearchButton();
-return;
-}
+        if (down) {
+            event.preventDefault();
+            focusFirstMovie();
+            return;
+        }
 
-if (down) {
-event.preventDefault();
-focusFirstMovie();
-return;
-}
+        if (enter) {
+            event.preventDefault();
+            focusFirstMovie();
+            return;
+        }
 
-if (enter) {
-event.preventDefault();
-const first = getVisibleCards()[0];
-if (first) focusMovie(first);
-return;
-}
+        return;
+    }
 
-return;
-}
+    if (isSearchButton) {
+        if (enter) {
+            event.preventDefault();
+            openSearch();
+            return;
+        }
 
-/* LUPA */
+        if (down) {
+            event.preventDefault();
+            focusFirstMovie();
+            return;
+        }
 
-if (isSearchButton) {
-if (enter) {
-event.preventDefault();
-openSearch();
-return;
-}
+        if (up || left || right) {
+            event.preventDefault();
+            return;
+        }
+    }
 
-if (down) {
-event.preventDefault();
+    if (!activeCard) {
+        if (up || left) {
+            event.preventDefault();
+            searchButton.focus({ preventScroll: true });
+        } else if (down || right) {
+            event.preventDefault();
+            focusFirstMovie();
+        }
+        return;
+    }
 
-if (searchInput.classList.contains('active')) {
-searchInput.focus();
-} else {
-focusFirstMovie();
-}
+    const cards = getVisibleCards();
+    const index = cards.indexOf(activeCard);
+    if (index < 0) return;
 
-return;
-}
+    const columns = getColumns();
+    let next = index;
 
-if (up || left || right) {
-event.preventDefault();
-return;
-}
-}
+    if (right) {
+        next = Math.min(index + 1, cards.length - 1);
+    } else if (left) {
+        next = index % columns === 0 ? index : index - 1;
+    } else if (down) {
+        next = Math.min(index + columns, cards.length - 1);
+    } else if (up) {
+        if (index < columns) {
+            event.preventDefault();
+            searchButton.focus({ preventScroll: true });
+            return;
+        }
+        next = index - columns;
+    } else if (escape) {
+        event.preventDefault();
+        searchButton.focus({ preventScroll: true });
+        return;
+    } else {
+        return;
+    }
 
-/* SI EL FOCO SE HA PERDIDO, RECUPERAR LA NAVEGACIÓN */
-
-if (!activeCard) {
-if (up || left) {
-event.preventDefault();
-focusSearchButton();
-} else if (down || right) {
-event.preventDefault();
-focusFirstMovie();
-}
-return;
-}
-
-/* CARÁTULAS */
-
-const cards = getVisibleCards();
-const index = cards.indexOf(activeCard);
-if (index < 0) return;
-
-const columns = getColumns();
-let next = index;
-
-if (right) {
-next = Math.min(index + 1, cards.length - 1);
-} else if (left) {
-next = index % columns === 0 ? index : index - 1;
-} else if (down) {
-next = Math.min(index + columns, cards.length - 1);
-} else if (up) {
-if (index < columns) {
-event.preventDefault();
-focusSearchButton();
-return;
-}
-next = index - columns;
-} else if (escape) {
-event.preventDefault();
-focusSearchButton();
-return;
-} else {
-/* Enter en una carátula mantiene el enlace de YouTube. */
-return;
-}
-
-event.preventDefault();
-
-if (cards[next]) focusMovie(cards[next]);
+    event.preventDefault();
+    if (cards[next]) focusMovie(cards[next]);
 }, true);
 
-/* BUSCADOR: eventos de clic y escritura */
+/* BUSCADOR */
 
 searchButton.addEventListener('click', openSearch);
 searchInput.addEventListener('input', filterMovies);
 
 searchInput.addEventListener('blur', () => {
-if (!searchInput.value.trim()) {
-searchInput.classList.remove('active');
-}
+    if (!searchInput.value.trim()) {
+        searchInput.classList.remove('active');
+    }
 });
 
 function filterMovies() {
-const query = searchInput.value.trim().toLocaleLowerCase('es');
-const cards = [...movieRow.querySelectorAll('.movie')];
-let firstMatch = null;
+    const query = searchInput.value.trim().toLocaleLowerCase('es');
+    const cards = [...movieRow.querySelectorAll('.movie')];
+    let firstMatch = null;
 
-cards.forEach(card => {
-const text = [
-card.dataset.title,
-card.dataset.year,
-card.dataset.genres,
-card.dataset.quality,
-card.dataset.age,
-card.dataset.overview
- ].join(' ').toLocaleLowerCase('es');
+    cards.forEach(card => {
+        const text = [
+            card.dataset.title,
+            card.dataset.year,
+            card.dataset.genres,
+            card.dataset.quality,
+            card.dataset.age,
+            card.dataset.overview
+        ].join(' ').toLocaleLowerCase('es');
 
-const matches = text.includes(query);
-card.hidden = !matches;
+        const matches = text.includes(query);
+        card.hidden = !matches;
 
-if (matches && !firstMatch) firstMatch = card;
-});
+        if (matches && !firstMatch) firstMatch = card;
+    });
 
-if (firstMatch) {
-selectMovie(firstMatch);
-} else if (query) {
-selectedMovie = null;
-info.classList.remove('visible');
-header.style.backgroundImage = 'none';
+    if (firstMatch) {
+        selectMovie(firstMatch);
+    } else if (query) {
+        selectedMovie = null;
+        info.classList.remove('visible');
+        header.style.backgroundImage = 'none';
+        titleElement.replaceChildren();
+        metaElement.textContent = '';
+        overviewElement.textContent = '';
+    }
 }
-}
-
-/* REAJUSTAR NAVEGACIÓN AL CAMBIAR EL TAMAÑO */
 
 window.addEventListener('resize', () => {
-if (selectedMovie && !selectedMovie.hidden) {
-selectMovie(selectedMovie);
-}
+    if (selectedMovie && !selectedMovie.hidden) {
+        selectMovie(selectedMovie);
+    }
 });
 
 /* ARRANQUE */
@@ -723,4 +722,3 @@ loadMovies();
 
 </body>
 </html>
-
