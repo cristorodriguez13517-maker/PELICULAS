@@ -1,0 +1,40 @@
+name: Actualizar catalogo SHARKTV
+
+on:
+workflow_dispatch:
+schedule:
+- cron: "*/30 * * * *"
+
+permissions:
+contents: write
+
+jobs:
+actualizar:
+runs-on: ubuntu-latest
+
+steps:
+- name: Descargar repositorio
+uses: actions/checkout@v4
+
+- name: Preparar Python
+uses: actions/setup-python@v5
+with:
+python-version: "3.12"
+
+- name: Instalar dependencias
+run: pip install requests
+
+- name: Actualizar peliculas
+env:
+YOUTUBE_API_KEY:  {{ secrets.TMDB_API_KEY }}
+run: python actualizar.py
+
+- name: Guardar catalogo
+run: |
+git add peliculas.json
+if ! git diff --cached --quiet; then
+git config user.name "github-actions[bot]"
+git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+git commit -m "Actualizar catalogo de peliculas"
+git push
+fi
