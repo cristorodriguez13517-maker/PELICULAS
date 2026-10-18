@@ -25,13 +25,13 @@ jobs:
       - name: Instalar dependencias
         run: pip install requests
 
-      - name: Actualizar peliculas
+      - name: Actualizar catálogo
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python actualizar.py
 
-      - name: Guardar catalogo
+      - name: Guardar catálogo actualizado
         run: |
           git add peliculas.json
           if ! git diff --cached --quiet; then
