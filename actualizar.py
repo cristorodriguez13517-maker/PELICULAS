@@ -6,9 +6,9 @@ import requests
 import unicodedata
 from difflib import SequenceMatcher
 
-==================================================
+
 CONFIGURACIÓN
-==================================================
+
 
 YOUTUBE_KEY = os.environ["YOUTUBE_API_KEY"]
 TMDB_KEY = os.environ["TMDB_API_KEY"]
@@ -24,9 +24,9 @@ CATALOG_FILE = "peliculas.json"
 session = requests.Session()
 
 
-==================================================
+
 PETICIONES A LAS API
-==================================================
+
 
 def api_get(url, params):
 response = session.get(url, params=params, timeout=30)
@@ -34,9 +34,9 @@ response.raise_for_status()
 return response.json()
 
 
-==================================================
+
 LEER EL CATÁLOGO ANTERIOR
-==================================================
+
 
 def load_previous_catalog():
 if not os.path.exists(CATALOG_FILE):
@@ -64,9 +64,9 @@ f"No se puede leer peliculas.json: {error}. "
 )
 
 
-==================================================
+
 OBTENER LA LISTA COMPLETA DE YOUTUBE
-==================================================
+
 
 def get_youtube_videos():
 videos = []
@@ -124,9 +124,9 @@ break
 return videos
 
 
-==================================================
+
 LIMPIAR Y NORMALIZAR TÍTULOS
-==================================================
+
 
 def clean_title(title):
 title = re.sub(
@@ -156,9 +156,9 @@ text = re.sub(r"[^a-z0-9 ]", " ", text)
 return re.sub(r"\s+", " ", text).strip()
 
 
-==================================================
+
 DETECTAR CALIDAD
-==================================================
+
 
 def detect_quality(title, description):
 text = f"{title} {description}".lower()
@@ -175,9 +175,9 @@ return "HD"
 return ""
 
 
-==================================================
+
 BUSCAR LA PELÍCULA EN TMDB
-==================================================
+
 
 def find_tmdb_movie(title):
 original_title = clean_title(title)
@@ -287,9 +287,9 @@ f"(ID {best_movie.get('id')})"
 return best_movie
 
 
-==================================================
+
 DETALLES DE LA PELÍCULA
-==================================================
+
 
 def get_movie_details(movie_id):
 return api_get(
@@ -301,9 +301,9 @@ f"{TMDB_MOVIE_URL}/{movie_id}",
 )
 
 
-==================================================
+
 CLASIFICACIÓN POR EDADES DE ESPAÑA
-==================================================
+
 
 def get_spain_age_rating(movie_id):
 try:
@@ -334,9 +334,9 @@ print(f"Error al consultar clasificación: {error}")
 return ""
 
 
-==================================================
+
 LOGO DE LA PELÍCULA
-==================================================
+
 
 def get_movie_logo(movie_id):
 try:
@@ -368,9 +368,9 @@ return IMAGE_BASE + "w780" + logo["file_path"]
 return None
 
 
-==================================================
+
 PROCESAR UN VÍDEO NUEVO
-==================================================
+
 
 def process_new_video(video):
 title = video["youtube_title"]
@@ -456,9 +456,9 @@ entry["match_status"] = "error_api"
 return entry
 
 
-==================================================
+
 SINCRONIZAR CATÁLOGO CON YOUTUBE
-==================================================
+
 
 def main():
 if not PLAYLIST_ID or "PEGA_AQUI" in PLAYLIST_ID:
