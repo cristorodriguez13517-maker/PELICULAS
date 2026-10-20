@@ -175,83 +175,93 @@ def detect_quality(title, description):
 # ============================================================
 
 def find_tmdb_movie(youtube_title):
+    """Busca por título español e inglés, probando variantes con y sin año."""
     original = clean_title(youtube_title)
-
     year_match = re.search(r"\b(19\d{2}|20\d{2})\b", original)
     year = year_match.group(1) if year_match else None
 
-    query = re.sub(r"\b(19\d{2}|20\d{2})\b", " ", original)
-    query = re.sub(r"\s+", " ", query).strip()
+    # Ejemplo: "Susurran tu nombre (The Whisper Man, 2026)"
+    # separa el título español del título original entre paréntesis.
+    without_year = re.sub(r"\b(19\d{2}|20\d{2})\b", " ", original)
+    parenthetical = re.findall(r"\(([^()]*)\)", without_year)
+    spanish_title = re.sub(r"\([^()]*\)", " ", without_year)
+    spanish_title = re.sub(r"\s+", " ", spanish_title).strip(" -|,;")
 
-    if not query:
-        query = original
+    title_variants = []
+    if spanish_title:
+        title_variants.append(spanish_title)
+    for group in parenthetical:
+        # El contenido entre paréntesis puede incluir el título original y el año.
+        for part in re.split(r"[,;|]", group):
+            part = re.sub(r"\b(19\d{2}|20\d{2})\b", " ", part)
+            part = re.sub(r"\s+", " ", part).strip(" -|,;")
+            if part:
+                title_variants.append(part)
 
-    if not query:
-        return None
+    if not title_variants:
+        title_variants.append(without_year.strip())
 
-    wanted = normalize(query)
+    # Elimina duplicados sin distinguir mayúsculas/minúsculas.
+    unique_variants = []
+    seen = set()
+    for variant in title_variants:
+        key = normalize(variant)
+        if key and key not in seen:
+            seen.add(key)
+            unique_variants.append(variant)
+
     candidates = {}
-
-    for language in ("es-ES", "en-US"):
-        params = {
-            "api_key": TMDB_KEY,
-            "language": language,
-            "query": query,
-            "include_adult": "false",
-            "page": 1,
-        }
-
-        if year:
-            params["year"] = year
-
-        data = api_get(TMDB_SEARCH_URL, params)
-
-        for movie in data.get("results", []):
-            movie_id = movie.get("id")
-            if movie_id:
-                candidates[movie_id] = movie
-
-        time.sleep(0.1)
+    for query in unique_variants:
+        for language in ("es-ES", "en-US"):
+            params = {
+                "api_key": TMDB_KEY,
+                "language": language,
+                "query": query,
+                "include_adult": "false",
+                "page": 1,
+            }
+            if year:
+                params["year"] = year
+            data = api_get(TMDB_SEARCH_URL, params)
+            for movie in data.get("results", []):
+                movie_id = movie.get("id")
+                if movie_id:
+                    candidates[movie_id] = movie
+            time.sleep(0.1)
 
     best_movie = None
     best_score = -1
+    wanted_names = [normalize(v) for v in unique_variants if normalize(v)]
 
     for movie in candidates.values():
-        names = [
-            movie.get("title", ""),
-            movie.get("original_title", ""),
-        ]
-
+        names = [normalize(movie.get("title", "")), normalize(movie.get("original_title", ""))]
         name_score = max(
-            (
-                SequenceMatcher(
-                    None, wanted, normalize(name)
-                ).ratio()
-                for name in names if name
-            ),
+            (SequenceMatcher(None, wanted, name).ratio()
+             for wanted in wanted_names for name in names if wanted and name),
             default=0,
         )
-
         score = name_score
         release_date = movie.get("release_date", "")
-
         if year:
             if release_date.startswith(year):
-                score += 0.20
+                score += 0.25
             elif re.match(r"^\d{4}", release_date):
-                score -= 0.15
-
+                score -= 0.20
         if score > best_score:
             best_score = score
             best_movie = movie
 
-    if not best_movie or best_score < 0.72:
-        print(f"TMDB: no se encontró coincidencia fiable para {youtube_title!r}")
+    if not best_movie or best_score < 0.68:
+        print(
+            f"TMDB: no se encontró coincidencia fiable para {youtube_title!r}. "
+            f"Consultas probadas: {unique_variants!r}; año={year!r}"
+        )
         return None
 
     print(
-        f"TMDB: {youtube_title!r} -> "
-        f"{best_movie.get('title')!r}"
+        f"TMDB: {youtube_title!r} -> {best_movie.get('title')!r} "
+        f"(original: {best_movie.get('original_title')!r}, "
+        f"año: {best_movie.get('release_date', '')[:4]}, puntuación: {best_score:.2f})"
     )
     return best_movie
 
@@ -440,9 +450,12 @@ def main():
 
         # Mantener los registros ya procesados evita consultar TMDB
         # en cada ejecución de GitHub Actions.
+        # Reintentar también los registros no encontrados: el título puede
+        # haberse añadido/corregido en TMDB desde la ejecución anterior.
         if old_entry and old_entry.get("match_status") not in (
             "error_api",
             "pendiente",
+            "no_encontrada",
         ):
             merged = dict(old_entry)
             merged.update(video)
