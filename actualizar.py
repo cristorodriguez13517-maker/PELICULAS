@@ -280,6 +280,14 @@ def get_movie_details(movie_id):
     )
 
 
+def format_age_rating(rating):
+    """Añade + a las edades numéricas: 18 -> 18+, 16 -> 16+."""
+    rating = str(rating or "").strip()
+    if rating.isdigit():
+        return f"{rating}+"
+    return rating
+
+
 def get_spain_age_rating(movie_id):
     try:
         data = api_get(
@@ -294,7 +302,7 @@ def get_spain_age_rating(movie_id):
             for release in country.get("release_dates", []):
                 rating = (release.get("certification") or "").strip()
                 if rating:
-                    return rating
+                    return format_age_rating(rating)
 
     except requests.RequestException as error:
         print(f"No se pudo consultar la clasificación por edades: {error}")
@@ -501,6 +509,14 @@ def main():
             catalog.append(entry)
 
         time.sleep(0.2)
+
+    # Actualizar también los registros ya guardados: 18 -> 18+, etc.
+    # Las clasificaciones manuales tienen prioridad sobre las automáticas.
+    for item in catalog:
+        if item.get("age_rating_manual"):
+            item["age_rating_manual"] = format_age_rating(item["age_rating_manual"])
+        elif item.get("age_rating"):
+            item["age_rating"] = format_age_rating(item["age_rating"])
 
     # Escribir primero un archivo temporal y sustituir el JSON al final.
     temp_file = CATALOG_FILE + ".tmp"
