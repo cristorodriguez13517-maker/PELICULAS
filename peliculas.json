@@ -37,7 +37,28 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=1y88PTEzrhc"
   },
- 
+  {
+    "youtube_id": "_CWL8E5p_ks",
+    "youtube_title": "A la carrera (The Runner) (2026)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-18T01:22:37Z",
+    "title": "A la carrera",
+    "tmdb_id": 1386315,
+    "poster": "https://image.tmdb.org/t/p/w780/aBzKyfruwaUgU2qYYtMO7vC1Pv2.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/zLEGM0nl8fWDiMg0KtFFXGevb2Z.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/jzBWExXacS33rMQ2zLBrqIVweyG.jpg",
+    "overview": "En el thriller psicológico A la carrera, Maia Marten, una brillante abogada londinense, ve cómo su vida se desmorona tras recibir una llamada durante su carrera matutina: han secuestrado a su hijo. Para recuperarlo, debe seguir corriendo, cumplir todas las órdenes despiadadas y no confiar en nadie. Cada segundo es una prueba de hasta dónde puede llegar una madre para salvar a su hijo.",
+    "release_date": "2026-09-03",
+    "runtime": 86,
+    "genres": [
+      "Suspense",
+      "Acción"
+    ],
+    "quality": "4K",
+    "age_rating": "16",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=_CWL8E5p_ks"
+  },
   {
     "youtube_id": "JbrFdW_-45E",
     "youtube_title": "Mayday (2026)",
