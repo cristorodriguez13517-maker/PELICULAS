@@ -715,9 +715,24 @@ window.addEventListener('resize', () => {
     }
 });
 
+
 /* ARRANQUE */
 
-loadMovies();
+async function startSharkTV() {
+    await loadMovies();
+
+    // Esperar a que el navegador termine de dibujar las carátulas.
+    requestAnimationFrame(() => {
+        const firstCard = getVisibleCards()[0];
+
+        if (firstCard) {
+            focusMovie(firstCard);
+        }
+    });
+}
+
+startSharkTV();
+
 </script>
 
 </body>
