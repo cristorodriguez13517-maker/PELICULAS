@@ -103,7 +103,9 @@ body {
     cursor: pointer;
     outline: none;
     text-decoration: none;
-    background: #111;
+    background: transparent;
+    border: none;
+    box-shadow: none;
     overflow: hidden;
     transform: translateZ(0);
 }
@@ -116,6 +118,9 @@ body {
     height: 160px;
     object-fit: cover;
     border: 3px solid transparent;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
     transition: border-color .15s;
 }
 
@@ -123,6 +128,14 @@ body {
 .movie:focus-visible img {
     border-color: #e50914;
 }
+
+/* Sin marco gris: solo se muestra el borde rojo de selección */
+.movie, .movie:focus, .movie:focus-visible, .movie.selected {
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.movie img { background: transparent !important; box-shadow: none !important; }
 
 .search-container {
     position: fixed;
@@ -715,24 +728,9 @@ window.addEventListener('resize', () => {
     }
 });
 
-
 /* ARRANQUE */
 
-async function startSharkTV() {
-    await loadMovies();
-
-    // Esperar a que el navegador termine de dibujar las carátulas.
-    requestAnimationFrame(() => {
-        const firstCard = getVisibleCards()[0];
-
-        if (firstCard) {
-            focusMovie(firstCard);
-        }
-    });
-}
-
-startSharkTV();
-
+loadMovies();
 </script>
 
 </body>
