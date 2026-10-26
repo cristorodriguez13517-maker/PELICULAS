@@ -728,9 +728,17 @@ window.addEventListener('resize', () => {
     }
 });
 
-/* ARRANQUE */
+/* ARRANQUE: dar el foco real a la primera carátula */
+async function startSharkTV() {
+    await loadMovies();
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            focusFirstMovie();
+        });
+    });
+}
 
-loadMovies();
+startSharkTV();
 </script>
 
 </body>
