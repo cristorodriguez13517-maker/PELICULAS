@@ -1312,19 +1312,23 @@
     "youtube_title": "Así se hizo ‘Jay Kelly'  (2025) 4K 2160p  [ DOCUMENTAL ]",
     "description": "",
     "published_at": "2026-10-23T03:26:36Z",
-    "title": "Así se hizo ‘Jay Kelly' (2025) [ DOCUMENTAL ]",
-    "tmdb_id": null,
-    "poster": null,
-    "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "title": "Así se hizo ‘Jay Kelly'",
+    "tmdb_id": 1593419,
+    "poster": "https://image.tmdb.org/t/p/w780/wdYWaCYcTmyAgTN2AHCrjYPi0cp.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/tHtgNl8gChyt3JXeDYaSZxkCi28.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/tgjK8Uk6N8TzwjpkKAx1jcyrdit.jpg",
+    "overview": "El director Noah Baumbach, George Clooney, Adam Sandler y muchos más comentan la película detrás de las cámaras, desde la envolvente primera toma a la emotiva frase del final.",
+    "release_date": "2025-12-04",
+    "runtime": 51,
+    "genres": [
+      "Documental"
+    ],
     "quality": "4K",
-    "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=2AsgyfPeXeI"
+    "age_rating": "7+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=2AsgyfPeXeI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:01+00:00"
   },
   {
     "youtube_id": "jzbTC975jtM",
@@ -1343,7 +1347,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=jzbTC975jtM"
+    "youtube_url": "https://www.youtube.com/watch?v=jzbTC975jtM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:02+00:00",
+    "next_retry_at": "2026-10-28T18:00:02+00:00"
   },
   {
     "youtube_id": "bezjr9REt4g",
@@ -1431,7 +1438,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=10YSehyaO8o"
+    "youtube_url": "https://www.youtube.com/watch?v=10YSehyaO8o",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:03+00:00",
+    "next_retry_at": "2026-10-28T18:00:03+00:00"
   },
   {
     "youtube_id": "wy3UCncD0xM",
@@ -1450,7 +1460,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=wy3UCncD0xM"
+    "youtube_url": "https://www.youtube.com/watch?v=wy3UCncD0xM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:04+00:00",
+    "next_retry_at": "2026-10-28T18:00:04+00:00"
   },
   {
     "youtube_id": "-gtANbFWxNI",
@@ -1491,26 +1504,33 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=wIzq5jw2wDM"
+    "youtube_url": "https://www.youtube.com/watch?v=wIzq5jw2wDM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:05+00:00",
+    "next_retry_at": "2026-10-28T18:00:05+00:00"
   },
   {
     "youtube_id": "8oiaxRVaHFw",
     "youtube_title": "Caza de brujas (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-23T03:26:36Z",
-    "title": "Caza de brujas (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "La caza de brujas",
+    "tmdb_id": 473719,
+    "poster": "https://image.tmdb.org/t/p/w780/9PGVH6MiUA4PH10G2vJ12WS0a7K.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/glVGZOVgd6H4RY8XjTmiIfCpA4Q.jpg",
+    "overview": "Cuando, en un colegio católico muy estricto, un profesor entra en un cuarto de baño y sorprende a dos estudiantes entregados a prácticas sexuales prohibidas, algunos de sus compañeros de clase no saben si callar o delatar a sus propios amigos cuando son interrogados por las autoridades escolares.",
+    "release_date": "1967-01-01",
+    "runtime": 35,
+    "genres": [
+      "Drama"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=8oiaxRVaHFw"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=8oiaxRVaHFw",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:06+00:00"
   },
   {
     "youtube_id": "wqd-xsJZ8hk",
@@ -1551,7 +1571,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=EwnTJ9eCD8k"
+    "youtube_url": "https://www.youtube.com/watch?v=EwnTJ9eCD8k",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:07+00:00",
+    "next_retry_at": "2026-10-28T18:00:07+00:00"
   },
   {
     "youtube_id": "Mcm_ekhviGo",
@@ -1603,19 +1626,25 @@
     "youtube_title": "Juegos de niños (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-23T03:26:36Z",
-    "title": "Juegos de niños (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Juegos de niños",
+    "tmdb_id": 1156753,
+    "poster": "https://image.tmdb.org/t/p/w780/hWDBj5zSSa5KxIolKoMw0slM6Ve.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/aZFM3EI4v2SkDt0WtkVrZ7HM7ak.jpg",
+    "overview": "Jaime y Pablo exploran y trabajan su identidad contándonos acerca de sus experiencias y participando en un laboratorio teatral de masculinidad donde descubriremos el conflicto que los llevó a cuestionarse su masculinidad. Este conflicto los obligó a cuestionarse los juegos que nos enseñaron de niños, proponiendo juegos distintos donde aprendemos a cuidar a la gente que amamos",
+    "release_date": "2023-08-31",
+    "runtime": 29,
+    "genres": [
+      "Documental",
+      "Drama",
+      "Familia"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=n1wQ_o4MNEU"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=n1wQ_o4MNEU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:08+00:00"
   },
   {
     "youtube_id": "joQIpLlz4L0",
@@ -1659,7 +1688,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=c4gwOLKcgeg"
+    "youtube_url": "https://www.youtube.com/watch?v=c4gwOLKcgeg",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:09+00:00",
+    "next_retry_at": "2026-10-28T18:00:09+00:00"
   },
   {
     "youtube_id": "IFBRsn5lZFA",
@@ -1769,26 +1801,33 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=XXTEOV7mvOA"
+    "youtube_url": "https://www.youtube.com/watch?v=XXTEOV7mvOA",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:10+00:00",
+    "next_retry_at": "2026-10-28T18:00:10+00:00"
   },
   {
     "youtube_id": "aUv6KZL24lI",
     "youtube_title": "Maldita suerte (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-23T03:32:06Z",
-    "title": "Maldita suerte (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Maldita Suerte",
+    "tmdb_id": 1115268,
+    "poster": "https://image.tmdb.org/t/p/w780/8yknANUWiRMpMaImrkwT8Vmflrk.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
     "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "runtime": 16,
+    "genres": [
+      "Drama"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=aUv6KZL24lI"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=aUv6KZL24lI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:12+00:00"
   },
   {
     "youtube_id": "WuX3k6kwf3A",
@@ -1885,19 +1924,21 @@
     "youtube_title": "Pacto de sangre (2024) 4K 2160p",
     "description": "",
     "published_at": "2026-10-23T03:32:06Z",
-    "title": "Pacto de sangre (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Pacto de sangre",
+    "tmdb_id": 676078,
+    "poster": "https://image.tmdb.org/t/p/w780/oSGDoVBU8XjGxQfoPM658NshCHH.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
+    "overview": "El ingeniero y arqueólogo Rolando se ve envuelto sin querer en una intriga alrededor de un plano del tesoro.",
+    "release_date": "1966-01-01",
+    "runtime": 85,
     "genres": [],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=tNaF5f6bHEg"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=tNaF5f6bHEg",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:13+00:00"
   },
   {
     "youtube_id": "3gnjDid4wx8",
@@ -1916,7 +1957,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=3gnjDid4wx8"
+    "youtube_url": "https://www.youtube.com/watch?v=3gnjDid4wx8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:14+00:00",
+    "next_retry_at": "2026-10-28T18:00:14+00:00"
   },
   {
     "youtube_id": "BU09V2uZVuI",
@@ -1988,19 +2032,23 @@
     "youtube_title": "Regalo maldito (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-23T03:32:06Z",
-    "title": "Regalo maldito (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Gift: El Regalo Maldito",
+    "tmdb_id": 1355869,
+    "poster": "https://image.tmdb.org/t/p/w780/sldECoLgKxMZNVu1j79SqGlLs3M.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "release_date": "2017-04-10",
+    "runtime": 0,
+    "genres": [
+      "Terror"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=E_tf5MsrVnA"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=E_tf5MsrVnA",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:15+00:00"
   },
   {
     "youtube_id": "tyPMu1NV8lo",
@@ -2064,7 +2112,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=ujB6CuWh-tQ"
+    "youtube_url": "https://www.youtube.com/watch?v=ujB6CuWh-tQ",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:16+00:00",
+    "next_retry_at": "2026-10-28T18:00:16+00:00"
   },
   {
     "youtube_id": "1Vmp6nS-N_s",
@@ -2127,7 +2178,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=lNrnchHJ6b8"
+    "youtube_url": "https://www.youtube.com/watch?v=lNrnchHJ6b8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:17+00:00",
+    "next_retry_at": "2026-10-28T18:00:17+00:00"
   },
   {
     "youtube_id": "5QYgKCKStEI",
@@ -2146,7 +2200,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=5QYgKCKStEI"
+    "youtube_url": "https://www.youtube.com/watch?v=5QYgKCKStEI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:18+00:00",
+    "next_retry_at": "2026-10-28T18:00:18+00:00"
   },
   {
     "youtube_id": "rl2u-emLNng",
@@ -2188,26 +2245,33 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=rZ2ZX7GVs9s"
+    "youtube_url": "https://www.youtube.com/watch?v=rZ2ZX7GVs9s",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:19+00:00",
+    "next_retry_at": "2026-10-28T18:00:19+00:00"
   },
   {
     "youtube_id": "E47RfmZTixE",
     "youtube_title": "Juego sucio (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-23T03:32:06Z",
-    "title": "Juego sucio (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Juego sucio en Panamá",
+    "tmdb_id": 99897,
+    "poster": "https://image.tmdb.org/t/p/w780/8s9JM69k24ckOv5pfyHjRazdZdJ.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "overview": "Un escritor fracasado que atraviesa además una crisis sentimental toma una drástica decisión durante una partida de póquer. La apuesta es su propia vida, y las reglas del juego están determinadas por una carta que él mismo ha marcado: quien la obtenga tendrá que matarlo y heredará su dinero.",
+    "release_date": "1975-08-22",
+    "runtime": 94,
+    "genres": [
+      "Suspense"
+    ],
     "quality": "4K",
-    "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=E47RfmZTixE"
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=E47RfmZTixE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:20+00:00"
   },
   {
     "youtube_id": "pMi-uV2NA5w",
@@ -2249,7 +2313,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=1dnZ5KjtiHc"
+    "youtube_url": "https://www.youtube.com/watch?v=1dnZ5KjtiHc",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:21+00:00",
+    "next_retry_at": "2026-10-28T18:00:21+00:00"
   },
   {
     "youtube_id": "AJA7eC0PYlA",
@@ -2429,7 +2496,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=cZ962-0Q2pU"
+    "youtube_url": "https://www.youtube.com/watch?v=cZ962-0Q2pU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:22+00:00",
+    "next_retry_at": "2026-10-28T18:00:22+00:00"
   },
   {
     "youtube_id": "13fKcgaJGNA",
@@ -2582,26 +2652,33 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=IMCQ_MQF0tU"
+    "youtube_url": "https://www.youtube.com/watch?v=IMCQ_MQF0tU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:23+00:00",
+    "next_retry_at": "2026-10-28T18:00:23+00:00"
   },
   {
     "youtube_id": "-tMLi9ul4SI",
     "youtube_title": "Ajuste de cuentas (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T10:44:54Z",
-    "title": "Ajuste de cuentas (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Ajuste de Cuentas",
+    "tmdb_id": 1511155,
+    "poster": "https://image.tmdb.org/t/p/w780/o4B8CZNFkDKKYzCQYWou2lJLkq9.jpg",
     "logo": null,
-    "backdrop": null,
+    "backdrop": "https://image.tmdb.org/t/p/original/omGReZTbyHvOgynj2QYRLBtLtJv.jpg",
     "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "release_date": "1984-07-09",
+    "runtime": 0,
+    "genres": [
+      "Crimen"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=-tMLi9ul4SI"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=-tMLi9ul4SI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:24+00:00"
   },
   {
     "youtube_id": "2SGckn37qsE",
@@ -2620,7 +2697,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=2SGckn37qsE"
+    "youtube_url": "https://www.youtube.com/watch?v=2SGckn37qsE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:25+00:00",
+    "next_retry_at": "2026-10-28T18:00:25+00:00"
   },
   {
     "youtube_id": "eQKj8I-f0bA",
@@ -2639,7 +2719,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=eQKj8I-f0bA"
+    "youtube_url": "https://www.youtube.com/watch?v=eQKj8I-f0bA",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:26+00:00",
+    "next_retry_at": "2026-10-28T18:00:26+00:00"
   },
   {
     "youtube_id": "9ICabjHILE4",
@@ -2658,7 +2741,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=9ICabjHILE4"
+    "youtube_url": "https://www.youtube.com/watch?v=9ICabjHILE4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:27+00:00",
+    "next_retry_at": "2026-10-28T18:00:27+00:00"
   },
   {
     "youtube_id": "x28ddkJF0Ys",
@@ -2722,7 +2808,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=xLc_kqKFJU0"
+    "youtube_url": "https://www.youtube.com/watch?v=xLc_kqKFJU0",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:28+00:00",
+    "next_retry_at": "2026-10-28T18:00:28+00:00"
   },
   {
     "youtube_id": "twPYZAC7Ghs",
@@ -2741,7 +2830,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=twPYZAC7Ghs"
+    "youtube_url": "https://www.youtube.com/watch?v=twPYZAC7Ghs",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:29+00:00",
+    "next_retry_at": "2026-10-28T18:00:29+00:00"
   },
   {
     "youtube_id": "TUR3j1io3b4",
@@ -2806,7 +2898,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=CwA4EGL6IRI"
+    "youtube_url": "https://www.youtube.com/watch?v=CwA4EGL6IRI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:30+00:00",
+    "next_retry_at": "2026-10-28T18:00:30+00:00"
   },
   {
     "youtube_id": "M5ErfGShu2s",
@@ -2871,7 +2966,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Zu3DO0VbT0g"
+    "youtube_url": "https://www.youtube.com/watch?v=Zu3DO0VbT0g",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:31+00:00",
+    "next_retry_at": "2026-10-28T18:00:31+00:00"
   },
   {
     "youtube_id": "X2JeOdHKLT0",
@@ -2936,7 +3034,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=STeNqGBA3yM"
+    "youtube_url": "https://www.youtube.com/watch?v=STeNqGBA3yM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:32+00:00",
+    "next_retry_at": "2026-10-28T18:00:32+00:00"
   },
   {
     "youtube_id": "9CC0VxgomwI",
@@ -3016,19 +3117,23 @@
     "youtube_title": "Baila, Vini (2025) HD 1080p [DOCUMENTAL]",
     "description": "",
     "published_at": "2026-10-25T10:44:54Z",
-    "title": "Baila, Vini (2025) [DOCUMENTAL]",
-    "tmdb_id": null,
-    "poster": null,
-    "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "title": "Baila, Vini",
+    "tmdb_id": 1390394,
+    "poster": "https://image.tmdb.org/t/p/w780/s1zEsvB5XoS0Gqr7tmnNZExVdRI.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/72SiqX4eemC0dBqSbt6KLAR8gAR.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/qQ9i4mO2GrUFR3gLWjf8J6s3Wf3.jpg",
+    "overview": "\"Vini Jr.\", un documental sobre la vida de Vinícius Júnior, uno de los delanteros más prometedores del fútbol. Con impresionantes números, Vini Jr es una estrella de la selección brasileña, y la trama lo sigue en el decisivo año de 2024. Ganador de la UEFA Champions League y con la posibilidad de ganar el premio The Best de la FIFA. Reconocido también por su valentía en la lucha contra el racismo, muestra las dificultades que experimentó durante la liga española. Con la presencia de varios ídolos deportivos, como Neymar, Karim Benzema, Jude Bellingham y Tony Kroos, el documental analiza el impacto del jugador dentro y fuera del campo.",
+    "release_date": "2025-05-15",
+    "runtime": 106,
+    "genres": [
+      "Documental"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Ix3XntDP91Q"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=Ix3XntDP91Q",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:33+00:00"
   },
   {
     "youtube_id": "AbHMBQfkHW4",
@@ -3092,7 +3197,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=7m6xKDjHU7s"
+    "youtube_url": "https://www.youtube.com/watch?v=7m6xKDjHU7s",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:34+00:00",
+    "next_retry_at": "2026-10-28T18:00:34+00:00"
   },
   {
     "youtube_id": "oe3_1NzZImU",
@@ -3111,7 +3219,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=oe3_1NzZImU"
+    "youtube_url": "https://www.youtube.com/watch?v=oe3_1NzZImU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:35+00:00",
+    "next_retry_at": "2026-10-28T18:00:35+00:00"
   },
   {
     "youtube_id": "RNGFtrHVehA",
@@ -3130,7 +3241,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=RNGFtrHVehA"
+    "youtube_url": "https://www.youtube.com/watch?v=RNGFtrHVehA",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:36+00:00",
+    "next_retry_at": "2026-10-28T18:00:36+00:00"
   },
   {
     "youtube_id": "CsidFwRdXgw",
@@ -3219,7 +3333,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Dy9xz7x0ewM"
+    "youtube_url": "https://www.youtube.com/watch?v=Dy9xz7x0ewM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:37+00:00",
+    "next_retry_at": "2026-10-28T18:00:37+00:00"
   },
   {
     "youtube_id": "_xCLJdBm1ZM",
@@ -3306,7 +3423,10 @@
     "quality": "HD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=lVBlqp4yot4"
+    "youtube_url": "https://www.youtube.com/watch?v=lVBlqp4yot4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:38+00:00",
+    "next_retry_at": "2026-10-28T18:00:38+00:00"
   },
   {
     "youtube_id": "3adfY5VtVxs",
@@ -3325,7 +3445,10 @@
     "quality": "HD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=3adfY5VtVxs"
+    "youtube_url": "https://www.youtube.com/watch?v=3adfY5VtVxs",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:39+00:00",
+    "next_retry_at": "2026-10-28T18:00:39+00:00"
   },
   {
     "youtube_id": "9e7363ILjdM",
@@ -3344,7 +3467,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=9e7363ILjdM"
+    "youtube_url": "https://www.youtube.com/watch?v=9e7363ILjdM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:40+00:00",
+    "next_retry_at": "2026-10-28T18:00:40+00:00"
   },
   {
     "youtube_id": "V5CsULNKBLw",
@@ -3521,7 +3647,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=DtI7C8cSIac"
+    "youtube_url": "https://www.youtube.com/watch?v=DtI7C8cSIac",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:41+00:00",
+    "next_retry_at": "2026-10-28T18:00:41+00:00"
   },
   {
     "youtube_id": "r5f7CpPbmck",
@@ -3540,7 +3669,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=r5f7CpPbmck"
+    "youtube_url": "https://www.youtube.com/watch?v=r5f7CpPbmck",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:42+00:00",
+    "next_retry_at": "2026-10-28T18:00:42+00:00"
   },
   {
     "youtube_id": "AmQEhQ-1kEU",
@@ -3559,7 +3691,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=AmQEhQ-1kEU"
+    "youtube_url": "https://www.youtube.com/watch?v=AmQEhQ-1kEU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:43+00:00",
+    "next_retry_at": "2026-10-28T18:00:43+00:00"
   },
   {
     "youtube_id": "2HULDq0CTak",
@@ -3601,7 +3736,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=OJ1_rm60BEI"
+    "youtube_url": "https://www.youtube.com/watch?v=OJ1_rm60BEI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:44+00:00",
+    "next_retry_at": "2026-10-28T18:00:44+00:00"
   },
   {
     "youtube_id": "Sd4M4txkHQs",
@@ -3620,7 +3758,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Sd4M4txkHQs"
+    "youtube_url": "https://www.youtube.com/watch?v=Sd4M4txkHQs",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:46+00:00",
+    "next_retry_at": "2026-10-28T18:00:46+00:00"
   },
   {
     "youtube_id": "ECfTNo3UmSI",
@@ -3749,7 +3890,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=NtsrbDp8Oeo"
+    "youtube_url": "https://www.youtube.com/watch?v=NtsrbDp8Oeo",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:47+00:00",
+    "next_retry_at": "2026-10-28T18:00:47+00:00"
   },
   {
     "youtube_id": "cW3hAnPn4BA",
@@ -3790,7 +3934,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=R7E7A4bBT34"
+    "youtube_url": "https://www.youtube.com/watch?v=R7E7A4bBT34",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:48+00:00",
+    "next_retry_at": "2026-10-28T18:00:48+00:00"
   },
   {
     "youtube_id": "Yc5d7Snd2uQ",
@@ -3832,7 +3979,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=YfQtKeBAXLM"
+    "youtube_url": "https://www.youtube.com/watch?v=YfQtKeBAXLM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:49+00:00",
+    "next_retry_at": "2026-10-28T18:00:49+00:00"
   },
   {
     "youtube_id": "Z7tYYau6kF4",
@@ -3863,19 +4013,23 @@
     "youtube_title": "La evaluación (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T10:52:56Z",
-    "title": "La evaluación (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "La evaluación",
+    "tmdb_id": 1143057,
+    "poster": "https://image.tmdb.org/t/p/w780/yiP0ZYvTjLyIYrwlvmkmL3RbFdS.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "release_date": "2022-10-22",
+    "runtime": 0,
+    "genres": [
+      "Documental"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=dv-XLAZAhfw"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=dv-XLAZAhfw",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:50+00:00"
   },
   {
     "youtube_id": "muBbpD0iS9Y",
@@ -3951,19 +4105,23 @@
     "youtube_title": "Estragos (2025) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T10:55:52Z",
-    "title": "Estragos (2025)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Estragos",
+    "tmdb_id": 1425345,
+    "poster": "https://image.tmdb.org/t/p/w780/7iV0vdYZ2oKyjtD5QhlQ7xxFY3h.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "overview": "Un trabajador de la Comisión Federal de Electricidad sufre un accidente que cambia su vida y la manera de afrontarla, se somete a un cambio emocional que perjudica su relación con su único familiar, esta travesía lo lleva a tomar una decisión difícil.5​",
+    "release_date": "2017-01-15",
+    "runtime": 7,
+    "genres": [
+      "Drama"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=cLFC-lAH0EQ"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=cLFC-lAH0EQ",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:51+00:00"
   },
   {
     "youtube_id": "bvKgBfcLIi0",
@@ -4188,7 +4346,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=j6rx4am7QuI"
+    "youtube_url": "https://www.youtube.com/watch?v=j6rx4am7QuI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:52+00:00",
+    "next_retry_at": "2026-10-28T18:00:52+00:00"
   },
   {
     "youtube_id": "9p4a7a95RjM",
@@ -4207,7 +4368,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=9p4a7a95RjM"
+    "youtube_url": "https://www.youtube.com/watch?v=9p4a7a95RjM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:53+00:00",
+    "next_retry_at": "2026-10-28T18:00:53+00:00"
   },
   {
     "youtube_id": "yy-Jf8JPBV4",
@@ -4226,7 +4390,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=yy-Jf8JPBV4"
+    "youtube_url": "https://www.youtube.com/watch?v=yy-Jf8JPBV4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:54+00:00",
+    "next_retry_at": "2026-10-28T18:00:54+00:00"
   },
   {
     "youtube_id": "SqPM41E37sI",
@@ -4245,7 +4412,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=SqPM41E37sI"
+    "youtube_url": "https://www.youtube.com/watch?v=SqPM41E37sI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:55+00:00",
+    "next_retry_at": "2026-10-28T18:00:55+00:00"
   },
   {
     "youtube_id": "F-sMEKFwcyU",
@@ -4286,7 +4456,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=FX77xqm0rNk"
+    "youtube_url": "https://www.youtube.com/watch?v=FX77xqm0rNk",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:56+00:00",
+    "next_retry_at": "2026-10-28T18:00:56+00:00"
   },
   {
     "youtube_id": "mgTIvoZqiSE",
@@ -4327,7 +4500,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=MDwz6VNWUbc"
+    "youtube_url": "https://www.youtube.com/watch?v=MDwz6VNWUbc",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:57+00:00",
+    "next_retry_at": "2026-10-28T18:00:57+00:00"
   },
   {
     "youtube_id": "TOX2ThCGxOY",
@@ -4368,7 +4544,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=4R613Ts5Nqs"
+    "youtube_url": "https://www.youtube.com/watch?v=4R613Ts5Nqs",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:58+00:00",
+    "next_retry_at": "2026-10-28T18:00:58+00:00"
   },
   {
     "youtube_id": "uwjyGL-C0i8",
@@ -4387,7 +4566,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=uwjyGL-C0i8"
+    "youtube_url": "https://www.youtube.com/watch?v=uwjyGL-C0i8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:00:59+00:00",
+    "next_retry_at": "2026-10-28T18:00:59+00:00"
   },
   {
     "youtube_id": "OONuV-xqghA",
@@ -4619,19 +4801,24 @@
     "youtube_title": "La Venganza del Dragón (2023) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T10:59:58Z",
-    "title": "La Venganza del Dragón (2023)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Extermineitors II: La venganza del Dragón",
+    "tmdb_id": 197498,
+    "poster": "https://image.tmdb.org/t/p/w780/z19yh7E72weO4L4SZ3eT2LcRXtq.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/hNtPSpwz48uhxze08QD06EyenFb.jpg",
+    "overview": "El Dragón se encuentra en prisión dispuesto a fugarse y vengarse de quienes lo detuvieron. Para ello recibirá ayuda de una organización de mafiosos que se mueve en el mundo de las apuestas clandestinas relacionadas con las peleas de artes marciales a nivel internacional y vinculados también con el narcotráfico. En la cárcel, el Dragón se encuentra con un siniestro personaje, Randolph McClain, un americano encarcelado por haber matado a sus contrincantes. Pero una vez puesto en libertad en enviado para competir por el Campeonato Mundial de Artes Marciales con Héctor Echavarría, luchador argentino y campeón mundial.",
+    "release_date": "1990-07-12",
+    "runtime": 82,
+    "genres": [
+      "Acción",
+      "Comedia"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=v2bcsePrbP4"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=v2bcsePrbP4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:00+00:00"
   },
   {
     "youtube_id": "Q5fgPaCXdfw",
@@ -4810,7 +4997,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Wyo7OlbGCtI"
+    "youtube_url": "https://www.youtube.com/watch?v=Wyo7OlbGCtI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:01+00:00",
+    "next_retry_at": "2026-10-28T18:01:01+00:00"
   },
   {
     "youtube_id": "DSXA-_VV3W4",
@@ -4966,7 +5156,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=WVREMI25v80"
+    "youtube_url": "https://www.youtube.com/watch?v=WVREMI25v80",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:02+00:00",
+    "next_retry_at": "2026-10-28T18:01:02+00:00"
   },
   {
     "youtube_id": "ZHQiSOBe2Cw",
@@ -5118,7 +5311,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=nEDjAPtTWNY"
+    "youtube_url": "https://www.youtube.com/watch?v=nEDjAPtTWNY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:03+00:00",
+    "next_retry_at": "2026-10-28T18:01:03+00:00"
   },
   {
     "youtube_id": "yDI8reRec1U",
@@ -5192,19 +5388,23 @@
     "youtube_title": "Canina (2024) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:07:50Z",
-    "title": "Canina (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Caninabis",
+    "tmdb_id": 504446,
+    "poster": "https://image.tmdb.org/t/p/w780/4lkQSVfIaxnMhOFvmAx10YLLnzw.jpg",
     "logo": null,
-    "backdrop": null,
+    "backdrop": "https://image.tmdb.org/t/p/original/7z6KxSiKvYBKJ97mb9ZbznxLePO.jpg",
     "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "release_date": "1979-02-10",
+    "runtime": 10,
+    "genres": [
+      "Animación"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=4XJUtQBrIu8"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=4XJUtQBrIu8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:05+00:00"
   },
   {
     "youtube_id": "1J76Vuh47Dc",
@@ -5223,7 +5423,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=1J76Vuh47Dc"
+    "youtube_url": "https://www.youtube.com/watch?v=1J76Vuh47Dc",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:06+00:00",
+    "next_retry_at": "2026-10-28T18:01:06+00:00"
   },
   {
     "youtube_id": "0MGK-SgLFl8",
@@ -5242,7 +5445,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=0MGK-SgLFl8"
+    "youtube_url": "https://www.youtube.com/watch?v=0MGK-SgLFl8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:07+00:00",
+    "next_retry_at": "2026-10-28T18:01:07+00:00"
   },
   {
     "youtube_id": "733cXLMbqxM",
@@ -5282,7 +5488,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=AHOGKgtdMCk"
+    "youtube_url": "https://www.youtube.com/watch?v=AHOGKgtdMCk",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:08+00:00",
+    "next_retry_at": "2026-10-28T18:01:08+00:00"
   },
   {
     "youtube_id": "nvaMtQ2TNSc",
@@ -5301,26 +5510,35 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=nvaMtQ2TNSc"
+    "youtube_url": "https://www.youtube.com/watch?v=nvaMtQ2TNSc",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:09+00:00",
+    "next_retry_at": "2026-10-28T18:01:09+00:00"
   },
   {
     "youtube_id": "6j98AV2RIts",
     "youtube_title": "Furia Asesina (2024) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:07:50Z",
-    "title": "Furia Asesina (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Furia asesina",
+    "tmdb_id": 259920,
+    "poster": "https://image.tmdb.org/t/p/w780/hkwNEYZqwazU54jiRvfIc9ad3YC.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "overview": "Un grupo de científicos convencidos que los tiburones son una esperanza para las enfermedades mortales que atacan al hombre, se lanzan a una peligrosa aventura en busca de las pruebas que confirmen sus teorías.",
+    "release_date": "1990-03-20",
+    "runtime": 96,
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Terror"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=6j98AV2RIts"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=6j98AV2RIts",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:10+00:00"
   },
   {
     "youtube_id": "BEm3sCunA_E",
@@ -5339,7 +5557,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=BEm3sCunA_E"
+    "youtube_url": "https://www.youtube.com/watch?v=BEm3sCunA_E",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:11+00:00",
+    "next_retry_at": "2026-10-28T18:01:11+00:00"
   },
   {
     "youtube_id": "_mbPvcR_6xw",
@@ -5358,7 +5579,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=_mbPvcR_6xw"
+    "youtube_url": "https://www.youtube.com/watch?v=_mbPvcR_6xw",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:12+00:00",
+    "next_retry_at": "2026-10-28T18:01:12+00:00"
   },
   {
     "youtube_id": "q6uRS1sd3_g",
@@ -5377,7 +5601,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=q6uRS1sd3_g"
+    "youtube_url": "https://www.youtube.com/watch?v=q6uRS1sd3_g",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:13+00:00",
+    "next_retry_at": "2026-10-28T18:01:13+00:00"
   },
   {
     "youtube_id": "g7OdMsIyoFE",
@@ -5396,7 +5623,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=g7OdMsIyoFE"
+    "youtube_url": "https://www.youtube.com/watch?v=g7OdMsIyoFE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:14+00:00",
+    "next_retry_at": "2026-10-28T18:01:14+00:00"
   },
   {
     "youtube_id": "DjRPkUdzX5A",
@@ -5460,7 +5690,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=zH5RwAEW-zU"
+    "youtube_url": "https://www.youtube.com/watch?v=zH5RwAEW-zU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:15+00:00",
+    "next_retry_at": "2026-10-28T18:01:15+00:00"
   },
   {
     "youtube_id": "t26o7KCWDLE",
@@ -5535,19 +5768,25 @@
     "youtube_title": "Perros de guerra (2024) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:11:03Z",
-    "title": "Perros de guerra (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Perros de Guerra",
+    "tmdb_id": 1555636,
+    "poster": "https://image.tmdb.org/t/p/w780/jbgeXdUl9e5MczLIazx4f1sZCEX.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "overview": "Osfran y Beltrán son dos matones a sueldo que reciben una misión de su jefe: recuperar un paquete muy valioso de otros  contactos. A medida que avanzan en la tarea, empiezan a sospechar que la misión es una trampa y que su propio jefe planea deshacerse de ellos, refiriéndose a la necesidad de \"atar cabos sueltos\".",
+    "release_date": "2025-09-17",
+    "runtime": 22,
+    "genres": [
+      "Acción",
+      "Comedia",
+      "Crimen"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Mjt7-hwVF_M"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=Mjt7-hwVF_M",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:16+00:00"
   },
   {
     "youtube_id": "lI7zImyuspg",
@@ -5680,7 +5919,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=7enZ7S_Jzhg"
+    "youtube_url": "https://www.youtube.com/watch?v=7enZ7S_Jzhg",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:17+00:00",
+    "next_retry_at": "2026-10-28T18:01:17+00:00"
   },
   {
     "youtube_id": "A3Ej9cCf_kI",
@@ -5732,19 +5974,23 @@
     "youtube_title": "Fragmentado (2016) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:11:03Z",
-    "title": "Fragmentado (2016)",
-    "tmdb_id": null,
+    "title": "Noche Fragmentado",
+    "tmdb_id": 1762701,
     "poster": null,
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/b47YPeQ6wt9fyHHYr02Li2WfdWd.jpg",
+    "overview": "Recuerdos, lagunas mentales, golpes, alcohol, sudor. No recuerdo muy bien que pasó la noche anterior, ni la pasada, ni ninguna.",
+    "release_date": "2026-09-03",
+    "runtime": 4,
+    "genres": [
+      "Drama"
+    ],
     "quality": "4K",
-    "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=qvGDKFSTDVI"
+    "age_rating": "18+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=qvGDKFSTDVI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:18+00:00"
   },
   {
     "youtube_id": "x7tgaiOv-QM",
@@ -5785,7 +6031,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=MT9VLnoq128"
+    "youtube_url": "https://www.youtube.com/watch?v=MT9VLnoq128",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:20+00:00",
+    "next_retry_at": "2026-10-28T18:01:20+00:00"
   },
   {
     "youtube_id": "fp6wdL5Cdf8",
@@ -5848,7 +6097,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=ySHDJS7LWrk"
+    "youtube_url": "https://www.youtube.com/watch?v=ySHDJS7LWrk",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:21+00:00",
+    "next_retry_at": "2026-10-28T18:01:21+00:00"
   },
   {
     "youtube_id": "S2U9oPfu8bw",
@@ -5890,7 +6142,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=SRzExsx4slQ"
+    "youtube_url": "https://www.youtube.com/watch?v=SRzExsx4slQ",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:22+00:00",
+    "next_retry_at": "2026-10-28T18:01:22+00:00"
   },
   {
     "youtube_id": "tNT8W1KV050",
@@ -5966,38 +6221,47 @@
     "youtube_title": "Equipaje de mano (2024) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:15:14Z",
-    "title": "Equipaje de mano (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Equipaje de mano",
+    "tmdb_id": 882907,
+    "poster": "https://image.tmdb.org/t/p/w780/f2Hj2obRz0pXIMIQnAvEOZ7b2IK.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
+    "release_date": "2020-09-18",
+    "runtime": 15,
     "genres": [],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=x_VmBjekF90"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=x_VmBjekF90",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:23+00:00"
   },
   {
     "youtube_id": "AfrLmP5cYY4",
     "youtube_title": "El Grinch (2000) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:15:14Z",
-    "title": "El Grinch (2000)",
-    "tmdb_id": null,
-    "poster": null,
-    "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "title": "El Grinch",
+    "tmdb_id": 360920,
+    "poster": "https://image.tmdb.org/t/p/w780/o3b6DOiePNlNOiqLCzCvqvDvHpL.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/jzl1BrLytFdkBDlT54ZrKSsHfZw.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/5lWIYxYEqWi8j3ZloxXntw3ImBo.jpg",
+    "overview": "El Grinch, la película de animación basada en el popular clásico navideño del Dr. Seuss, cuenta la historia de un cínico cascarrabias que se propone robar la Navidad hasta que el desbordante espíritu navideño de una niña le hace cambiar de opinión. Divertida, enternecedora y visualmente impactante, se trata de una historia universal sobre el indómito poder del optimismo.",
+    "release_date": "2018-11-08",
+    "runtime": 90,
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Familia",
+      "Fantasía"
+    ],
     "quality": "4K",
-    "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=AfrLmP5cYY4"
+    "age_rating": "A",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=AfrLmP5cYY4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:24+00:00"
   },
   {
     "youtube_id": "gQ1HORq0h2g",
@@ -6038,7 +6302,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=je9Qi2oT9kc"
+    "youtube_url": "https://www.youtube.com/watch?v=je9Qi2oT9kc",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:25+00:00",
+    "next_retry_at": "2026-10-28T18:01:25+00:00"
   },
   {
     "youtube_id": "OnmXw5nbw_o",
@@ -6102,7 +6369,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=kCt5gxv9AdA"
+    "youtube_url": "https://www.youtube.com/watch?v=kCt5gxv9AdA",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:26+00:00",
+    "next_retry_at": "2026-10-28T18:01:26+00:00"
   },
   {
     "youtube_id": "U5b4pW-iCik",
@@ -6257,7 +6527,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=vp-4kVsZMYM"
+    "youtube_url": "https://www.youtube.com/watch?v=vp-4kVsZMYM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:27+00:00",
+    "next_retry_at": "2026-10-28T18:01:27+00:00"
   },
   {
     "youtube_id": "aIAcWPnC1II",
@@ -6299,7 +6572,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=rL9ymOE6aqU"
+    "youtube_url": "https://www.youtube.com/watch?v=rL9ymOE6aqU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:28+00:00",
+    "next_retry_at": "2026-10-28T18:01:28+00:00"
   },
   {
     "youtube_id": "vPtTHcQm4j0",
@@ -6318,7 +6594,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=vPtTHcQm4j0"
+    "youtube_url": "https://www.youtube.com/watch?v=vPtTHcQm4j0",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:29+00:00",
+    "next_retry_at": "2026-10-28T18:01:29+00:00"
   },
   {
     "youtube_id": "e4rxUIl8nXo",
@@ -6360,7 +6639,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=qB-1P9drQvE"
+    "youtube_url": "https://www.youtube.com/watch?v=qB-1P9drQvE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:30+00:00",
+    "next_retry_at": "2026-10-28T18:01:30+00:00"
   },
   {
     "youtube_id": "jIfxU2BTMOM",
@@ -6446,7 +6728,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=ypXn0VXOtHY"
+    "youtube_url": "https://www.youtube.com/watch?v=ypXn0VXOtHY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:31+00:00",
+    "next_retry_at": "2026-10-28T18:01:31+00:00"
   },
   {
     "youtube_id": "n2Zp9hCxAFQ",
@@ -6626,7 +6911,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=-W-Wk0Bqe5s"
+    "youtube_url": "https://www.youtube.com/watch?v=-W-Wk0Bqe5s",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:32+00:00",
+    "next_retry_at": "2026-10-28T18:01:32+00:00"
   },
   {
     "youtube_id": "NxVPbCfBXtk",
@@ -6645,7 +6933,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=NxVPbCfBXtk"
+    "youtube_url": "https://www.youtube.com/watch?v=NxVPbCfBXtk",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:33+00:00",
+    "next_retry_at": "2026-10-28T18:01:33+00:00"
   },
   {
     "youtube_id": "lAbaXgiXuWM",
@@ -6664,7 +6955,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=lAbaXgiXuWM"
+    "youtube_url": "https://www.youtube.com/watch?v=lAbaXgiXuWM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:34+00:00",
+    "next_retry_at": "2026-10-28T18:01:34+00:00"
   },
   {
     "youtube_id": "G2L_-t-EJmw",
@@ -6729,26 +7023,31 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=ZjqRAF5Bwgk"
+    "youtube_url": "https://www.youtube.com/watch?v=ZjqRAF5Bwgk",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:35+00:00",
+    "next_retry_at": "2026-10-28T18:01:35+00:00"
   },
   {
     "youtube_id": "FIPZuD2MPIM",
     "youtube_title": "Fuera de temporada (2023) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:19:28Z",
-    "title": "Fuera de temporada (2023)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Fuera de temporada",
+    "tmdb_id": 601764,
+    "poster": "https://image.tmdb.org/t/p/w780/v1aw12QLFSxJ64HV3j6W7z0cuec.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
+    "overview": "Un fin de semana con amigos en una pileta en las afueras de una gran ciudad. Bruno aparece de pronto ante Vera. Solían ser pareja, y no se veían hace rato.",
+    "release_date": "2017-12-15",
+    "runtime": 23,
     "genres": [],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=FIPZuD2MPIM"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=FIPZuD2MPIM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:37+00:00"
   },
   {
     "youtube_id": "y5nZEkRiLgI",
@@ -6790,7 +7089,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=sqUUh-Au56k"
+    "youtube_url": "https://www.youtube.com/watch?v=sqUUh-Au56k",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:38+00:00",
+    "next_retry_at": "2026-10-28T18:01:38+00:00"
   },
   {
     "youtube_id": "Etj4EaAd0Zs",
@@ -6830,7 +7132,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=wc3P1FMoGJE"
+    "youtube_url": "https://www.youtube.com/watch?v=wc3P1FMoGJE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:39+00:00",
+    "next_retry_at": "2026-10-28T18:01:39+00:00"
   },
   {
     "youtube_id": "KlICT_pJmUA",
@@ -6893,7 +7198,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=onRQQ5O4P9k"
+    "youtube_url": "https://www.youtube.com/watch?v=onRQQ5O4P9k",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:40+00:00",
+    "next_retry_at": "2026-10-28T18:01:40+00:00"
   },
   {
     "youtube_id": "BTZPir8LMXw",
@@ -6933,7 +7241,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=cv0v68sJk4Q"
+    "youtube_url": "https://www.youtube.com/watch?v=cv0v68sJk4Q",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:41+00:00",
+    "next_retry_at": "2026-10-28T18:01:41+00:00"
   },
   {
     "youtube_id": "S7LdtjHwSAM",
@@ -6952,26 +7263,33 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=S7LdtjHwSAM"
+    "youtube_url": "https://www.youtube.com/watch?v=S7LdtjHwSAM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:42+00:00",
+    "next_retry_at": "2026-10-28T18:01:42+00:00"
   },
   {
     "youtube_id": "G6XPHCecNAs",
     "youtube_title": "El atraco (2024) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:24:40Z",
-    "title": "El atraco (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "El atraco",
+    "tmdb_id": 455735,
+    "poster": "https://image.tmdb.org/t/p/w780/vUNjrzKBm8cpAtLYBwM8aAbb2N4.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "overview": "Bolivia, finales de los años ochenta. Una camioneta que lleva una remesa de dinero en efectivo (el sueldo de miles de trabajadores mineros), es asaltada en pleno altiplano andino: el chofer, el cajero y el policía de escolta son victimados alevosamente. La cantidad de dinero robado sorprende y abruma a los mismos atracadores.",
+    "release_date": "2004-02-05",
+    "runtime": 121,
+    "genres": [
+      "Drama"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=G6XPHCecNAs"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=G6XPHCecNAs",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:43+00:00"
   },
   {
     "youtube_id": "t6lWs-vjKNo",
@@ -7000,19 +7318,23 @@
     "youtube_title": "Descansa en paz (2024) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:24:40Z",
-    "title": "Descansa en paz (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Descansa muy en paz, Amancio",
+    "tmdb_id": 1069312,
+    "poster": "https://image.tmdb.org/t/p/w780/67LyyqXoxsUre75buOARHimT1nT.jpg",
     "logo": null,
     "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "overview": "Una recién viuda visita la tumba artificial de su marido para llorar su muerte, poco tardará en perderlo de vista.",
+    "release_date": "2022-11-26",
+    "runtime": 5,
+    "genres": [
+      "Comedia"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=atCCZzHR1C8"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=atCCZzHR1C8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:44+00:00"
   },
   {
     "youtube_id": "3NU0nWXJuP4",
@@ -7031,7 +7353,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=3NU0nWXJuP4"
+    "youtube_url": "https://www.youtube.com/watch?v=3NU0nWXJuP4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:45+00:00",
+    "next_retry_at": "2026-10-28T18:01:45+00:00"
   },
   {
     "youtube_id": "HHZYtyscRvs",
@@ -7071,7 +7396,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=oACR0t_8m8A"
+    "youtube_url": "https://www.youtube.com/watch?v=oACR0t_8m8A",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:46+00:00",
+    "next_retry_at": "2026-10-28T18:01:46+00:00"
   },
   {
     "youtube_id": "B9YjJEjuoeg",
@@ -7155,7 +7483,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=gYOZzRa4Ago"
+    "youtube_url": "https://www.youtube.com/watch?v=gYOZzRa4Ago",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:47+00:00",
+    "next_retry_at": "2026-10-28T18:01:47+00:00"
   },
   {
     "youtube_id": "EXrq1KFBN9E",
@@ -7197,7 +7528,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=_wwXj-8zJsI"
+    "youtube_url": "https://www.youtube.com/watch?v=_wwXj-8zJsI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:48+00:00",
+    "next_retry_at": "2026-10-28T18:01:48+00:00"
   },
   {
     "youtube_id": "IuMvUVVtN50",
@@ -7216,7 +7550,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=IuMvUVVtN50"
+    "youtube_url": "https://www.youtube.com/watch?v=IuMvUVVtN50",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:49+00:00",
+    "next_retry_at": "2026-10-28T18:01:49+00:00"
   },
   {
     "youtube_id": "Vrt2dI5zeys",
@@ -7278,26 +7615,34 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=TM5lekvzTv8"
+    "youtube_url": "https://www.youtube.com/watch?v=TM5lekvzTv8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:50+00:00",
+    "next_retry_at": "2026-10-28T18:01:50+00:00"
   },
   {
     "youtube_id": "b9MFHCRTnfw",
     "youtube_title": "Sueños de otoño (2015) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:37:44Z",
-    "title": "Sueños de otoño (2015)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Sueños de Otoño",
+    "tmdb_id": 1766623,
+    "poster": "https://image.tmdb.org/t/p/w780/mB7dTsZffPHPHmZSp6nHqckNvfz.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "release_date": "2011-09-28",
+    "runtime": 27,
+    "genres": [
+      "Drama",
+      "Comedia"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=b9MFHCRTnfw"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=b9MFHCRTnfw",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:51+00:00"
   },
   {
     "youtube_id": "GnGyto3vdsE",
@@ -7370,19 +7715,26 @@
     "youtube_title": "Misión suicida (2024) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:37:44Z",
-    "title": "Misión suicida (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Misión suicida",
+    "tmdb_id": 286012,
+    "poster": "https://image.tmdb.org/t/p/w780/kxtqH08Lq9ewiGyDMN6Tz2fg31o.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/5P6pEp4WjaOiCv9PyfY39dDEEJe.jpg",
+    "overview": "Un científico nazi fugitivo, el doctor Muller, llega a México, secuestrado en Sudamérica por los secuaces de Sebastián. Muller tiene miedo de que sea una organización judía que se dedica a apresar a criminales de guerra la que se encuentra detrás del secuestro, pero Sebastián le dice que no, aunque sí que \"desde ahora está al servicio de la potencia que derrotó a Alemania y a Hitler con la ayuda de los países occidentales\" (vale decir, la Unión Soviética). Sebastián dirige en Santo Domingo un campo de entrenamiento para espías y saboteadores. Su plan es que el doctor Muller le lave el cerebro a los dominicanos, usando una droga secreta diseñada por los nazis. Pero, primero, Muller tiene que hacerse la cirugía estética para cambiar su aspecto.",
+    "release_date": "1973-04-05",
+    "runtime": 75,
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción",
+      "Western"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=CYsp3Geae5c"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=CYsp3Geae5c",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:53+00:00"
   },
   {
     "youtube_id": "iYczU563i30",
@@ -7401,7 +7753,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=iYczU563i30"
+    "youtube_url": "https://www.youtube.com/watch?v=iYczU563i30",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:54+00:00",
+    "next_retry_at": "2026-10-28T18:01:54+00:00"
   },
   {
     "youtube_id": "ET06mN8rNvY",
@@ -7420,7 +7775,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=ET06mN8rNvY"
+    "youtube_url": "https://www.youtube.com/watch?v=ET06mN8rNvY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:55+00:00",
+    "next_retry_at": "2026-10-28T18:01:55+00:00"
   },
   {
     "youtube_id": "jlkp85C5K6E",
@@ -7439,7 +7797,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=jlkp85C5K6E"
+    "youtube_url": "https://www.youtube.com/watch?v=jlkp85C5K6E",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:56+00:00",
+    "next_retry_at": "2026-10-28T18:01:56+00:00"
   },
   {
     "youtube_id": "DM2oo5oH24s",
@@ -7458,7 +7819,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=DM2oo5oH24s"
+    "youtube_url": "https://www.youtube.com/watch?v=DM2oo5oH24s",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:57+00:00",
+    "next_retry_at": "2026-10-28T18:01:57+00:00"
   },
   {
     "youtube_id": "LNOWf54HPPQ",
@@ -7499,7 +7863,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=KSHYIm8fcSs"
+    "youtube_url": "https://www.youtube.com/watch?v=KSHYIm8fcSs",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:58+00:00",
+    "next_retry_at": "2026-10-28T18:01:58+00:00"
   },
   {
     "youtube_id": "Yv29ca_BLB8",
@@ -7571,19 +7938,24 @@
     "youtube_title": "Victima imperfecta (2023) HD 1080p",
     "description": "La fiesta se tuerce: Dary agrede a Aly. Cuando Aly llama a la policía, es Anna quien responde y consigue evitar que la agresión vaya a más. Al día siguiente, Aly intenta seguir con su vida como si nada y relativiza los efectos de la agresión. Dary trata de autoconvencerse de una versión de los hechos que no le quita el sueño. Anna hace por seguir involucrada en el asunto. Comienza el juicio. ¿Qué consigue la justicia? ¿Qué se puede reparar?\n\nDrama | Abusos sexuales\n\nhttps://youtu.be/qpdIMz7yckE?si=W-fS8IxwMhdQ9OWP\n\nRecomendada para mayores de 12 años",
     "published_at": "2026-10-25T11:46:58Z",
-    "title": "Victima imperfecta (2023)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "The Imperfect Victim",
+    "tmdb_id": 1359332,
+    "poster": "https://image.tmdb.org/t/p/w780/uLH2QrV4aEZ7ZUZuSDTr0PJXyES.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/3DRVqNMqXWrj7K7Zm5NmnTuEjYT.jpg",
+    "overview": "En un tenso juicio, un prestigioso catedrático se encuentra en medio de una tormenta de acusaciones. A medida que se desentrañan las verdades ocultas, su vida y la reputación de quienes lo rodean estarán al borde del colapso.",
+    "release_date": "2024-12-31",
+    "runtime": 25,
+    "genres": [
+      "Drama",
+      "Suspense"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=LxCf33XFYq0"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=LxCf33XFYq0",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:01:59+00:00"
   },
   {
     "youtube_id": "gq3R0WhJIVY",
@@ -7626,7 +7998,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=DwcADhyEJxk"
+    "youtube_url": "https://www.youtube.com/watch?v=DwcADhyEJxk",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:00+00:00",
+    "next_retry_at": "2026-10-28T18:02:00+00:00"
   },
   {
     "youtube_id": "c5cLR7WUFW0",
@@ -7668,7 +8043,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=BozLR9dts9I"
+    "youtube_url": "https://www.youtube.com/watch?v=BozLR9dts9I",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:01+00:00",
+    "next_retry_at": "2026-10-28T18:02:01+00:00"
   },
   {
     "youtube_id": "MqC7429RUvc",
@@ -7697,19 +8075,21 @@
     "youtube_title": "La maquina del tiempo (2002) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:46:58Z",
-    "title": "La maquina del tiempo (2002)",
-    "tmdb_id": null,
+    "title": "La máquina del tiempo",
+    "tmdb_id": 1353446,
     "poster": null,
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
+    "release_date": "2024-09-05",
+    "runtime": 3,
     "genres": [],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=m9E8-twVxEE"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=m9E8-twVxEE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:02+00:00"
   },
   {
     "youtube_id": "Uz5ZddpKBmg",
@@ -7750,7 +8130,10 @@
     "quality": "HD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=LhSV30lectM"
+    "youtube_url": "https://www.youtube.com/watch?v=LhSV30lectM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:03+00:00",
+    "next_retry_at": "2026-10-28T18:02:03+00:00"
   },
   {
     "youtube_id": "h9B9IqNciwA",
@@ -7895,19 +8278,24 @@
     "youtube_title": "Los juegos del amor (2024) 4K 2160p",
     "description": "",
     "published_at": "2026-10-25T11:46:58Z",
-    "title": "Los juegos del amor (2024)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Los juegos del amor",
+    "tmdb_id": 269125,
+    "poster": "https://image.tmdb.org/t/p/w780/PHTz0AkebFKc1k3hNoxGszfqZZ.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/h3jC4rIdZISzdExZeB8jEyHS5g6.jpg",
+    "overview": "Suzanne, una joven anticuaria parisina, anhela tener un hijo con su amante, el atractivo y algo excéntrico Víctor, que prefiere su situación actual con Suzanne pero sin matrimonio ni hijos.",
+    "release_date": "1960-06-01",
+    "runtime": 86,
+    "genres": [
+      "Comedia",
+      "Romance"
+    ],
     "quality": "4K",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Tx_TYuHKChY"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=Tx_TYuHKChY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:04+00:00"
   },
   {
     "youtube_id": "3SrjQgXYmaU",
@@ -7971,7 +8359,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=89pPf6LGHzo"
+    "youtube_url": "https://www.youtube.com/watch?v=89pPf6LGHzo",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:05+00:00",
+    "next_retry_at": "2026-10-28T18:02:05+00:00"
   },
   {
     "youtube_id": "VL_FCmh0bVE",
@@ -7990,7 +8381,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=VL_FCmh0bVE"
+    "youtube_url": "https://www.youtube.com/watch?v=VL_FCmh0bVE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:06+00:00",
+    "next_retry_at": "2026-10-28T18:02:06+00:00"
   },
   {
     "youtube_id": "gGqk2jYvDBw",
@@ -8055,26 +8449,31 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=oqKRZAh21hY"
+    "youtube_url": "https://www.youtube.com/watch?v=oqKRZAh21hY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:07+00:00",
+    "next_retry_at": "2026-10-28T18:02:07+00:00"
   },
   {
     "youtube_id": "Tq-poZhtXgE",
     "youtube_title": "El precio de la venganza (2023) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:52:33Z",
-    "title": "El precio de la venganza (2023)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Condenado, el precio de la venganza",
+    "tmdb_id": 1702776,
+    "poster": "https://image.tmdb.org/t/p/w780/aX2vyISSBcbev4pmy1XkfVNXnfG.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
+    "release_date": "2021-01-01",
+    "runtime": 61,
     "genres": [],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Tq-poZhtXgE"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=Tq-poZhtXgE",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:09+00:00"
   },
   {
     "youtube_id": "TjxUZYzsbi0",
@@ -8093,7 +8492,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=TjxUZYzsbi0"
+    "youtube_url": "https://www.youtube.com/watch?v=TjxUZYzsbi0",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:10+00:00",
+    "next_retry_at": "2026-10-28T18:02:10+00:00"
   },
   {
     "youtube_id": "DbTlu8lBhhg",
@@ -8158,7 +8560,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=K6ynnBIRWBM"
+    "youtube_url": "https://www.youtube.com/watch?v=K6ynnBIRWBM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:11+00:00",
+    "next_retry_at": "2026-10-28T18:02:11+00:00"
   },
   {
     "youtube_id": "FGZTDN-jDZY",
@@ -8199,7 +8604,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=CNpZMoJXkPQ"
+    "youtube_url": "https://www.youtube.com/watch?v=CNpZMoJXkPQ",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:12+00:00",
+    "next_retry_at": "2026-10-28T18:02:12+00:00"
   },
   {
     "youtube_id": "TvqpE7-wOSg",
@@ -8262,7 +8670,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=hAwXEGvyng4"
+    "youtube_url": "https://www.youtube.com/watch?v=hAwXEGvyng4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:13+00:00",
+    "next_retry_at": "2026-10-28T18:02:13+00:00"
   },
   {
     "youtube_id": "zLpCU7-bMt8",
@@ -8281,7 +8692,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=zLpCU7-bMt8"
+    "youtube_url": "https://www.youtube.com/watch?v=zLpCU7-bMt8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:14+00:00",
+    "next_retry_at": "2026-10-28T18:02:14+00:00"
   },
   {
     "youtube_id": "ivrLXi1TngY",
@@ -8300,7 +8714,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=ivrLXi1TngY"
+    "youtube_url": "https://www.youtube.com/watch?v=ivrLXi1TngY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:15+00:00",
+    "next_retry_at": "2026-10-28T18:02:15+00:00"
   },
   {
     "youtube_id": "QAq4ziCIqqw",
@@ -8319,7 +8736,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=QAq4ziCIqqw"
+    "youtube_url": "https://www.youtube.com/watch?v=QAq4ziCIqqw",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:16+00:00",
+    "next_retry_at": "2026-10-28T18:02:16+00:00"
   },
   {
     "youtube_id": "-DBdQDhY7dw",
@@ -8370,19 +8790,24 @@
     "youtube_title": "El planeta de los simios - (R)Evolución (2011)  Full HD 1080p",
     "description": "",
     "published_at": "2026-10-25T11:52:33Z",
-    "title": "El planeta de los simios - (R)Evolución (2011)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "R",
+    "tmdb_id": 49207,
+    "poster": "https://image.tmdb.org/t/p/w780/jxMgFBcEkBPhoikocUBqXS3i6TP.jpg",
     "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "backdrop": "https://image.tmdb.org/t/p/original/gd4JXEnL3SAff3qth6Qx3ZNh3NO.jpg",
+    "overview": "La R del título representa a la joven protagonista, Rune, interpretada intrépidamente por Pilou Asbæk. Encarcelado por un asalto violento, es un joven engreído y apuesto ubicado en el pabellón de hardcore, donde su supervivencia depende de aprender rápidamente el mundo paralelo de reglas, honor y obligaciones de la prisión. R también representa a Rachid, un joven prisionero musulmán que se convierte en amigo y cómplice de Rune, desafiando las rígidas estratificaciones raciales entre los reclusos.",
+    "release_date": "2010-04-22",
+    "runtime": 99,
+    "genres": [
+      "Crimen",
+      "Drama"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=aIuufD9lIl8"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=aIuufD9lIl8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:18+00:00"
   },
   {
     "youtube_id": "DZWQgrQ58ZA",
@@ -8401,7 +8826,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=DZWQgrQ58ZA"
+    "youtube_url": "https://www.youtube.com/watch?v=DZWQgrQ58ZA",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:19+00:00",
+    "next_retry_at": "2026-10-28T18:02:19+00:00"
   },
   {
     "youtube_id": "7rxsDCxSzLY",
@@ -8420,7 +8848,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=7rxsDCxSzLY"
+    "youtube_url": "https://www.youtube.com/watch?v=7rxsDCxSzLY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:20+00:00",
+    "next_retry_at": "2026-10-28T18:02:20+00:00"
   },
   {
     "youtube_id": "dofZ0TdPS8s",
@@ -8584,19 +9015,24 @@
     "youtube_title": "La Cocina (2023) HD 1080p",
     "description": "Londres, 2040. Izi y Benji viven en un Londres futuro distópico en el que se han eliminado todas las viviendas sociales. Ambos luchan por navegar por el mundo como residentes de la Cocina, una comunidad que se niega a abandonar su hogar.\n\nCiencia ficción. Drama | Distopía. Crimen. Drama social\n\nhttps://youtu.be/q3BLeOieJsI?si=XvXfWaR9NQTy5rbK\n\nRecomendada para mayores de 12 años",
     "published_at": "2026-10-25T11:59:07Z",
-    "title": "La Cocina (2023)",
-    "tmdb_id": null,
-    "poster": null,
-    "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "title": "La cocina",
+    "tmdb_id": 966238,
+    "poster": "https://image.tmdb.org/t/p/w780/lzPnV47oaw6VCTreQG8eLZ55Vny.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/waaTMZeOMJg3seX3jAw5qrkAYvK.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/2yvzBVtMGCtw1Em9a7W1fxuTzIU.jpg",
+    "overview": "Es la hora punta del almuerzo en The Grill, una trampa para turistas de Nueva York que atiende a miles de clientes un viernes normal como hoy. Ha desaparecido dinero de la caja y todos los trabajadores están siendo interrogados. La mayoría de ellos son inmigrantes ilegales y luchan por defender su trabajo, el único lugar que les corresponde en el mundo, mientras preparan un sinfín de platos, tratando de seguir el ritmo del flujo constante de pedidos que llegan del comedor. Uno de los cocineros es Pedro, un joven mexicano que busca en la vida algo más que este trabajo. Es un soñador que está enamorado de Julia, una camarera estadounidense que no puede comprometerse en una relación con un extranjero indocumentado. Rashid, el dueño de The Grill, ha prometido ayudar a Pedro con sus papeles. Pero cuando Pedro es acusado de robar el dinero se precipita hacia un acto que detendrá la cadena de producción en la cocina de una vez por todas. Basada en la aclamada obra teatral de Arnold Wesker.",
+    "release_date": "2024-10-25",
+    "runtime": 139,
+    "genres": [
+      "Drama",
+      "Comedia"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=AtZpM0YOA5Y"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=AtZpM0YOA5Y",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:21+00:00"
   },
   {
     "youtube_id": "JdOg9zqzpvU",
@@ -8684,7 +9120,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Mpk_4eTca4s"
+    "youtube_url": "https://www.youtube.com/watch?v=Mpk_4eTca4s",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:22+00:00",
+    "next_retry_at": "2026-10-28T18:02:22+00:00"
   },
   {
     "youtube_id": "imiBeOZ16jk",
@@ -8745,7 +9184,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=NFQzPjssQXI"
+    "youtube_url": "https://www.youtube.com/watch?v=NFQzPjssQXI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:23+00:00",
+    "next_retry_at": "2026-10-28T18:02:23+00:00"
   },
   {
     "youtube_id": "AUVJwXJCm1g",
@@ -8809,7 +9251,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=MkZIJhX_1bg"
+    "youtube_url": "https://www.youtube.com/watch?v=MkZIJhX_1bg",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:24+00:00",
+    "next_retry_at": "2026-10-28T18:02:24+00:00"
   },
   {
     "youtube_id": "nOF79aYFSbo",
@@ -8873,7 +9318,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=Y9vRBlgeJwM"
+    "youtube_url": "https://www.youtube.com/watch?v=Y9vRBlgeJwM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:25+00:00",
+    "next_retry_at": "2026-10-28T18:02:25+00:00"
   },
   {
     "youtube_id": "2-yawl91Kuw",
@@ -9000,7 +9448,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=oQHZnt0gJEY"
+    "youtube_url": "https://www.youtube.com/watch?v=oQHZnt0gJEY",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:26+00:00",
+    "next_retry_at": "2026-10-28T18:02:26+00:00"
   },
   {
     "youtube_id": "54HMf6wqZec",
@@ -9065,7 +9516,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=yF3-jSfW_P8"
+    "youtube_url": "https://www.youtube.com/watch?v=yF3-jSfW_P8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:27+00:00",
+    "next_retry_at": "2026-10-28T18:02:27+00:00"
   },
   {
     "youtube_id": "-XnTpUybD5g",
@@ -9220,7 +9674,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=3GQmbDpzlmM"
+    "youtube_url": "https://www.youtube.com/watch?v=3GQmbDpzlmM",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:28+00:00",
+    "next_retry_at": "2026-10-28T18:02:28+00:00"
   },
   {
     "youtube_id": "3PVPGHDJYhQ",
@@ -9293,7 +9750,7 @@
     "youtube_title": "Juicio al diablo (2023)HD 1080p  [DOCUMENTAL]",
     "description": "",
     "published_at": "2026-10-25T12:05:06Z",
-    "title": "Juicio al diablo (2023) [DOCUMENTAL]",
+    "title": "Juicio al diablo (2023)",
     "tmdb_id": null,
     "poster": null,
     "logo": null,
@@ -9305,7 +9762,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=1QfjulFB6Q8"
+    "youtube_url": "https://www.youtube.com/watch?v=1QfjulFB6Q8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:29+00:00",
+    "next_retry_at": "2026-10-28T18:02:29+00:00"
   },
   {
     "youtube_id": "JAH3l5R54TU",
@@ -9324,7 +9784,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=JAH3l5R54TU"
+    "youtube_url": "https://www.youtube.com/watch?v=JAH3l5R54TU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:30+00:00",
+    "next_retry_at": "2026-10-28T18:02:30+00:00"
   },
   {
     "youtube_id": "AeYCx5MBagA",
@@ -9364,7 +9827,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=eFbUEHbO2xI"
+    "youtube_url": "https://www.youtube.com/watch?v=eFbUEHbO2xI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:31+00:00",
+    "next_retry_at": "2026-10-28T18:02:31+00:00"
   },
   {
     "youtube_id": "yfrt0Hhpx1I",
@@ -9383,7 +9849,10 @@
     "quality": "4K",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=yfrt0Hhpx1I"
+    "youtube_url": "https://www.youtube.com/watch?v=yfrt0Hhpx1I",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:32+00:00",
+    "next_retry_at": "2026-10-28T18:02:32+00:00"
   },
   {
     "youtube_id": "uYBIY2-ylZI",
@@ -9412,19 +9881,23 @@
     "youtube_title": "Asediado (2023) HD 1080p",
     "description": "",
     "published_at": "2026-10-25T12:05:06Z",
-    "title": "Asediado (2023)",
-    "tmdb_id": null,
-    "poster": null,
+    "title": "Asediados",
+    "tmdb_id": 1507654,
+    "poster": "https://image.tmdb.org/t/p/w780/xvNjMkb0CPXa71xwFJoLaJdnl7p.jpg",
     "logo": null,
     "backdrop": null,
     "overview": "",
-    "release_date": "",
-    "runtime": null,
-    "genres": [],
+    "release_date": "2024-11-22",
+    "runtime": 110,
+    "genres": [
+      "Drama"
+    ],
     "quality": "FHD",
     "age_rating": "",
-    "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=l-JtdPJjtv8"
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=l-JtdPJjtv8",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:33+00:00"
   },
   {
     "youtube_id": "BImzv5CBoQU",
@@ -9443,7 +9916,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=BImzv5CBoQU"
+    "youtube_url": "https://www.youtube.com/watch?v=BImzv5CBoQU",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:34+00:00",
+    "next_retry_at": "2026-10-28T18:02:34+00:00"
   },
   {
     "youtube_id": "7bxK1hX2kL4",
@@ -9462,7 +9938,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=7bxK1hX2kL4"
+    "youtube_url": "https://www.youtube.com/watch?v=7bxK1hX2kL4",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:35+00:00",
+    "next_retry_at": "2026-10-28T18:02:35+00:00"
   },
   {
     "youtube_id": "nwpmw_4haTI",
@@ -9481,7 +9960,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=nwpmw_4haTI"
+    "youtube_url": "https://www.youtube.com/watch?v=nwpmw_4haTI",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:36+00:00",
+    "next_retry_at": "2026-10-28T18:02:36+00:00"
   },
   {
     "youtube_id": "X7Exx7hp5eY",
@@ -9546,7 +10028,10 @@
     "quality": "FHD",
     "age_rating": "",
     "match_status": "no_encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=RfNsz7qRX9E"
+    "youtube_url": "https://www.youtube.com/watch?v=RfNsz7qRX9E",
+    "matcher_version": 3,
+    "last_tmdb_attempt": "2026-10-28T06:02:37+00:00",
+    "next_retry_at": "2026-10-28T18:02:37+00:00"
   },
   {
     "youtube_id": "bW28j9PulyY",
