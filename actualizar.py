@@ -24,7 +24,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/"
 CATALOG_FILE = "peliculas.json"
 
 RETRY_NOT_FOUND_HOURS = 12
-MATCHER_VERSION = 3
+MATCHER_VERSION = 4
 
 session = requests.Session()
 
@@ -239,7 +239,7 @@ def find_tmdb_movie(youtube_title):
         title_variants.append(spanish_title)
 
     for group in parenthetical:
-        for part in re.split(r"[,;|]", group):
+        for part in re.split(r"[;|]", group):
             part = re.sub(
                 r"\b(19\d{2}|20\d{2})\b",
                 " ",
