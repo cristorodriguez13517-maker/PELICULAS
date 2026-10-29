@@ -290,7 +290,7 @@ let selectedMovie = null;
 
 async function loadMovies() {
     statusElement.hidden = false;
-    statusElement.textContent = 'Cargando películas...';
+    statusElement.textContent = 'Cargando contenido...';
 
     try {
         const response = await fetch('./peliculas.json?t=' + Date.now(), {
