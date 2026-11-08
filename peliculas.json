@@ -1524,7 +1524,29 @@
     "last_tmdb_attempt": "2026-11-05T18:10:20+00:00",
     "next_retry_at": "2026-11-05T22:27:01+00:00"
   },
-  
+  {
+    "youtube_id": "8oiaxRVaHFw",
+    "youtube_title": "Caza de brujas (After the Hunt) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-23T03:26:36Z",
+    "matcher_version": 4,
+    "title": "Caza de brujas",
+    "tmdb_id": 1265063,
+    "poster": "https://image.tmdb.org/t/p/w780/uSzB0T77LvQzCjYCkb6ZhWHTrQa.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/2OwnQJqK4BXHtJwFwvLoDl0VXBB.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/8jHvHZPiw6h3Xfy0cv3m7H40O8e.jpg",
+    "overview": "Una profesora universitaria se encuentra en una encrucijada personal y profesional cuando una estudiante estrella acusa a uno de sus compañeros de trabajo y un oscuro secreto de su pasado amenaza con salir a la luz.",
+    "release_date": "2025-10-09",
+    "runtime": 139,
+    "genres": [
+      "Drama"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=8oiaxRVaHFw",
+    "last_tmdb_attempt": "2026-11-08T01:36:34+00:00"
+  },
   {
     "youtube_id": "wqd-xsJZ8hk",
     "youtube_title": "Plan en familia 2 (2025) 4K 2160p",
@@ -1617,7 +1639,30 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=BF_lAB3QrPU"
   },
-  
+  {
+    "youtube_id": "n1wQ_o4MNEU",
+    "youtube_title": "Juegos de niños (Playdate) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-23T03:26:36Z",
+    "matcher_version": 4,
+    "title": "Juegos de niños",
+    "tmdb_id": 1248226,
+    "poster": "https://image.tmdb.org/t/p/w780/sWhglhFoGA0T7n5U6Yi0t8LBGjA.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/4XQyjOv5Y0EbYDdB1p3sMRH7uWv.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/5lQ4euO30sDin5nCifvi0vURFNd.jpg",
+    "overview": "Brian acaba de ser despedido de su trabajo, y se convierte en un padre que se queda en casa. Acepta una invitación para jugar de otro padre, que resulta ser un bala perdida.",
+    "release_date": "2025-11-04",
+    "runtime": 93,
+    "genres": [
+      "Acción",
+      "Comedia"
+    ],
+    "quality": "4K",
+    "age_rating": "12+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=n1wQ_o4MNEU",
+    "last_tmdb_attempt": "2026-11-08T01:36:36+00:00"
+  },
   {
     "youtube_id": "joQIpLlz4L0",
     "youtube_title": "Ninja Turtles: Fuera de las sombras (2016) 4K 2160p",
@@ -1785,7 +1830,30 @@
     "last_tmdb_attempt": "2026-11-05T18:10:23+00:00",
     "next_retry_at": "2026-11-05T22:27:03+00:00"
   },
-  
+  {
+    "youtube_id": "aUv6KZL24lI",
+    "youtube_title": "Maldita suerte (Ballad of a Small Player) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-23T03:32:06Z",
+    "matcher_version": 4,
+    "title": "Maldita suerte",
+    "tmdb_id": 1272166,
+    "poster": "https://image.tmdb.org/t/p/w780/jd4p4omMZIywNP5vYbrPUfL1phX.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/fqQfpnPzfrX9Ba4llS7jH2axFlG.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/cc48kfehVAkgG73BsPcFLMoxa8h.jpg",
+    "overview": "En los deslumbrantes casinos de Macao, un jugador que huye de su pasado queda fascinado por una enigmática mujer en la mesa de bacará.",
+    "release_date": "2025-10-15",
+    "runtime": 101,
+    "genres": [
+      "Crimen",
+      "Drama"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=aUv6KZL24lI",
+    "last_tmdb_attempt": "2026-11-08T01:36:38+00:00"
+  },
   {
     "youtube_id": "WuX3k6kwf3A",
     "youtube_title": "Hedda (2025) 4K 2160p",
@@ -1876,7 +1944,31 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=hnxiFhD1ssY"
   },
-  
+  {
+    "youtube_id": "tNaF5f6bHEg",
+    "youtube_title": "Pacto de sangre (Red Right Hand)  (2024)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-23T03:32:06Z",
+    "matcher_version": 4,
+    "title": "Pacto de sangre",
+    "tmdb_id": 1227816,
+    "poster": "https://image.tmdb.org/t/p/w780/70cTpSGH1cXygHum9lOASTbOvGc.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/z7jpJjLqCO32oxVtIxy0HALTpkQ.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/1AZoKXDwfbuk6B7M0bjivcrWdmd.jpg",
+    "overview": "Cash intenta llevar una vida honesta y tranquila alejado del mundo criminal, pero cuando Big Cat, la capo de la droga de los Apalaches, le obliga a volver a sus servicios, demuestra ser capaz de cualquier cosa para proteger al pueblo y a la única familia que le queda.",
+    "release_date": "2024-02-22",
+    "runtime": 111,
+    "genres": [
+      "Crimen",
+      "Acción",
+      "Suspense"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=tNaF5f6bHEg",
+    "last_tmdb_attempt": "2026-11-08T01:36:40+00:00"
+  },
   {
     "youtube_id": "3gnjDid4wx8",
     "youtube_title": "Cosecha sangrienta (Clown in a Cornfield) (2025)",
