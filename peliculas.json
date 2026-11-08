@@ -1524,29 +1524,7 @@
     "last_tmdb_attempt": "2026-11-05T18:10:20+00:00",
     "next_retry_at": "2026-11-05T22:27:01+00:00"
   },
-  {
-    "youtube_id": "8oiaxRVaHFw",
-    "youtube_title": "Caza de brujas (After the Hunt) (2025)",
-    "description": "4K 2160p",
-    "published_at": "2026-10-23T03:26:36Z",
-    "title": "La caza de brujas",
-    "tmdb_id": 1265063,
-    "poster": "https://image.tmdb.org/t/p/w780/9PGVH6MiUA4PH10G2vJ12WS0a7K.jpg",
-    "logo": null,
-    "backdrop": "https://image.tmdb.org/t/p/original/glVGZOVgd6H4RY8XjTmiIfCpA4Q.jpg",
-    "overview": "Cuando, en un colegio católico muy estricto, un profesor entra en un cuarto de baño y sorprende a dos estudiantes entregados a prácticas sexuales prohibidas, algunos de sus compañeros de clase no saben si callar o delatar a sus propios amigos cuando son interrogados por las autoridades escolares.",
-    "release_date": "1967-01-01",
-    "runtime": 35,
-    "genres": [
-      "Drama"
-    ],
-    "quality": "4K",
-    "age_rating": "",
-    "match_status": "encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=8oiaxRVaHFw",
-    "matcher_version": 3,
-    "last_tmdb_attempt": "2026-10-28T06:00:06+00:00"
-  },
+  
   {
     "youtube_id": "wqd-xsJZ8hk",
     "youtube_title": "Plan en familia 2 (2025) 4K 2160p",
@@ -1639,31 +1617,7 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=BF_lAB3QrPU"
   },
-  {
-    "youtube_id": "n1wQ_o4MNEU",
-    "youtube_title": "Juegos de niños (Playdate) (2025)",
-    "description": "4K 2160p",
-    "published_at": "2026-10-23T03:26:36Z",
-    "title": "Juegos de niños",
-    "tmdb_id": 1156753,
-    "poster": "https://image.tmdb.org/t/p/w780/hWDBj5zSSa5KxIolKoMw0slM6Ve.jpg",
-    "logo": null,
-    "backdrop": "https://image.tmdb.org/t/p/original/aZFM3EI4v2SkDt0WtkVrZ7HM7ak.jpg",
-    "overview": "Jaime y Pablo exploran y trabajan su identidad contándonos acerca de sus experiencias y participando en un laboratorio teatral de masculinidad donde descubriremos el conflicto que los llevó a cuestionarse su masculinidad. Este conflicto los obligó a cuestionarse los juegos que nos enseñaron de niños, proponiendo juegos distintos donde aprendemos a cuidar a la gente que amamos",
-    "release_date": "2023-08-31",
-    "runtime": 29,
-    "genres": [
-      "Documental",
-      "Drama",
-      "Familia"
-    ],
-    "quality": "4K",
-    "age_rating": "",
-    "match_status": "encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=n1wQ_o4MNEU",
-    "matcher_version": 3,
-    "last_tmdb_attempt": "2026-10-28T06:00:08+00:00"
-  },
+  
   {
     "youtube_id": "joQIpLlz4L0",
     "youtube_title": "Ninja Turtles: Fuera de las sombras (2016) 4K 2160p",
@@ -1831,29 +1785,7 @@
     "last_tmdb_attempt": "2026-11-05T18:10:23+00:00",
     "next_retry_at": "2026-11-05T22:27:03+00:00"
   },
-  {
-    "youtube_id": "aUv6KZL24lI",
-    "youtube_title": "Maldita suerte (Ballad of a Small Player) (2025)",
-    "description": "4K 2160p",
-    "published_at": "2026-10-23T03:32:06Z",
-    "title": "Maldita Suerte",
-    "tmdb_id": 1115268,
-    "poster": "https://image.tmdb.org/t/p/w780/8yknANUWiRMpMaImrkwT8Vmflrk.jpg",
-    "logo": null,
-    "backdrop": null,
-    "overview": "",
-    "release_date": "",
-    "runtime": 16,
-    "genres": [
-      "Drama"
-    ],
-    "quality": "4K",
-    "age_rating": "",
-    "match_status": "encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=aUv6KZL24lI",
-    "matcher_version": 3,
-    "last_tmdb_attempt": "2026-10-28T06:00:12+00:00"
-  },
+  
   {
     "youtube_id": "WuX3k6kwf3A",
     "youtube_title": "Hedda (2025) 4K 2160p",
@@ -1944,27 +1876,7 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=hnxiFhD1ssY"
   },
-  {
-    "youtube_id": "tNaF5f6bHEg",
-    "youtube_title": "Pacto de sangre (Red Right Hand)  (2024)",
-    "description": "4K 2160p",
-    "published_at": "2026-10-23T03:32:06Z",
-    "title": "Pacto de sangre",
-    "tmdb_id": 676078,
-    "poster": "https://image.tmdb.org/t/p/w780/oSGDoVBU8XjGxQfoPM658NshCHH.jpg",
-    "logo": null,
-    "backdrop": null,
-    "overview": "El ingeniero y arqueólogo Rolando se ve envuelto sin querer en una intriga alrededor de un plano del tesoro.",
-    "release_date": "1966-01-01",
-    "runtime": 85,
-    "genres": [],
-    "quality": "4K",
-    "age_rating": "",
-    "match_status": "encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=tNaF5f6bHEg",
-    "matcher_version": 3,
-    "last_tmdb_attempt": "2026-10-28T06:00:13+00:00"
-  },
+  
   {
     "youtube_id": "3gnjDid4wx8",
     "youtube_title": "Cosecha sangrienta (Clown in a Cornfield) (2025)",
