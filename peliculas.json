@@ -2060,7 +2060,30 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=K77ruIxi_UQ"
   },
-  
+  {
+    "youtube_id": "E_tf5MsrVnA",
+    "youtube_title": "Regalo maldito (Vicious) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-23T03:32:06Z",
+    "matcher_version": 4,
+    "title": "Regalo maldito",
+    "tmdb_id": 1251717,
+    "poster": "https://image.tmdb.org/t/p/w780/fiiQCt0EQhu9ZOLxu6Al6x8akTH.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/7NLO1l0xQ6keajQdlz4NENpvMT5.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/da1mXvCrQrFcw6BxovCavBFbIvz.jpg",
+    "overview": "Cuando Polly recibe una misteriosa caja de una inesperada visitante nocturna, viene con la simple instrucción de colocar tres cosas dentro: algo que necesites, algo que odies y algo que ames. Lo que comienza como un extraño ritual se convierte rápidamente en una pesadilla. Atrapada en un mundo aterrador donde la realidad se tuerce y la memoria la traiciona, Polly debe tomar una serie de decisiones imposibles. A medida que el tiempo se escapa, se ve obligada a enfrentarse a la oscuridad no sólo a su alrededor, sino también en su interior, antes de que consuma todo y a todos los que ha conocido.",
+    "release_date": "2025-08-06",
+    "runtime": 98,
+    "genres": [
+      "Terror",
+      "Suspense"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=E_tf5MsrVnA",
+    "last_tmdb_attempt": "2026-11-10T10:33:41+00:00"
+  },
   {
     "youtube_id": "tyPMu1NV8lo",
     "youtube_title": "Los Rose (2025) 4K 2160p",
@@ -2273,7 +2296,32 @@
     "last_tmdb_attempt": "2026-11-05T18:10:29+00:00",
     "next_retry_at": "2026-11-05T22:27:08+00:00"
   },
-  
+  {
+    "youtube_id": "E47RfmZTixE",
+    "youtube_title": "Juego sucio (Play Dirty) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-23T03:32:06Z",
+    "matcher_version": 4,
+    "title": "Juego sucio",
+    "tmdb_id": 941109,
+    "poster": "https://image.tmdb.org/t/p/w780/70Na5MXfOsFlJvoX6oKYAwOhNN9.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/8FYBuJbhWVMUjYkUcebfGPPicQx.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/k6tdiMTO39RQj3dhfspuzprfoe0.jpg",
+    "overview": "Un experto ladrón lleva a cabo el mayor robo de su vida. Parker, junto a Grofield, Zen y un equipo experto, se ven involucrados en un golpe que los enfrenta a la mafia de Nueva York en esta arriesgada misión.",
+    "release_date": "2025-09-30",
+    "runtime": 128,
+    "genres": [
+      "Crimen",
+      "Acción",
+      "Suspense",
+      "Drama"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=E47RfmZTixE",
+    "last_tmdb_attempt": "2026-11-10T10:33:43+00:00"
+  },
   {
     "youtube_id": "pMi-uV2NA5w",
     "youtube_title": "Mantis (2025) 4K 2160p",
@@ -2642,7 +2690,30 @@
     "last_tmdb_attempt": "2026-11-10T04:28:38+00:00",
     "next_retry_at": "2026-11-10T08:23:12+00:00"
   },
-  
+  {
+    "youtube_id": "-tMLi9ul4SI",
+    "youtube_title": "Ajuste de cuentas (Day of Reckoning) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-25T10:44:54Z",
+    "matcher_version": 4,
+    "title": "Ajuste de cuentas",
+    "tmdb_id": 1414048,
+    "poster": "https://image.tmdb.org/t/p/w780/af5mcUPylOFNcrWSd4OCImC71Mf.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/1uRaIY3dmv0PDjbsTkuDbRyzhgp.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/gIm5sjPSm973yKf6sbvd5lOkg3X.jpg",
+    "overview": "Un sheriff en apuros se une a un duro U.S. Marshal para detener a una astuta forajida. A medida que aumentan las tensiones dentro de su pelotón, deben enfrentarse a una banda que se aproxima, liderada por el violento marido de la prisionera.",
+    "release_date": "2025-03-28",
+    "runtime": 106,
+    "genres": [
+      "Acción",
+      "Western"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=-tMLi9ul4SI",
+    "last_tmdb_attempt": "2026-11-10T10:33:45+00:00"
+  },
   {
     "youtube_id": "2SGckn37qsE",
     "youtube_title": "El club del crimen de los jueves (The Thursday Murder Club) (2025)",
@@ -2935,7 +3006,31 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=X8fvXXqZxB0"
   },
-  
+  {
+    "youtube_id": "Zu3DO0VbT0g",
+    "youtube_title": "El último encargo (The Pickup) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-25T10:44:54Z",
+    "matcher_version": 4,
+    "title": "El último encargo",
+    "tmdb_id": 1106289,
+    "poster": "https://image.tmdb.org/t/p/w780/lbpyI9nwzSVDjS7OnE0uC41UciP.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/38jqTp6UaPpnyoD74b4hfzbtfBX.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/y7tjLYcq2ZGy2DNG0ODhGX9Tm60.jpg",
+    "overview": "Una rutinaria recogida de dinero da un giro salvaje cuando dos incompatibles conductores de camión, Russell y Travis, son asaltados por despiadados criminales a las órdenes de la hábil mente maestra Zoe, cuyos planes van mucho más allá del cargamento de dinero en efectivo. Mientras el caos se desata a su alrededor, este improbable dúo tiene que enfrentarse en situaciones de alto riesgo, con personalidades que chocan continuamente y un muy mal día que no deja de empeorar.",
+    "release_date": "2025-07-27",
+    "runtime": 94,
+    "genres": [
+      "Acción",
+      "Comedia",
+      "Crimen"
+    ],
+    "quality": "4K",
+    "age_rating": "16+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=Zu3DO0VbT0g",
+    "last_tmdb_attempt": "2026-11-10T10:33:47+00:00"
+  },
   {
     "youtube_id": "X2JeOdHKLT0",
     "youtube_title": "Karate Kid - Leyendas (2025) 4K 2160p",
@@ -3505,7 +3600,30 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=RIGQeG-iGSI"
   },
-  
+  {
+    "youtube_id": "vehwUSFvpPk",
+    "youtube_title": "Amateur (The Amateur) (2025)",
+    "description": "4K 2160p",
+    "published_at": "2026-10-25T10:48:55Z",
+    "matcher_version": 4,
+    "title": "Amateur",
+    "tmdb_id": 1087891,
+    "poster": "https://image.tmdb.org/t/p/w780/9WPWF0AmklsKclrXeyKXbQ543ZA.jpg",
+    "logo": "https://image.tmdb.org/t/p/w780/4FbxQWfMCtJNgoSb1zQZDgk2Y2P.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/aD7FXrm2GErTmzrIFBntPyhAqS9.jpg",
+    "overview": "Charlie Heller es un brillante pero introvertido decodificador de la CIA que trabaja en una oficina en el sótano de la sede de Langley. Su vida cambia radicalmente cuando su esposa muere en un ataque terrorista en Londres. Cuando sus supervisores se niegan a tomar cartas en el asunto, él mismo toma las riendas y se embarca en un peligroso viaje por todo el mundo para localizar a los responsables. Su inteligencia puede ser el arma definitiva para llevar a cabo su venganza.",
+    "release_date": "2025-04-09",
+    "runtime": 123,
+    "genres": [
+      "Suspense",
+      "Acción"
+    ],
+    "quality": "4K",
+    "age_rating": "12+",
+    "match_status": "encontrada",
+    "youtube_url": "https://www.youtube.com/watch?v=vehwUSFvpPk",
+    "last_tmdb_attempt": "2026-11-10T10:33:49+00:00"
+  },
   {
     "youtube_id": "W5xiQTmAwSY",
     "youtube_title": "Echo Valley (2025) 4K 2160p",
@@ -3872,8 +3990,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=NtsrbDp8Oeo",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:28+00:00",
-    "next_retry_at": "2026-11-10T08:23:28+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:50+00:00",
+    "next_retry_at": "2026-11-10T22:33:50+00:00"
   },
   {
     "youtube_id": "cW3hAnPn4BA",
@@ -3916,8 +4034,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=R7E7A4bBT34",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:29+00:00",
-    "next_retry_at": "2026-11-10T08:23:29+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:50+00:00",
+    "next_retry_at": "2026-11-10T22:33:50+00:00"
   },
   {
     "youtube_id": "Yc5d7Snd2uQ",
@@ -3961,8 +4079,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=YfQtKeBAXLM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:30+00:00",
-    "next_retry_at": "2026-11-10T08:23:30+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:51+00:00",
+    "next_retry_at": "2026-11-10T22:33:51+00:00"
   },
   {
     "youtube_id": "Z7tYYau6kF4",
@@ -4328,8 +4446,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=j6rx4am7QuI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:31+00:00",
-    "next_retry_at": "2026-11-10T08:23:31+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:52+00:00",
+    "next_retry_at": "2026-11-10T22:33:52+00:00"
   },
   {
     "youtube_id": "9p4a7a95RjM",
@@ -4350,8 +4468,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=9p4a7a95RjM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:32+00:00",
-    "next_retry_at": "2026-11-10T08:23:32+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:53+00:00",
+    "next_retry_at": "2026-11-10T22:33:53+00:00"
   },
   {
     "youtube_id": "yy-Jf8JPBV4",
@@ -4372,8 +4490,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=yy-Jf8JPBV4",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:33+00:00",
-    "next_retry_at": "2026-11-10T08:23:33+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:55+00:00",
+    "next_retry_at": "2026-11-10T22:33:55+00:00"
   },
   {
     "youtube_id": "SqPM41E37sI",
@@ -4394,8 +4512,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=SqPM41E37sI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:33+00:00",
-    "next_retry_at": "2026-11-10T08:23:33+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:56+00:00",
+    "next_retry_at": "2026-11-10T22:33:56+00:00"
   },
   {
     "youtube_id": "F-sMEKFwcyU",
@@ -4438,8 +4556,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=FX77xqm0rNk",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:34+00:00",
-    "next_retry_at": "2026-11-10T08:23:34+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:56+00:00",
+    "next_retry_at": "2026-11-10T22:33:56+00:00"
   },
   {
     "youtube_id": "mgTIvoZqiSE",
@@ -4482,8 +4600,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=MDwz6VNWUbc",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:35+00:00",
-    "next_retry_at": "2026-11-10T08:23:35+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:57+00:00",
+    "next_retry_at": "2026-11-10T22:33:57+00:00"
   },
   {
     "youtube_id": "TOX2ThCGxOY",
@@ -4526,8 +4644,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=4R613Ts5Nqs",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:36+00:00",
-    "next_retry_at": "2026-11-10T08:23:36+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:58+00:00",
+    "next_retry_at": "2026-11-10T22:33:58+00:00"
   },
   {
     "youtube_id": "uwjyGL-C0i8",
@@ -4548,8 +4666,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=uwjyGL-C0i8",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:37+00:00",
-    "next_retry_at": "2026-11-10T08:23:37+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:33:59+00:00",
+    "next_retry_at": "2026-11-10T22:33:59+00:00"
   },
   {
     "youtube_id": "OONuV-xqghA",
@@ -4979,8 +5097,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=Wyo7OlbGCtI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:37+00:00",
-    "next_retry_at": "2026-11-10T08:23:37+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:00+00:00",
+    "next_retry_at": "2026-11-10T22:34:00+00:00"
   },
   {
     "youtube_id": "DSXA-_VV3W4",
@@ -5138,8 +5256,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=WVREMI25v80",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:38+00:00",
-    "next_retry_at": "2026-11-10T08:23:38+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:01+00:00",
+    "next_retry_at": "2026-11-10T22:34:01+00:00"
   },
   {
     "youtube_id": "ZHQiSOBe2Cw",
@@ -5293,8 +5411,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=nEDjAPtTWNY",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:39+00:00",
-    "next_retry_at": "2026-11-10T08:23:39+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:02+00:00",
+    "next_retry_at": "2026-11-10T22:34:02+00:00"
   },
   {
     "youtube_id": "yDI8reRec1U",
@@ -5405,8 +5523,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=1J76Vuh47Dc",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:40+00:00",
-    "next_retry_at": "2026-11-10T08:23:40+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:03+00:00",
+    "next_retry_at": "2026-11-10T22:34:03+00:00"
   },
   {
     "youtube_id": "0MGK-SgLFl8",
@@ -5427,8 +5545,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=0MGK-SgLFl8",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:41+00:00",
-    "next_retry_at": "2026-11-10T08:23:41+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:04+00:00",
+    "next_retry_at": "2026-11-10T22:34:04+00:00"
   },
   {
     "youtube_id": "733cXLMbqxM",
@@ -5470,8 +5588,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=AHOGKgtdMCk",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:41+00:00",
-    "next_retry_at": "2026-11-10T08:23:41+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:05+00:00",
+    "next_retry_at": "2026-11-10T22:34:05+00:00"
   },
   {
     "youtube_id": "nvaMtQ2TNSc",
@@ -5492,8 +5610,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=nvaMtQ2TNSc",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:42+00:00",
-    "next_retry_at": "2026-11-10T08:23:42+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:06+00:00",
+    "next_retry_at": "2026-11-10T22:34:06+00:00"
   },
   {
     "youtube_id": "6j98AV2RIts",
@@ -5539,8 +5657,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=BEm3sCunA_E",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:43+00:00",
-    "next_retry_at": "2026-11-10T08:23:43+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:07+00:00",
+    "next_retry_at": "2026-11-10T22:34:07+00:00"
   },
   {
     "youtube_id": "_mbPvcR_6xw",
@@ -5561,8 +5679,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=_mbPvcR_6xw",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:44+00:00",
-    "next_retry_at": "2026-11-10T08:23:44+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:08+00:00",
+    "next_retry_at": "2026-11-10T22:34:08+00:00"
   },
   {
     "youtube_id": "q6uRS1sd3_g",
@@ -5583,8 +5701,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=q6uRS1sd3_g",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:45+00:00",
-    "next_retry_at": "2026-11-10T08:23:45+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:09+00:00",
+    "next_retry_at": "2026-11-10T22:34:09+00:00"
   },
   {
     "youtube_id": "g7OdMsIyoFE",
@@ -5605,8 +5723,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=g7OdMsIyoFE",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:45+00:00",
-    "next_retry_at": "2026-11-10T08:23:45+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:10+00:00",
+    "next_retry_at": "2026-11-10T22:34:10+00:00"
   },
   {
     "youtube_id": "DjRPkUdzX5A",
@@ -5672,8 +5790,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=zH5RwAEW-zU",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:46+00:00",
-    "next_retry_at": "2026-11-10T08:23:46+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:11+00:00",
+    "next_retry_at": "2026-11-10T22:34:11+00:00"
   },
   {
     "youtube_id": "t26o7KCWDLE",
@@ -5909,8 +6027,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=7enZ7S_Jzhg",
-    "last_tmdb_attempt": "2026-11-09T20:23:47+00:00",
-    "next_retry_at": "2026-11-10T08:23:47+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:12+00:00",
+    "next_retry_at": "2026-11-10T22:34:12+00:00"
   },
   {
     "youtube_id": "A3Ej9cCf_kI",
@@ -6025,8 +6143,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=MT9VLnoq128",
-    "last_tmdb_attempt": "2026-11-09T20:23:48+00:00",
-    "next_retry_at": "2026-11-10T08:23:48+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:13+00:00",
+    "next_retry_at": "2026-11-10T22:34:13+00:00"
   },
   {
     "youtube_id": "fp6wdL5Cdf8",
@@ -6095,8 +6213,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=ySHDJS7LWrk",
-    "last_tmdb_attempt": "2026-11-09T20:23:49+00:00",
-    "next_retry_at": "2026-11-10T08:23:49+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:13+00:00",
+    "next_retry_at": "2026-11-10T22:34:13+00:00"
   },
   {
     "youtube_id": "S2U9oPfu8bw",
@@ -6142,8 +6260,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=SRzExsx4slQ",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:50+00:00",
-    "next_retry_at": "2026-11-10T08:23:50+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:14+00:00",
+    "next_retry_at": "2026-11-10T22:34:14+00:00"
   },
   {
     "youtube_id": "tNT8W1KV050",
@@ -6306,8 +6424,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=je9Qi2oT9kc",
-    "last_tmdb_attempt": "2026-11-09T20:23:50+00:00",
-    "next_retry_at": "2026-11-10T08:23:50+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:15+00:00",
+    "next_retry_at": "2026-11-10T22:34:15+00:00"
   },
   {
     "youtube_id": "OnmXw5nbw_o",
@@ -6377,8 +6495,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=kCt5gxv9AdA",
-    "last_tmdb_attempt": "2026-11-09T20:23:51+00:00",
-    "next_retry_at": "2026-11-10T08:23:51+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:16+00:00",
+    "next_retry_at": "2026-11-10T22:34:16+00:00"
   },
   {
     "youtube_id": "U5b4pW-iCik",
@@ -6541,8 +6659,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=vp-4kVsZMYM",
-    "last_tmdb_attempt": "2026-11-09T20:23:52+00:00",
-    "next_retry_at": "2026-11-10T08:23:52+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:17+00:00",
+    "next_retry_at": "2026-11-10T22:34:17+00:00"
   },
   {
     "youtube_id": "aIAcWPnC1II",
@@ -6586,8 +6704,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=rL9ymOE6aqU",
-    "last_tmdb_attempt": "2026-11-09T20:23:53+00:00",
-    "next_retry_at": "2026-11-10T08:23:53+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:18+00:00",
+    "next_retry_at": "2026-11-10T22:34:18+00:00"
   },
   {
     "youtube_id": "vPtTHcQm4j0",
@@ -6608,8 +6726,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=vPtTHcQm4j0",
-    "last_tmdb_attempt": "2026-11-09T20:23:54+00:00",
-    "next_retry_at": "2026-11-10T08:23:54+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:20+00:00",
+    "next_retry_at": "2026-11-10T22:34:20+00:00"
   },
   {
     "youtube_id": "e4rxUIl8nXo",
@@ -6630,8 +6748,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=e4rxUIl8nXo",
-    "last_tmdb_attempt": "2026-11-09T20:23:55+00:00",
-    "next_retry_at": "2026-11-10T08:23:55+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:21+00:00",
+    "next_retry_at": "2026-11-10T22:34:21+00:00"
   },
   {
     "youtube_id": "qB-1P9drQvE",
@@ -6652,8 +6770,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=qB-1P9drQvE",
-    "last_tmdb_attempt": "2026-11-09T20:23:56+00:00",
-    "next_retry_at": "2026-11-10T08:23:56+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:22+00:00",
+    "next_retry_at": "2026-11-10T22:34:22+00:00"
   },
   {
     "youtube_id": "jIfxU2BTMOM",
@@ -6741,8 +6859,8 @@
     "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=ypXn0VXOtHY",
-    "last_tmdb_attempt": "2026-11-09T20:23:56+00:00",
-    "next_retry_at": "2026-11-10T08:23:56+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:22+00:00",
+    "next_retry_at": "2026-11-10T22:34:22+00:00"
   },
   {
     "youtube_id": "n2Zp9hCxAFQ",
@@ -6926,8 +7044,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=-W-Wk0Bqe5s",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:57+00:00",
-    "next_retry_at": "2026-11-10T08:23:57+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:23+00:00",
+    "next_retry_at": "2026-11-10T22:34:23+00:00"
   },
   {
     "youtube_id": "NxVPbCfBXtk",
@@ -6948,8 +7066,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=NxVPbCfBXtk",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:58+00:00",
-    "next_retry_at": "2026-11-10T08:23:58+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:24+00:00",
+    "next_retry_at": "2026-11-10T22:34:24+00:00"
   },
   {
     "youtube_id": "lAbaXgiXuWM",
@@ -6970,8 +7088,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=lAbaXgiXuWM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:23:59+00:00",
-    "next_retry_at": "2026-11-10T08:23:59+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:25+00:00",
+    "next_retry_at": "2026-11-10T22:34:25+00:00"
   },
   {
     "youtube_id": "G2L_-t-EJmw",
@@ -7038,8 +7156,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=ZjqRAF5Bwgk",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:00+00:00",
-    "next_retry_at": "2026-11-10T08:24:00+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:26+00:00",
+    "next_retry_at": "2026-11-10T22:34:26+00:00"
   },
   {
     "youtube_id": "FIPZuD2MPIM",
@@ -7104,8 +7222,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=sqUUh-Au56k",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:00+00:00",
-    "next_retry_at": "2026-11-10T08:24:00+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:27+00:00",
+    "next_retry_at": "2026-11-10T22:34:27+00:00"
   },
   {
     "youtube_id": "Etj4EaAd0Zs",
@@ -7147,8 +7265,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=wc3P1FMoGJE",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:01+00:00",
-    "next_retry_at": "2026-11-10T08:24:01+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:28+00:00",
+    "next_retry_at": "2026-11-10T22:34:28+00:00"
   },
   {
     "youtube_id": "KlICT_pJmUA",
@@ -7213,8 +7331,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=onRQQ5O4P9k",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:02+00:00",
-    "next_retry_at": "2026-11-10T08:24:02+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:29+00:00",
+    "next_retry_at": "2026-11-10T22:34:29+00:00"
   },
   {
     "youtube_id": "BTZPir8LMXw",
@@ -7256,8 +7374,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=cv0v68sJk4Q",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:03+00:00",
-    "next_retry_at": "2026-11-10T08:24:03+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:30+00:00",
+    "next_retry_at": "2026-11-10T22:34:30+00:00"
   },
   {
     "youtube_id": "S7LdtjHwSAM",
@@ -7278,8 +7396,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=S7LdtjHwSAM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:04+00:00",
-    "next_retry_at": "2026-11-10T08:24:04+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:31+00:00",
+    "next_retry_at": "2026-11-10T22:34:31+00:00"
   },
   {
     "youtube_id": "G6XPHCecNAs",
@@ -7368,8 +7486,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=3NU0nWXJuP4",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:04+00:00",
-    "next_retry_at": "2026-11-10T08:24:04+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:32+00:00",
+    "next_retry_at": "2026-11-10T22:34:32+00:00"
   },
   {
     "youtube_id": "HHZYtyscRvs",
@@ -7411,8 +7529,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=oACR0t_8m8A",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:05+00:00",
-    "next_retry_at": "2026-11-10T08:24:05+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:33+00:00",
+    "next_retry_at": "2026-11-10T22:34:33+00:00"
   },
   {
     "youtube_id": "B9YjJEjuoeg",
@@ -7498,8 +7616,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=gYOZzRa4Ago",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:06+00:00",
-    "next_retry_at": "2026-11-10T08:24:06+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:34+00:00",
+    "next_retry_at": "2026-11-10T22:34:34+00:00"
   },
   {
     "youtube_id": "EXrq1KFBN9E",
@@ -7543,8 +7661,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=_wwXj-8zJsI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:07+00:00",
-    "next_retry_at": "2026-11-10T08:24:07+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:35+00:00",
+    "next_retry_at": "2026-11-10T22:34:35+00:00"
   },
   {
     "youtube_id": "IuMvUVVtN50",
@@ -7565,8 +7683,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=IuMvUVVtN50",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:08+00:00",
-    "next_retry_at": "2026-11-10T08:24:08+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:36+00:00",
+    "next_retry_at": "2026-11-10T22:34:36+00:00"
   },
   {
     "youtube_id": "Vrt2dI5zeys",
@@ -7630,8 +7748,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=TM5lekvzTv8",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:08+00:00",
-    "next_retry_at": "2026-11-10T08:24:08+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:37+00:00",
+    "next_retry_at": "2026-11-10T22:34:37+00:00"
   },
   {
     "youtube_id": "b9MFHCRTnfw",
@@ -7768,8 +7886,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=iYczU563i30",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:09+00:00",
-    "next_retry_at": "2026-11-10T08:24:09+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:38+00:00",
+    "next_retry_at": "2026-11-10T22:34:38+00:00"
   },
   {
     "youtube_id": "ET06mN8rNvY",
@@ -7790,8 +7908,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=ET06mN8rNvY",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:10+00:00",
-    "next_retry_at": "2026-11-10T08:24:10+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:39+00:00",
+    "next_retry_at": "2026-11-10T22:34:39+00:00"
   },
   {
     "youtube_id": "jlkp85C5K6E",
@@ -7812,8 +7930,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=jlkp85C5K6E",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:11+00:00",
-    "next_retry_at": "2026-11-10T08:24:11+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:40+00:00",
+    "next_retry_at": "2026-11-10T22:34:40+00:00"
   },
   {
     "youtube_id": "DM2oo5oH24s",
@@ -7834,8 +7952,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=DM2oo5oH24s",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:12+00:00",
-    "next_retry_at": "2026-11-10T08:24:12+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:41+00:00",
+    "next_retry_at": "2026-11-10T22:34:41+00:00"
   },
   {
     "youtube_id": "LNOWf54HPPQ",
@@ -7878,8 +7996,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=KSHYIm8fcSs",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:12+00:00",
-    "next_retry_at": "2026-11-10T08:24:12+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:41+00:00",
+    "next_retry_at": "2026-11-10T22:34:41+00:00"
   },
   {
     "youtube_id": "Yv29ca_BLB8",
@@ -8013,8 +8131,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=DwcADhyEJxk",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:13+00:00",
-    "next_retry_at": "2026-11-10T08:24:13+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:42+00:00",
+    "next_retry_at": "2026-11-10T22:34:42+00:00"
   },
   {
     "youtube_id": "c5cLR7WUFW0",
@@ -8058,8 +8176,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=BozLR9dts9I",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:14+00:00",
-    "next_retry_at": "2026-11-10T08:24:14+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:43+00:00",
+    "next_retry_at": "2026-11-10T22:34:43+00:00"
   },
   {
     "youtube_id": "MqC7429RUvc",
@@ -8145,8 +8263,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=LhSV30lectM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:15+00:00",
-    "next_retry_at": "2026-11-10T08:24:15+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:44+00:00",
+    "next_retry_at": "2026-11-10T22:34:44+00:00"
   },
   {
     "youtube_id": "h9B9IqNciwA",
@@ -8374,8 +8492,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=89pPf6LGHzo",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:16+00:00",
-    "next_retry_at": "2026-11-10T08:24:16+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:45+00:00",
+    "next_retry_at": "2026-11-10T22:34:45+00:00"
   },
   {
     "youtube_id": "VL_FCmh0bVE",
@@ -8396,8 +8514,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=VL_FCmh0bVE",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:16+00:00",
-    "next_retry_at": "2026-11-10T08:24:16+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:46+00:00",
+    "next_retry_at": "2026-11-10T22:34:46+00:00"
   },
   {
     "youtube_id": "gGqk2jYvDBw",
@@ -8464,8 +8582,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=oqKRZAh21hY",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:17+00:00",
-    "next_retry_at": "2026-11-10T08:24:17+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:47+00:00",
+    "next_retry_at": "2026-11-10T22:34:47+00:00"
   },
   {
     "youtube_id": "Tq-poZhtXgE",
@@ -8507,8 +8625,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=TjxUZYzsbi0",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:18+00:00",
-    "next_retry_at": "2026-11-10T08:24:18+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:48+00:00",
+    "next_retry_at": "2026-11-10T22:34:48+00:00"
   },
   {
     "youtube_id": "DbTlu8lBhhg",
@@ -8575,8 +8693,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=K6ynnBIRWBM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:19+00:00",
-    "next_retry_at": "2026-11-10T08:24:19+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:49+00:00",
+    "next_retry_at": "2026-11-10T22:34:49+00:00"
   },
   {
     "youtube_id": "FGZTDN-jDZY",
@@ -8619,8 +8737,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=CNpZMoJXkPQ",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:20+00:00",
-    "next_retry_at": "2026-11-10T08:24:20+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:50+00:00",
+    "next_retry_at": "2026-11-10T22:34:50+00:00"
   },
   {
     "youtube_id": "TvqpE7-wOSg",
@@ -8685,8 +8803,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=hAwXEGvyng4",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:20+00:00",
-    "next_retry_at": "2026-11-10T08:24:20+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:51+00:00",
+    "next_retry_at": "2026-11-10T22:34:51+00:00"
   },
   {
     "youtube_id": "zLpCU7-bMt8",
@@ -8707,8 +8825,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=zLpCU7-bMt8",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:21+00:00",
-    "next_retry_at": "2026-11-10T08:24:21+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:52+00:00",
+    "next_retry_at": "2026-11-10T22:34:52+00:00"
   },
   {
     "youtube_id": "ivrLXi1TngY",
@@ -8729,8 +8847,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=ivrLXi1TngY",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:22+00:00",
-    "next_retry_at": "2026-11-10T08:24:22+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:53+00:00",
+    "next_retry_at": "2026-11-10T22:34:53+00:00"
   },
   {
     "youtube_id": "QAq4ziCIqqw",
@@ -8751,8 +8869,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=QAq4ziCIqqw",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:23+00:00",
-    "next_retry_at": "2026-11-10T08:24:23+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:54+00:00",
+    "next_retry_at": "2026-11-10T22:34:54+00:00"
   },
   {
     "youtube_id": "-DBdQDhY7dw",
@@ -8841,8 +8959,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=DZWQgrQ58ZA",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:24+00:00",
-    "next_retry_at": "2026-11-10T08:24:24+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:55+00:00",
+    "next_retry_at": "2026-11-10T22:34:55+00:00"
   },
   {
     "youtube_id": "7rxsDCxSzLY",
@@ -8863,8 +8981,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=7rxsDCxSzLY",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:25+00:00",
-    "next_retry_at": "2026-11-10T08:24:25+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:56+00:00",
+    "next_retry_at": "2026-11-10T22:34:56+00:00"
   },
   {
     "youtube_id": "dofZ0TdPS8s",
@@ -9135,8 +9253,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=Mpk_4eTca4s",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:25+00:00",
-    "next_retry_at": "2026-11-10T08:24:25+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:57+00:00",
+    "next_retry_at": "2026-11-10T22:34:57+00:00"
   },
   {
     "youtube_id": "imiBeOZ16jk",
@@ -9199,8 +9317,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=NFQzPjssQXI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:26+00:00",
-    "next_retry_at": "2026-11-10T08:24:26+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:58+00:00",
+    "next_retry_at": "2026-11-10T22:34:58+00:00"
   },
   {
     "youtube_id": "AUVJwXJCm1g",
@@ -9266,8 +9384,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=MkZIJhX_1bg",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:27+00:00",
-    "next_retry_at": "2026-11-10T08:24:27+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:34:59+00:00",
+    "next_retry_at": "2026-11-10T22:34:59+00:00"
   },
   {
     "youtube_id": "nOF79aYFSbo",
@@ -9333,8 +9451,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=Y9vRBlgeJwM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:28+00:00",
-    "next_retry_at": "2026-11-10T08:24:28+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:00+00:00",
+    "next_retry_at": "2026-11-10T22:35:00+00:00"
   },
   {
     "youtube_id": "2-yawl91Kuw",
@@ -9463,8 +9581,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=oQHZnt0gJEY",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:29+00:00",
-    "next_retry_at": "2026-11-10T08:24:29+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:01+00:00",
+    "next_retry_at": "2026-11-10T22:35:01+00:00"
   },
   {
     "youtube_id": "54HMf6wqZec",
@@ -9531,8 +9649,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=yF3-jSfW_P8",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:29+00:00",
-    "next_retry_at": "2026-11-10T08:24:29+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:02+00:00",
+    "next_retry_at": "2026-11-10T22:35:02+00:00"
   },
   {
     "youtube_id": "-XnTpUybD5g",
@@ -9689,8 +9807,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=3GQmbDpzlmM",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:30+00:00",
-    "next_retry_at": "2026-11-10T08:24:30+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:03+00:00",
+    "next_retry_at": "2026-11-10T22:35:03+00:00"
   },
   {
     "youtube_id": "3PVPGHDJYhQ",
@@ -9777,8 +9895,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=1QfjulFB6Q8",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:31+00:00",
-    "next_retry_at": "2026-11-10T08:24:31+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:04+00:00",
+    "next_retry_at": "2026-11-10T22:35:04+00:00"
   },
   {
     "youtube_id": "JAH3l5R54TU",
@@ -9799,8 +9917,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=JAH3l5R54TU",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:32+00:00",
-    "next_retry_at": "2026-11-10T08:24:32+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:05+00:00",
+    "next_retry_at": "2026-11-10T22:35:05+00:00"
   },
   {
     "youtube_id": "AeYCx5MBagA",
@@ -9842,8 +9960,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=eFbUEHbO2xI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:33+00:00",
-    "next_retry_at": "2026-11-10T08:24:33+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:06+00:00",
+    "next_retry_at": "2026-11-10T22:35:06+00:00"
   },
   {
     "youtube_id": "yfrt0Hhpx1I",
@@ -9864,8 +9982,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=yfrt0Hhpx1I",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:33+00:00",
-    "next_retry_at": "2026-11-10T08:24:33+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:07+00:00",
+    "next_retry_at": "2026-11-10T22:35:07+00:00"
   },
   {
     "youtube_id": "uYBIY2-ylZI",
@@ -9931,8 +10049,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=BImzv5CBoQU",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:34+00:00",
-    "next_retry_at": "2026-11-10T08:24:34+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:08+00:00",
+    "next_retry_at": "2026-11-10T22:35:08+00:00"
   },
   {
     "youtube_id": "7bxK1hX2kL4",
@@ -9953,8 +10071,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=7bxK1hX2kL4",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:35+00:00",
-    "next_retry_at": "2026-11-10T08:24:35+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:09+00:00",
+    "next_retry_at": "2026-11-10T22:35:09+00:00"
   },
   {
     "youtube_id": "nwpmw_4haTI",
@@ -9975,8 +10093,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=nwpmw_4haTI",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:36+00:00",
-    "next_retry_at": "2026-11-10T08:24:36+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:09+00:00",
+    "next_retry_at": "2026-11-10T22:35:09+00:00"
   },
   {
     "youtube_id": "X7Exx7hp5eY",
@@ -10043,8 +10161,8 @@
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=RfNsz7qRX9E",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-09T20:24:37+00:00",
-    "next_retry_at": "2026-11-10T08:24:37+00:00"
+    "last_tmdb_attempt": "2026-11-10T10:35:10+00:00",
+    "next_retry_at": "2026-11-10T22:35:10+00:00"
   },
   {
     "youtube_id": "bW28j9PulyY",
