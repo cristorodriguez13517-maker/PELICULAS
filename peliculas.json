@@ -4213,29 +4213,7 @@
     "match_status": "encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=C-t9Xz3TVTw"
   },
-  {
-    "youtube_id": "cLFC-lAH0EQ",
-    "youtube_title": "Estragos (Havoc) (2025)",
-    "description": "4K 2160p",
-    "published_at": "2026-10-25T10:55:52Z",
-    "title": "Estragos",
-    "tmdb_id": 1425345,
-    "poster": "https://image.tmdb.org/t/p/w780/7iV0vdYZ2oKyjtD5QhlQ7xxFY3h.jpg",
-    "logo": null,
-    "backdrop": null,
-    "overview": "Un trabajador de la Comisión Federal de Electricidad sufre un accidente que cambia su vida y la manera de afrontarla, se somete a un cambio emocional que perjudica su relación con su único familiar, esta travesía lo lleva a tomar una decisión difícil.5​",
-    "release_date": "2017-01-15",
-    "runtime": 7,
-    "genres": [
-      "Drama"
-    ],
-    "quality": "4K",
-    "age_rating": "",
-    "match_status": "encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=cLFC-lAH0EQ",
-    "matcher_version": 3,
-    "last_tmdb_attempt": "2026-10-28T06:00:51+00:00"
-  },
+ 
   {
     "youtube_id": "bvKgBfcLIi0",
     "youtube_title": "Viuda Negra [Black Widow] (2021) 4K 2160p",
@@ -4718,27 +4696,7 @@
     "last_tmdb_attempt": "2026-11-12T04:21:53+00:00",
     "next_retry_at": "2026-11-12T06:47:33+00:00"
   },
-  {
-    "youtube_id": "OONuV-xqghA",
-    "youtube_title": "Revelación (계시록) (2025)",
-    "description": "4K 2160p",
-    "published_at": "2026-10-25T10:55:52Z",
-    "title": "Revelación",
-    "tmdb_id": 1467482,
-    "poster": "https://image.tmdb.org/t/p/w780/juPuTtzYSoZlAdy30aWm54TdzoP.jpg",
-    "logo": null,
-    "backdrop": "https://image.tmdb.org/t/p/original/sK8ghYV79xAbE2i7NIdRfZrJts0.jpg",
-    "overview": "La fotografía es un acto visual que trasciende en el tiempo, contando historias que perduran.",
-    "release_date": "2025-04-24",
-    "runtime": 13,
-    "genres": [
-      "Drama"
-    ],
-    "quality": "4K",
-    "age_rating": "",
-    "match_status": "encontrada",
-    "youtube_url": "https://www.youtube.com/watch?v=OONuV-xqghA"
-  },
+ 
   {
     "youtube_id": "SfJoV7uiblA",
     "youtube_title": "Estado eléctrico (2025) 4K 2160p",
