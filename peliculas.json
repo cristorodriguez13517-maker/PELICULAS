@@ -3720,25 +3720,21 @@
     "description": "4K 2160p\n\nLa guerra de las galaxias. Episodio I: La amenaza fantasma (Star Wars: Episode I - The Phantom Menace)",
     "published_at": "2026-10-25T10:52:56Z",
     "title": "La guerra de las galaxias. Episodio I: La amenaza fantasma (1999)",
-    "tmdb_id": 1893,
+    "tmdb_id": null,
     "poster": "https://image.tmdb.org/t/p/w780/4rjatbWmGGmu0DZs6WNpXaUWqWN.jpg",
     "logo": "https://image.tmdb.org/t/p/w780/b3W3Yqm7FGiNC1TFtkiJ3i6BJF4.png",
     "backdrop": "https://image.tmdb.org/t/p/original/wDe8LzwuvHYYiuwyNfxdYQq8ti4.jpg",
-    "overview": "La Federación de Comercio ha bloqueado el pequeño planeta de Naboo, gobernado por la joven Reina Amidala, como parte de un plan ideado por Sith Darth Sidious, que manteniéndose en el anonimato dirige a los neimoidianos, que están al mando de la Federación. Amidala es convencida por los Jedis Qui-Gon Jinn y su aprendiz, o padawan, Obi-Wan Kenobi a viajar hasta Coruscant, capital de la República y sede del Consejo Jedi para intentar mediar esta amenaza. Pero esquivando el bloqueo, la nave real resulta dañada, obligando a la tripulación a aterrizar en el desértico y remoto planeta de Tatooine...",
-    "release_date": "1999-08-20",
-    "runtime": 131,
-    "genres": [
-      "Aventura",
-      "Acción",
-      "Ciencia ficción"
-    ],
+    "overview": "",
+    "release_date": "",
+    "runtime": null,
+    "genres": [],
     "quality": "4K",
-    "age_rating": "0+",
+    "age_rating": "",
     "match_status": "no_encontrada",
     "youtube_url": "https://www.youtube.com/watch?v=DtI7C8cSIac",
     "matcher_version": 4,
-    "last_tmdb_attempt": "2026-11-12T01:07:51+00:00",
-    "next_retry_at": "2026-11-12T13:07:51+00:00"
+    "last_tmdb_attempt": "2026-11-12T16:58:36+00:00",
+    "next_retry_at": "2026-11-13T04:58:36+00:00"
   },
   {
     "youtube_id": "r5f7CpPbmck",
