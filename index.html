@@ -507,7 +507,7 @@ function renderMovies() {
         poster.draggable = false;
 
         if (card.dataset.poster) {
-            poster.src = card.dataset.poster.replace('/w780/','/w500/');
+            poster.src = card.dataset.poster.replace(/\/t\/p\/(?:w\d+|original)\//, '/t/p/w342/');
         } else {
             poster.style.visibility = 'hidden';
         }
