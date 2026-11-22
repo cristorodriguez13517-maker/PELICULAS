@@ -285,6 +285,8 @@ const statusElement = document.getElementById('status');
 
 let movies = [];
 let selectedMovie = null;
+let sharkVisibleCards = [];
+let sharkLastFocusedRow = -1;
 
 /* CARGAR CATÁLOGO */
 
@@ -526,7 +528,7 @@ function renderMovieHeader(card){
 /* NAVEGACIÓN CON MANDO */
 
 function getVisibleCards() {
-    return [...movieRow.querySelectorAll('.movie:not([hidden])')];
+    return sharkVisibleCards;
 }
 
 function getColumns() {
@@ -537,24 +539,23 @@ function getColumns() {
 
 function scrollToMovie(card) {
     if (!card) return;
-
     const rect = card.getBoundingClientRect();
     const topLimit = 325;
     const bottomLimit = window.innerHeight - 12;
-
-    if (rect.top < topLimit) {
-        window.scrollBy(0, rect.top - topLimit);
-    } else if (rect.bottom > bottomLimit) {
-        window.scrollBy(0, rect.bottom - bottomLimit);
-    }
+    if (rect.top < topLimit) window.scrollBy(0, rect.top - topLimit);
+    else if (rect.bottom > bottomLimit) window.scrollBy(0, rect.bottom - bottomLimit);
 }
 
 function focusMovie(card) {
     if (!card) return;
-
+    const index = sharkVisibleCards.indexOf(card);
+    const row = index < 0 ? -1 : Math.floor(index / getColumns());
     card.focus({ preventScroll: true });
     selectMovie(card);
-    scrollToMovie(card);
+    if (row !== sharkLastFocusedRow) {
+        sharkLastFocusedRow = row;
+        scrollToMovie(card);
+    }
 }
 
 function focusFirstMovie() {
@@ -714,6 +715,8 @@ function filterMovies() {
 
         if (matches && !firstMatch) firstMatch = card;
     });
+    sharkVisibleCards = cards.filter(card => !card.hidden);
+    sharkLastFocusedRow = -1;
 
     if (firstMatch) {
         selectMovie(firstMatch);
