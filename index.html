@@ -472,16 +472,21 @@ function renderMovies() {
 
 /* BANNER Y LOGO */
 
-function selectMovie(card) {
-    if (!card || card.hidden) return;
+function selectMovie(card){
+    if(!card||card.hidden)return;
+    if(selectedMovie!==card){
+        if(selectedMovie)selectedMovie.classList.remove('selected');
+        selectedMovie=card;
+        card.classList.add('selected');
+    }
+    clearTimeout(window.__sharkHeaderUpdateTimer);
+    window.__sharkHeaderUpdateTimer=setTimeout(()=>{
+        if(selectedMovie===card)renderMovieHeader(card);
+    },110);
+}
 
-    selectedMovie = card;
-
-    movieRow.querySelectorAll('.movie').forEach(movie => {
-        movie.classList.toggle('selected', movie === card);
-    });
-
-    const banner = card.dataset.banner;
+function renderMovieHeader(card){
+        const banner = card.dataset.banner;
     header.style.backgroundImage = banner
         ? 'url("' + banner.replace(/"/g, '%22') + '")'
         : 'none';
