@@ -267,6 +267,29 @@ body {
   .movie-row .movie img{width:100%!important;height:100%!important}
 }
 
+
+/* SINOPSIS COMPLETA EN LA CABECERA: el texto no se recorta.
+   Si no cabe en la altura del banner, la zona informativa permite desplazarse. */
+.header-info,
+.header-info-container{
+  max-height:calc(100% - 24px)!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.55) rgba(0,0,0,.18);
+  overscroll-behavior:contain;
+}
+.overview{
+  display:block!important;
+  max-height:none!important;
+  height:auto!important;
+  overflow:visible!important;
+  -webkit-line-clamp:unset!important;
+  line-clamp:unset!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere;
+}
+
 </style>
 </head>
 
