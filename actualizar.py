@@ -632,7 +632,7 @@ def main():
             )
 
             should_skip = (
-                old_status == "encontrada"
+                (old_status == "encontrada" and old_entry.get("logo_selection_version") == 2)
                 or (
                     old_status == "no_encontrada"
                     and not title_changed
@@ -661,6 +661,7 @@ def main():
         print(f"Procesando: {video['youtube_title']}")
 
         entry = process_video(video)
+        entry["logo_selection_version"] = 2
 
         if entry.get("match_status") == "no_encontrada":
             now = datetime.now(timezone.utc)
@@ -709,8 +710,12 @@ def main():
             for field in ("poster", "logo", "backdrop"):
                 old_image = old_entry.get(field)
 
+                if field == "logo" and entry.get("logo"):
+                    continue
                 if old_image:
                     merged[field] = old_image
+
+            merged["logo_selection_version"] = 2
 
             # Las imágenes manuales tienen prioridad absoluta.
             for field in ("poster", "logo", "backdrop"):
