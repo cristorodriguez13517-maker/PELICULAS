@@ -620,6 +620,14 @@ function renderMovies() {
 
 /* BANNER Y LOGO */
 
+function updatePassedCards(card){
+    const parent=card&&card.parentElement;
+    if(!parent)return;
+    const cards=Array.from(parent.children).filter(item=>item.classList&&item.classList.contains('movie')&&!item.hidden);
+    const current=cards.indexOf(card);
+    cards.forEach((item,index)=>item.classList.toggle('shark-passed',current>=0&&index<current));
+}
+
 function selectMovie(card){
     if(!card||card.hidden)return;
     if(selectedMovie!==card){
@@ -627,6 +635,7 @@ function selectMovie(card){
         selectedMovie=card;
         card.classList.add('selected');
     }
+    updatePassedCards(card);
     clearTimeout(window.__sharkHeaderUpdateTimer);
     window.__sharkHeaderUpdateTimer=setTimeout(()=>{
         if(selectedMovie===card)renderMovieHeader(card);
@@ -913,4 +922,10 @@ startSharkTV();
 .movie-row{column-gap:8px!important}
 @media(max-width:900px){.movie-row{column-gap:8px!important}}
 @media(max-width:600px){.movie-row{column-gap:7px!important}}
+</style>
+<style>
+/* Las carátulas que quedan atrás se desvanecen; reaparecen al retroceder */
+.movie-row>.movie.shark-passed{opacity:0!important;transition:opacity .22s ease!important}
+.movie-row>.movie:not(.shark-passed){opacity:1;transition:opacity .22s ease!important}
+@media(prefers-reduced-motion:reduce){.movie-row>.movie{transition:none!important}}
 </style>
