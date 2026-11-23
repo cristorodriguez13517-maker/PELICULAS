@@ -436,14 +436,17 @@ def clasificar_logo_tmdb(logo):
 
 def elegir_logo_tmdb(logos):
     """Color primero; después español, inglés y otros; blanco antes que negro."""
-    idiomas = {"es": 0, "en": 1, None: 2}
+    # TMDB normalmente devuelve iso_639_1 ("es", "en", etc.), sin región.
+    # Si en el futuro devuelve variantes regionales, se respeta es-ES > es-MX.
+    idiomas = {"es-es": 0, "es-mx": 1, "es": 0, "en": 2, None: 3}
     candidatos = [logo for logo in logos if logo.get("file_path")]
     if not candidatos:
         return None
     clasificados = []
     for logo in candidatos:
         tiene_color, luminosidad = clasificar_logo_tmdb(logo)
-        idioma = idiomas.get(logo.get("iso_639_1"), 3)
+        codigo_idioma = str(logo.get("iso_639_1") or "").replace("_", "-").lower()
+        idioma = idiomas.get(codigo_idioma, 4)
         es_monocromo = not tiene_color
         blanco_primero = 0 if es_monocromo and luminosidad >= 128 else 1
         clave = (0 if tiene_color else 1, blanco_primero if es_monocromo else 0, idioma,
