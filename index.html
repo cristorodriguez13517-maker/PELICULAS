@@ -790,26 +790,33 @@ searchInput.addEventListener('blur', () => {
     }
 });
 
+function normalizarTextoBusqueda(valor) {
+    return String(valor || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLocaleLowerCase('es');
+}
+
 function filterMovies() {
-    const query = searchInput.value.trim().toLocaleLowerCase('es');
+    const query = normalizarTextoBusqueda(searchInput.value.trim());
     const cards = [...movieRow.querySelectorAll('.movie')];
     let firstMatch = null;
 
     cards.forEach(card => {
-        const text = [
+        const text = normalizarTextoBusqueda([
             card.dataset.title,
             card.dataset.year,
             card.dataset.genres,
             card.dataset.quality,
             card.dataset.age,
             card.dataset.overview
-        ].join(' ').toLocaleLowerCase('es');
+        ].join(' '));
 
         const matches = text.includes(query);
         card.hidden = !matches;
-
         if (matches && !firstMatch) firstMatch = card;
     });
+
     sharkVisibleCards = cards.filter(card => !card.hidden);
     sharkLastFocusedRow = -1;
 
