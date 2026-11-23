@@ -290,6 +290,22 @@ body {
   overflow-wrap:anywhere;
 }
 
+
+ 
+ /* CARÁTULAS REDONDEADAS Y MARCO ROJO DE SELECCIÓN */
+ .movie-row .movie{
+   border-radius:12px!important;
+   overflow:hidden!important;
+ }
+ .movie-row .movie img{
+   box-sizing:border-box!important;
+   border-radius:12px!important;
+ }
+ .movie-row .movie.selected img,
+ .movie-row .movie:focus-visible img{
+   border-color:#e50914!important;
+ }
+ 
 </style>
 </head>
 
