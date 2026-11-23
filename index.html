@@ -363,6 +363,7 @@ function configurarLogoBanner(img, url){
     img.style.filter='none';
   };
   img.style.filter='none';
+  if(/^https?:\/\/image\.tmdb\.org\//i.test(url)) img.crossOrigin='anonymous';
   img.src=url;
 }
 
