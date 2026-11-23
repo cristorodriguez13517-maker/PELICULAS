@@ -327,30 +327,42 @@ body {
 <script>
 /* LOGOS DE BANNER: conservar el color original; los logos oscuros monocromos se muestran en blanco. */
 function configurarLogoBanner(img, url){
+  // Mantener siempre el logo original de TMDB. Solo pasar a blanco los logos
+  // realmente monocromos y oscuros; nunca alterar logos que tengan color.
   img.onload=()=>{
+    img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
     try{
       const canvas=document.createElement('canvas');
-      canvas.width=Math.min(img.naturalWidth,160);
+      canvas.width=Math.min(img.naturalWidth,240);
       canvas.height=Math.max(1,Math.round(img.naturalHeight*canvas.width/img.naturalWidth));
       const ctx=canvas.getContext('2d',{willReadFrequently:true});
+      if(!ctx)return;
       ctx.drawImage(img,0,0,canvas.width,canvas.height);
       const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
-      let total=0, luminance=0, saturation=0;
+      let total=0, luminance=0, colored=0;
       for(let p=0;p<pixels.length;p+=4){
         if(pixels[p+3]<32)continue;
         const r=pixels[p],g=pixels[p+1],b=pixels[p+2];
         const hi=Math.max(r,g,b),lo=Math.min(r,g,b);
-        luminance+=(r*.2126+g*.7152+b*.0722);
-        saturation+=(hi===0?0:(hi-lo)/hi);
+        luminance+=r*.2126+g*.7152+b*.0722;
+        if(hi-lo>Math.max(18,hi*.12))colored++;
         total++;
       }
-      const dark=total>0 && luminance/total<115 && saturation/total<.18;
-      img.style.filter=dark?'brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))':'drop-shadow(0 1px 2px rgba(0,0,0,.45))';
+      const isDarkMonochrome=total>0 &&
+        luminance/total<115 &&
+        colored/total<.01;
+      if(isDarkMonochrome){
+        img.style.filter='brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))';
+      }
     }catch(error){
-      img.style.filter='brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))';
+      // Si el navegador no permite analizar la imagen, conservarla sin modificar.
+      img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
     }
   };
-  img.onerror=()=>{img.style.filter='brightness(0) invert(1)'};
+  img.onerror=()=>{
+    img.style.filter='none';
+  };
+  img.style.filter='none';
   img.src=url;
 }
 
