@@ -722,7 +722,7 @@ def main():
             for field in ("poster", "logo", "backdrop"):
                 old_image = old_entry.get(field)
 
-                if field == "logo" and entry.get("logo"):
+                if field == "logo":
                     continue
                 if old_image:
                     merged[field] = old_image
@@ -784,6 +784,15 @@ def main():
             )
 
     # ============================================================
+    # Revalidar los logos de TMDB en cada actualización del catálogo.
+    # Se conserva únicamente un logo manual o una selección válida (color/blanco).
+    for ficha in catalog:
+        if not isinstance(ficha, dict) or ficha.get("logo_manual"):
+            continue
+        tmdb_id = ficha.get("tmdb_id")
+        if tmdb_id:
+            ficha["logo"] = get_movie_logo(tmdb_id) or ""
+
     # GUARDAR EL CATÁLOGO DE FORMA SEGURA
     # ============================================================
 
