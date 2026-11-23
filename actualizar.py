@@ -387,7 +387,7 @@ def get_spain_age_rating(movie_id):
     try:
         data = api_get(
             f"{TMDB_MOVIE_URL}/{movie_id}/release_dates",
-            {"api_key": TMDB_KEY},
+            {"api_key": TMDB_KEY, "include_image_language": "es,en,null"},
         )
 
         for country in data.get("results", []):
