@@ -459,54 +459,66 @@ def crear_logo_blanco_tmdb(logo, base_imagen):
         raise RuntimeError("No se pudo generar la versión blanca del logo de TMDB") from error
 
 
-def elegir_logo_tmdb(logos):
-    """Prioriza logos a color y claros; si solo hay uno oscuro, lo convierte a blanco."""
-    idiomas = {"es-es": 0, "es-mx": 1, "es": 0, "en": 2, None: 3}
-    claros = []
-    oscuros = []
+def elegir_logo_tmdb(logos, idioma_original=None):
+    """Elige primero español; después el idioma original. Dentro de cada idioma prioriza color."""
+    original = str(idioma_original or "").strip().lower()
+    candidatos = []
     for logo in logos:
         if not logo.get("file_path"):
             continue
-        tiene_color, luminosidad = clasificar_logo_tmdb(logo)
         codigo = str(logo.get("iso_639_1") or "").replace("_", "-").lower()
-        idioma = idiomas.get(codigo, 4)
+        if codigo in ("es", "es-es", "es-mx"):
+            prioridad_idioma = 0
+        elif original and codigo == original:
+            prioridad_idioma = 1
+        elif codigo == "en":
+            prioridad_idioma = 2
+        elif not codigo:
+            prioridad_idioma = 3
+        else:
+            prioridad_idioma = 4
+        tiene_color, luminosidad = clasificar_logo_tmdb(logo)
         clave = (
+            prioridad_idioma,
             0 if tiene_color else 1,
-            idioma,
             -(logo.get("vote_average") or 0),
             -(logo.get("width") or 0),
         )
-        candidato = dict(logo)
-        if not tiene_color and luminosidad < 128:
-            oscuros.append((clave, candidato))
-        else:
-            claros.append((clave, candidato))
+        candidatos.append((clave, dict(logo), tiene_color, luminosidad))
 
-    if claros:
-        claros.sort(key=lambda item: item[0])
-        elegido = claros[0][1]
-        elegido["_logo_url"] = IMAGE_BASE + "w780" + elegido["file_path"]
-        return elegido
+    if not candidatos:
+        return None
 
-    if oscuros:
-        oscuros.sort(key=lambda item: item[0])
-        elegido = oscuros[0][1]
+    candidatos.sort(key=lambda item: item[0])
+    _, elegido, tiene_color, luminosidad = candidatos[0]
+    if not tiene_color and luminosidad < 128:
         elegido["_logo_url"] = crear_logo_blanco_tmdb(elegido, IMAGE_BASE)
-        return elegido
-
-    return None
+    else:
+        elegido["_logo_url"] = IMAGE_BASE + "w780" + elegido["file_path"]
+    return elegido
 
 def get_movie_logo(movie_id):
     try:
+        detalles = api_get(
+            f"{TMDB_MOVIE_URL}/{movie_id}",
+            {"api_key": TMDB_KEY},
+        )
+        idioma_original = detalles.get("original_language")
+        idiomas = ["es"]
+        if idioma_original and idioma_original not in idiomas:
+            idiomas.append(idioma_original)
+        if "en" not in idiomas:
+            idiomas.append("en")
+        idiomas.append("null")
         data = api_get(
             f"{TMDB_MOVIE_URL}/{movie_id}/images",
-            {"api_key": TMDB_KEY},
+            {"api_key": TMDB_KEY, "include_image_language": ",".join(idiomas)},
         )
     except requests.RequestException as error:
         print(f"No se pudo consultar el logo de TMDB: {error}")
         return None
 
-    elegido = elegir_logo_tmdb(data.get("logos", []))
+    elegido = elegir_logo_tmdb(data.get("logos", []), idioma_original)
     if not elegido:
         return None
     return elegido.get("_logo_url") or IMAGE_BASE + "w780" + elegido["file_path"]
@@ -822,7 +834,7 @@ def main():
             continue
         tmdb_id = ficha.get("tmdb_id")
         if tmdb_id:
-            ficha["logo"] = get_movie_logo(tmdb_id) or ""
+            ficha["logo"] = get_movie_logo(tmdb_id) or ficha.get("logo") or ""
 
     # GUARDAR EL CATÁLOGO DE FORMA SEGURA
     # ============================================================
