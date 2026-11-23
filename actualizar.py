@@ -455,8 +455,8 @@ def crear_logo_blanco_tmdb(logo, base_imagen):
         return "data:image/png;base64," + base64.b64encode(salida.getvalue()).decode("ascii")
     except Exception as error:
         print(f"No se pudo convertir el logo oscuro a blanco: {error}")
-        # No perder el logo si el servicio de imágenes falla temporalmente.
-        return url
+        # Nunca devolver el archivo negro/gris: reintentar para evitar guardar un logo incorrecto.
+        raise RuntimeError("No se pudo generar la versión blanca del logo de TMDB") from error
 
 
 def elegir_logo_tmdb(logos):
