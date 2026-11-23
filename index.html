@@ -327,7 +327,6 @@ body {
 <script>
 /* LOGOS DE BANNER: conservar el color original; los logos oscuros monocromos se muestran en blanco. */
 function configurarLogoBanner(img, url){
-  img.crossOrigin='anonymous';
   img.onload=()=>{
     try{
       const canvas=document.createElement('canvas');
