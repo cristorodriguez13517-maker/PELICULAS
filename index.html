@@ -306,6 +306,34 @@ body {
    border-color:#e50914!important;
  }
  
+
+/* FONDO CINEMATOGRÁFICO DETRÁS DE LA PRIMERA FILA */
+.content{
+  position:relative;
+  isolation:isolate;
+}
+.content::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  left:-24px;
+  right:-24px;
+  top:-190px;
+  height:410px;
+  background-image:linear-gradient(to bottom,rgba(0,0,0,.28) 0%,rgba(0,0,0,.52) 48%,#000 100%),var(--shark-row-banner);
+  background-size:cover;
+  background-position:center 35%;
+  filter:blur(15px);
+  opacity:.78;
+  transform:scale(1.035);
+}
+.content>.movie-row,
+.content>#series-grid,
+.content>.status{
+  position:relative;
+  z-index:1;
+}
 </style>
 </head>
 
@@ -577,7 +605,19 @@ function selectMovie(card){
     },320);
 }
 
+function actualizarFondoFila(banner){
+    const zona=document.querySelector('.content');
+    if(!zona)return;
+    if(banner){
+        const segura=String(banner).replace(/\\/g,'\\\\').replace(/"/g,'\\"');
+        zona.style.setProperty('--shark-row-banner','url("'+segura+'")');
+    }else{
+        zona.style.removeProperty('--shark-row-banner');
+    }
+}
+
 function renderMovieHeader(card){
+    actualizarFondoFila(card.dataset.banner);
         const banner = card.dataset.banner;
     header.style.backgroundImage = banner
         ? 'url("' + banner.replace(/"/g, '%22') + '")'
