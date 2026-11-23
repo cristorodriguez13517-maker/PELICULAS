@@ -332,6 +332,7 @@ function configurarLogoBanner(img, url){
   // convertidos a blanco desde el actualizador y conservan su transparencia.
   const logoUrl=String(url||'').trim()
     .replace('https://image.tmdb.org/pw780/','https://image.tmdb.org/t/p/w780/')
+    .replace('https://image.tmdb.org/t/pw780/','https://image.tmdb.org/t/p/w780/')
     .replace('http://image.tmdb.org/pw780/','https://image.tmdb.org/t/p/w780/');
   img.onload=()=>{
     img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
