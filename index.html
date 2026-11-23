@@ -327,8 +327,8 @@ body {
 <script>
 /* LOGOS DE BANNER: conservar el color original; los logos oscuros monocromos se muestran en blanco. */
 function configurarLogoBanner(img, url){
-  // Mantener siempre el logo original de TMDB. Solo pasar a blanco los logos
-  // realmente monocromos y oscuros; nunca alterar logos que tengan color.
+  // Mantener el logo original. Solo convertir a blanco logos oscuros
+  // estrictamente negros/grises; los colores oscuros se dejan intactos.
   img.onload=()=>{
     img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
     try{
@@ -342,27 +342,27 @@ function configurarLogoBanner(img, url){
       let total=0, luminance=0, colored=0;
       for(let p=0;p<pixels.length;p+=4){
         if(pixels[p+3]<32)continue;
-        const r=pixels[p],g=pixels[p+1],b=pixels[p+2];
-        const hi=Math.max(r,g,b),lo=Math.min(r,g,b);
-        luminance+=r*.2126+g*.7152+b*.0722;
+        const red=pixels[p],green=pixels[p+1],blue=pixels[p+2];
+        const hi=Math.max(red,green,blue),lo=Math.min(red,green,blue);
+        luminance+=red*.2126+green*.7152+blue*.0722;
         if(hi-lo>Math.max(18,hi*.12))colored++;
         total++;
       }
-      const isDarkMonochrome=total>0 &&
+      const isDarkBlackOrGray=total>0 &&
         luminance/total<115 &&
         colored/total<.01;
-      if(isDarkMonochrome){
+      if(isDarkBlackOrGray){
         img.style.filter='brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))';
       }
     }catch(error){
-      // Si el navegador no permite analizar la imagen, conservarla sin modificar.
+      // Si el navegador no permite analizar la imagen, mostrarla original.
       img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
     }
   };
-  img.onerror=()=>{
-    img.style.filter='none';
-  };
+  img.onerror=()=>{img.style.filter='none';};
   img.style.filter='none';
+  // Debe establecerse antes de src para poder analizar píxeles de TMDB.
+  img.crossOrigin='anonymous';
   img.src=url;
 }
 
