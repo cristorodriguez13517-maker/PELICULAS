@@ -327,43 +327,21 @@ body {
 <script>
 /* LOGOS DE BANNER: conservar el color original; los logos oscuros monocromos se muestran en blanco. */
 function configurarLogoBanner(img, url){
-  // Mantener el logo original. Solo convertir a blanco logos oscuros
-  // estrictamente negros/grises; los colores oscuros se dejan intactos.
+  // TMDB puede servir logos sin cabeceras CORS: no usar canvas ni crossOrigin,
+  // porque eso puede bloquear la propia imagen. Los logos oscuros ya llegan
+  // convertidos a blanco desde el actualizador y conservan su transparencia.
+  const logoUrl=String(url||'').trim()
+    .replace('https://image.tmdb.org/pw780/','https://image.tmdb.org/t/p/w780/')
+    .replace('http://image.tmdb.org/pw780/','https://image.tmdb.org/t/p/w780/');
   img.onload=()=>{
     img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
-    try{
-      const canvas=document.createElement('canvas');
-      canvas.width=Math.min(img.naturalWidth,240);
-      canvas.height=Math.max(1,Math.round(img.naturalHeight*canvas.width/img.naturalWidth));
-      const ctx=canvas.getContext('2d',{willReadFrequently:true});
-      if(!ctx)return;
-      ctx.drawImage(img,0,0,canvas.width,canvas.height);
-      const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
-      let total=0, luminance=0, colored=0;
-      for(let p=0;p<pixels.length;p+=4){
-        if(pixels[p+3]<32)continue;
-        const red=pixels[p],green=pixels[p+1],blue=pixels[p+2];
-        const hi=Math.max(red,green,blue),lo=Math.min(red,green,blue);
-        luminance+=red*.2126+green*.7152+blue*.0722;
-        if(hi-lo>Math.max(18,hi*.12))colored++;
-        total++;
-      }
-      const isDarkBlackOrGray=total>0 &&
-        luminance/total<115 &&
-        colored/total<.01;
-      if(isDarkBlackOrGray){
-        img.style.filter='brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))';
-      }
-    }catch(error){
-      // Si el navegador no permite analizar la imagen, mostrarla original.
-      img.style.filter='drop-shadow(0 1px 2px rgba(0,0,0,.45))';
-    }
   };
-  img.onerror=()=>{img.style.filter='none';};
-  img.style.filter='none';
-  // Debe establecerse antes de src para poder analizar píxeles de TMDB.
-  img.crossOrigin='anonymous';
-  img.src=url;
+  img.onerror=()=>{
+    img.style.filter='none';
+    img.dataset.logoError='true';
+  };
+  img.removeAttribute('crossorigin');
+  img.src=logoUrl;
 }
 
 'use strict';
