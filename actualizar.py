@@ -7,6 +7,8 @@ from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 
 import requests
+from io import BytesIO
+from PIL import Image
 
 # ============================================================
 # CONFIGURACIÓN SHARKTV
@@ -408,43 +410,63 @@ def get_spain_age_rating(movie_id):
     return ""
 
 
+from io import BytesIO
+from PIL import Image
+
+
+def clasificar_logo_tmdb(logo):
+    """Devuelve si el logo tiene color y su luminosidad media."""
+    try:
+        url = IMAGE_BASE + "w185" + logo["file_path"]
+        respuesta = requests.get(url, timeout=12)
+        respuesta.raise_for_status()
+        imagen_logo = Image.open(BytesIO(respuesta.content)).convert("RGBA")
+        imagen_logo.thumbnail((64, 64))
+        pixeles = list(imagen_logo.getdata())
+        visibles = [p for p in pixeles if p[3] > 32]
+        if not visibles:
+            return True, 255
+        coloreados = sum(1 for r, g, b, a in visibles if max(r, g, b) - min(r, g, b) > 22)
+        luminosidad = sum(0.2126*r + 0.7152*g + 0.0722*b for r, g, b, a in visibles) / len(visibles)
+        return (coloreados / len(visibles) >= 0.02), luminosidad
+    except Exception:
+        # Si no se puede analizar, no descartamos el logo ni lo convertimos.
+        return True, 255
+
+
+def elegir_logo_tmdb(logos):
+    """Color primero; después español, inglés y otros; blanco antes que negro."""
+    idiomas = {"es": 0, "en": 1, None: 2}
+    candidatos = [logo for logo in logos if logo.get("file_path")]
+    if not candidatos:
+        return None
+    clasificados = []
+    for logo in candidatos:
+        tiene_color, luminosidad = clasificar_logo_tmdb(logo)
+        idioma = idiomas.get(logo.get("iso_639_1"), 3)
+        es_monocromo = not tiene_color
+        blanco_primero = 0 if es_monocromo and luminosidad >= 128 else 1
+        clave = (0 if tiene_color else 1, idioma, blanco_primero,
+                 -(logo.get("vote_average") or 0), -(logo.get("width") or 0))
+        clasificados.append((clave, logo))
+    clasificados.sort(key=lambda item: item[0])
+    return clasificados[0][1]
+
+
 def get_movie_logo(movie_id):
     try:
         data = api_get(
             f"{TMDB_MOVIE_URL}/{movie_id}/images",
-            {
-                "api_key": TMDB_KEY,
-                "include_image_language": "es,en,null",
-            },
+            {"api_key": TMDB_KEY},
         )
-
     except requests.RequestException as error:
         print(f"No se pudo consultar el logo de TMDB: {error}")
         return None
 
-    logos = data.get("logos", [])
-
-    for language in ("es", "en", None):
-        for logo in logos:
-            if (
-                logo.get("iso_639_1") == language
-                and logo.get("file_path")
-            ):
-                return (
-                    IMAGE_BASE
-                    + "w780"
-                    + logo["file_path"]
-                )
-
-    for logo in logos:
-        if logo.get("file_path"):
-            return (
-                IMAGE_BASE
-                + "w780"
-                + logo["file_path"]
-            )
-
-    return None
+    elegido = elegir_logo_tmdb(data.get("logos", []))
+    if not elegido:
+        return None
+    return IMAGE_BASE + "w780" + elegido["file_path"]
 
 
 # ============================================================
