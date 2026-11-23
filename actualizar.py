@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 import re
@@ -440,19 +441,33 @@ def clasificar_logo_tmdb(logo):
         return False, 0
 
 
+def crear_logo_blanco_tmdb(logo, base_imagen):
+    """Convierte a blanco un logo oscuro conservando íntegra su transparencia."""
+    url = base_imagen + "w780" + logo["file_path"]
+    try:
+        respuesta = requests.get(url, timeout=15)
+        respuesta.raise_for_status()
+        original = Image.open(BytesIO(respuesta.content)).convert("RGBA")
+        blanco = Image.new("RGBA", original.size, (255, 255, 255, 0))
+        blanco.putalpha(original.getchannel("A"))
+        salida = BytesIO()
+        blanco.save(salida, format="PNG")
+        return "data:image/png;base64," + base64.b64encode(salida.getvalue()).decode("ascii")
+    except Exception as error:
+        print(f"No se pudo convertir el logo oscuro a blanco: {error}")
+        # No perder el logo si el servicio de imágenes falla temporalmente.
+        return url
+
+
 def elegir_logo_tmdb(logos):
-    """Color primero; si no hay color, solo monocromos blancos (nunca negros)."""
+    """Prioriza logos a color y claros; si solo hay uno oscuro, lo convierte a blanco."""
     idiomas = {"es-es": 0, "es-mx": 1, "es": 0, "en": 2, None: 3}
-    clasificados = []
+    claros = []
+    oscuros = []
     for logo in logos:
         if not logo.get("file_path"):
             continue
         tiene_color, luminosidad = clasificar_logo_tmdb(logo)
-        # Descartar cualquier logo oscuro, incluso si pequeños píxeles coloreados
-        # hicieron que el análisis lo clasificara erróneamente como "a color".
-        # Así nunca se seleccionan logos negros; se conserva el blanco como respaldo.
-        if luminosidad < 128:
-            continue
         codigo = str(logo.get("iso_639_1") or "").replace("_", "-").lower()
         idioma = idiomas.get(codigo, 4)
         clave = (
@@ -461,11 +476,25 @@ def elegir_logo_tmdb(logos):
             -(logo.get("vote_average") or 0),
             -(logo.get("width") or 0),
         )
-        clasificados.append((clave, logo))
-    if not clasificados:
-        return None
-    clasificados.sort(key=lambda item: item[0])
-    return clasificados[0][1]
+        candidato = dict(logo)
+        if not tiene_color and luminosidad < 128:
+            oscuros.append((clave, candidato))
+        else:
+            claros.append((clave, candidato))
+
+    if claros:
+        claros.sort(key=lambda item: item[0])
+        elegido = claros[0][1]
+        elegido["_logo_url"] = IMAGE_BASE + "w780" + elegido["file_path"]
+        return elegido
+
+    if oscuros:
+        oscuros.sort(key=lambda item: item[0])
+        elegido = oscuros[0][1]
+        elegido["_logo_url"] = crear_logo_blanco_tmdb(elegido, IMAGE_BASE)
+        return elegido
+
+    return None
 
 def get_movie_logo(movie_id):
     try:
@@ -480,7 +509,7 @@ def get_movie_logo(movie_id):
     elegido = elegir_logo_tmdb(data.get("logos", []))
     if not elegido:
         return None
-    return IMAGE_BASE + "w780" + elegido["file_path"]
+    return elegido.get("_logo_url") or IMAGE_BASE + "w780" + elegido["file_path"]
 
 
 # ============================================================
