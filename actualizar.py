@@ -448,8 +448,10 @@ def elegir_logo_tmdb(logos):
         if not logo.get("file_path"):
             continue
         tiene_color, luminosidad = clasificar_logo_tmdb(logo)
-        # Los monocromos oscuros y los que no se pudieron analizar se descartan.
-        if not tiene_color and luminosidad < 128:
+        # Descartar cualquier logo oscuro, incluso si pequeños píxeles coloreados
+        # hicieron que el análisis lo clasificara erróneamente como "a color".
+        # Así nunca se seleccionan logos negros; se conserva el blanco como respaldo.
+        if luminosidad < 128:
             continue
         codigo = str(logo.get("iso_639_1") or "").replace("_", "-").lower()
         idioma = idiomas.get(codigo, 4)
