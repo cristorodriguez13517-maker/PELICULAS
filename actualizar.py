@@ -446,7 +446,7 @@ def elegir_logo_tmdb(logos):
         idioma = idiomas.get(logo.get("iso_639_1"), 3)
         es_monocromo = not tiene_color
         blanco_primero = 0 if es_monocromo and luminosidad >= 128 else 1
-        clave = (0 if tiene_color else 1, idioma, blanco_primero,
+        clave = (0 if tiene_color else 1, blanco_primero if es_monocromo else 0, idioma,
                  -(logo.get("vote_average") or 0), -(logo.get("width") or 0))
         clasificados.append((clave, logo))
     clasificados.sort(key=lambda item: item[0])
