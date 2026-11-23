@@ -325,6 +325,36 @@ body {
 </div>
 
 <script>
+/* LOGOS DE BANNER: conservar el color original; los logos oscuros monocromos se muestran en blanco. */
+function configurarLogoBanner(img, url){
+  img.crossOrigin='anonymous';
+  img.onload=()=>{
+    try{
+      const canvas=document.createElement('canvas');
+      canvas.width=Math.min(img.naturalWidth,160);
+      canvas.height=Math.max(1,Math.round(img.naturalHeight*canvas.width/img.naturalWidth));
+      const ctx=canvas.getContext('2d',{willReadFrequently:true});
+      ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+      let total=0, luminance=0, saturation=0;
+      for(let p=0;p<pixels.length;p+=4){
+        if(pixels[p+3]<32)continue;
+        const r=pixels[p],g=pixels[p+1],b=pixels[p+2];
+        const hi=Math.max(r,g,b),lo=Math.min(r,g,b);
+        luminance+=(r*.2126+g*.7152+b*.0722);
+        saturation+=(hi===0?0:(hi-lo)/hi);
+        total++;
+      }
+      const dark=total>0 && luminance/total<115 && saturation/total<.18;
+      img.style.filter=dark?'brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))':'drop-shadow(0 1px 2px rgba(0,0,0,.45))';
+    }catch(error){
+      img.style.filter='brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))';
+    }
+  };
+  img.onerror=()=>{img.style.filter='brightness(0) invert(1)'};
+  img.src=url;
+}
+
 'use strict';
 
 const header = document.getElementById('header');
@@ -554,7 +584,7 @@ function renderMovieHeader(card){
 
     if (logo) {
         const image = document.createElement('img');
-        image.src = logo;
+        configurarLogoBanner(image,logo);
         image.alt = movieTitle;
 
         image.addEventListener('error', () => {
