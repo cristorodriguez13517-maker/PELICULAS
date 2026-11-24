@@ -962,6 +962,15 @@ startSharkTV();
   }
 })();
 </script>
+
+<style id="sharktv-mobile-synopsis-cover-overlay">
+@media screen and (max-width:600px) and (orientation:portrait){
+  /* La cabecera fija queda delante: las carátulas pasan por detrás de la sinopsis. */
+  .header{z-index:20!important;pointer-events:none!important}
+  .header-info{pointer-events:auto!important}
+  .content{position:relative!important;z-index:1!important}
+}
+</style>
 </body>
 </html>
 
