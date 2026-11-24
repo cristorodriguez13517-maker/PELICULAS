@@ -1085,42 +1085,44 @@ startSharkTV();
 <script id="sharktv-mobile-first-row-fade-script">
 (function(){
  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
- let raf=false, observer=null, scrollTargets=[];
+ let raf=false, observers=[];
+ function cards(){return Array.from(document.querySelectorAll('#movie-row .movie, #series-grid .movie, .movie-row .movie'));}
  function update(){
   raf=false;
-  const row=document.querySelector('#movie-row, #series-grid, .movie-row');
-  const synopsis=document.querySelector('#overview, .overview');
-  if(!row||!synopsis)return;
-  const cards=Array.from(row.querySelectorAll('.movie, .series-card, .movie-card')).slice(0,3);
-  if(!mq.matches){cards.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('transition');});return;}
-  const sr=synopsis.getBoundingClientRect();
-  cards.forEach(el=>{
+  const all=cards();
+  if(!mq.matches){all.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('transition');});return;}
+  const header=document.querySelector('.header');
+  const info=document.querySelector('#info, .header-info');
+  if(!header||!info)return;
+  const hr=header.getBoundingClientRect();
+  const ir=info.getBoundingClientRect();
+  const top=Math.max(hr.top,ir.top);
+  const bottom=Math.min(hr.bottom,ir.bottom);
+  if(bottom<=top)return;
+  all.forEach(el=>{
    const r=el.getBoundingClientRect();
-   const overlap=Math.max(0,Math.min(r.bottom,sr.bottom)-Math.max(r.top,sr.top));
-   const fraction=r.height>0?overlap/r.height:0;
-   // Opacidad 1 fuera de la sinopsis; se desvanece solo mientras cruza su zona.
-   const opacity=Math.max(0,Math.min(1,1-fraction));
-   el.style.opacity=String(opacity);
-   el.style.transition='opacity .08s linear';
+   if(r.bottom<=top-2||r.top>=bottom+2){el.style.removeProperty('opacity');el.style.removeProperty('transition');return;}
+   const overlap=Math.max(0,Math.min(r.bottom,bottom)-Math.max(r.top,top));
+   const ratio=r.height>0?overlap/r.height:0;
+   el.style.opacity=String(Math.max(0,Math.min(1,1-ratio)));
+   el.style.transition='opacity .10s linear';
   });
  }
- function requestUpdate(){if(!raf){raf=true;requestAnimationFrame(update);}}
- function bind(){
-  window.addEventListener('scroll',requestUpdate,{passive:true,capture:true});
-  document.addEventListener('scroll',requestUpdate,{passive:true,capture:true});
-  document.addEventListener('touchmove',requestUpdate,{passive:true});
-  scrollTargets=Array.from(document.querySelectorAll('*')).filter(el=>el.scrollHeight>el.clientHeight+2 && getComputedStyle(el).overflowY!=='visible');
-  scrollTargets.forEach(el=>el.addEventListener('scroll',requestUpdate,{passive:true}));
- }
+ function request(){if(!raf){raf=true;requestAnimationFrame(update);}}
  function init(){
-  if(observer)observer.disconnect();
-  bind();
+  observers.forEach(o=>o.disconnect());observers=[];
+  window.addEventListener('scroll',request,{passive:true,capture:true});
+  document.addEventListener('scroll',request,{passive:true,capture:true});
+  document.addEventListener('touchmove',request,{passive:true});
   const row=document.querySelector('#movie-row, #series-grid, .movie-row');
-  if(row){observer=new MutationObserver(requestUpdate);observer.observe(row,{childList:true,subtree:true});}
-  requestUpdate();
+  const info=document.querySelector('#info, .header-info');
+  [row,info].filter(Boolean).forEach(node=>{
+   const o=new MutationObserver(request);o.observe(node,{childList:true,subtree:true,characterData:true});observers.push(o);
+  });
+  request();
  }
- if(mq.addEventListener)mq.addEventListener('change',init);else mq.addListener(init);
- window.addEventListener('resize',requestUpdate);
+ if(mq.addEventListener)mq.addEventListener('change',request);else mq.addListener(request);
+ window.addEventListener('resize',request,{passive:true});
  init();
 })();
 </script>
