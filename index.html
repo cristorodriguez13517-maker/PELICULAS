@@ -1085,36 +1085,33 @@ startSharkTV();
 <script id="sharktv-mobile-first-row-fade-script">
 (function(){
  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
- let scheduled=false, mo=null;
+ let raf=false, mo=null;
  function update(){
-  scheduled=false;
-  if(!mq.matches){document.querySelectorAll(".movie-row .movie").forEach(el=>el.style.removeProperty("opacity"));return;}
-  const synopsis=document.getElementById("overview");
-  if(!synopsis){return;}
-  const sr=synopsis.getBoundingClientRect();
-  document.querySelectorAll(".movie-row .movie").forEach(el=>{
-   const r=el.getBoundingClientRect();
-   const vertical=Math.max(0,Math.min(r.bottom,sr.bottom)-Math.max(r.top,sr.top));
-   const horizontal=Math.max(0,Math.min(r.right,sr.right)-Math.max(r.left,sr.left));
-   const overlap=(r.width>0&&r.height>0)?(vertical/r.height)*(horizontal/r.width):0;
-   el.style.opacity=String(Math.max(0,Math.min(1,1-overlap)));
-  });
+  raf=false;
+  const row=document.getElementById('movie-row');
+  if(!row)return;
+  const cards=Array.from(row.querySelectorAll('.movie'));
+  const firstRow=cards.slice(0,3);
+  if(!mq.matches){firstRow.forEach(el=>el.style.removeProperty('opacity'));return;}
+  if(!firstRow.length)return;
+  const top=firstRow[0].getBoundingClientRect().top;
+  // La primera fila se desvanece al subir hacia la parte superior y reaparece al bajar.
+  const opacity=Math.max(0,Math.min(1,(top-110)/190));
+  firstRow.forEach(el=>{el.style.opacity=String(opacity);});
  }
- function requestUpdate(){if(!scheduled){scheduled=true;requestAnimationFrame(update);}}
+ function requestUpdate(){if(!raf){raf=true;requestAnimationFrame(update);}}
  function init(){
   if(mo)mo.disconnect();
-  document.querySelectorAll(".movie-row .movie").forEach(el=>el.style.removeProperty("opacity"));
-  if(!mq.matches)return;
+  const row=document.getElementById('movie-row');
+  if(row){
+   mo=new MutationObserver(requestUpdate);
+   mo.observe(row,{childList:true,subtree:true});
+  }
   requestUpdate();
-  window.addEventListener("scroll",requestUpdate,{passive:true});
-  window.addEventListener("resize",requestUpdate);
-  mo=new MutationObserver(requestUpdate);
-  const row=document.getElementById("movie-row");
-  if(row)mo.observe(row,{childList:true,subtree:true});
  }
- if(mq.addEventListener)mq.addEventListener("change",init);else mq.addListener(init);
- window.addEventListener("scroll",requestUpdate,{passive:true});
- window.addEventListener("resize",requestUpdate);
+ window.addEventListener('scroll',requestUpdate,{passive:true});
+ window.addEventListener('resize',requestUpdate);
+ if(mq.addEventListener)mq.addEventListener('change',init);else mq.addListener(init);
  init();
 })();
 </script>
