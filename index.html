@@ -913,6 +913,8 @@ async function startSharkTV() {
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
             focusFirstMovie();
+            const initialCard=document.activeElement&&document.activeElement.closest('.movie');
+            if(initialCard)initialCard.classList.add('shark-no-initial-frame');
         });
     });
 }
@@ -958,4 +960,9 @@ startSharkTV();
  .movie-row .movie{width:100%!important;min-width:0!important;max-width:130px!important;height:auto!important;aspect-ratio:2/3!important}
  .movie-row .movie img{width:100%!important;height:100%!important}
 }
+</style>
+
+<style>
+/* La primera carátula muestra el banner al iniciar, pero sin marco rojo. */
+.movie.shark-no-initial-frame img{border-color:transparent!important}
 </style>
