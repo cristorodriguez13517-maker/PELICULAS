@@ -700,8 +700,7 @@ function getVisibleCards() {
 
 function getColumns() {
     if (window.innerWidth <= 600) return 3;
-    if (window.innerWidth <= 900) return 5;
-    return 7;
+    return 6;
 }
 
 function scrollToMovie(card) {
@@ -913,9 +912,8 @@ async function startSharkTV() {
     await loadMovies();
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-            focusFirstMovie();
-            const initialCard=document.activeElement&&document.activeElement.closest('.movie');
-            if(initialCard)initialCard.classList.add('shark-no-initial-frame');
+            const first = getVisibleCards()[0];
+            if (first) renderMovieHeader(first);
         });
     });
 }
