@@ -1085,35 +1085,36 @@ startSharkTV();
 <script id="sharktv-mobile-first-row-fade-script">
 (function(){
  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
- let raf=false, observer=null, targets=[];
- function getCards(){
-  const row=document.querySelector('#movie-row, #series-grid, .movie-row');
-  if(!row)return [];
-  return Array.from(row.querySelectorAll('.movie, .series-card, .movie-card')).slice(0,3);
- }
+ let raf=false, observer=null, scrollTargets=[];
  function update(){
   raf=false;
-  const cards=getCards();
-  if(!mq.matches){cards.forEach(el=>el.style.removeProperty('opacity'));return;}
-  if(!cards.length)return;
-  const first=cards[0].getBoundingClientRect();
-  // Se desvanece solo la primera fila al subir y reaparece al bajar.
-  const fadeStart=Math.min(window.innerHeight*0.72,360);
-  const fadeEnd=Math.min(window.innerHeight*0.38,210);
-  const opacity=Math.max(0,Math.min(1,(first.top-fadeEnd)/(fadeStart-fadeEnd)));
-  cards.forEach(el=>{el.style.opacity=String(opacity);el.style.transition='opacity .12s linear';});
+  const row=document.querySelector('#movie-row, #series-grid, .movie-row');
+  const synopsis=document.querySelector('#overview, .overview');
+  if(!row||!synopsis)return;
+  const cards=Array.from(row.querySelectorAll('.movie, .series-card, .movie-card')).slice(0,3);
+  if(!mq.matches){cards.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('transition');});return;}
+  const sr=synopsis.getBoundingClientRect();
+  cards.forEach(el=>{
+   const r=el.getBoundingClientRect();
+   const overlap=Math.max(0,Math.min(r.bottom,sr.bottom)-Math.max(r.top,sr.top));
+   const fraction=r.height>0?overlap/r.height:0;
+   // Opacidad 1 fuera de la sinopsis; se desvanece solo mientras cruza su zona.
+   const opacity=Math.max(0,Math.min(1,1-fraction));
+   el.style.opacity=String(opacity);
+   el.style.transition='opacity .08s linear';
+  });
  }
  function requestUpdate(){if(!raf){raf=true;requestAnimationFrame(update);}}
- function bindScrollers(){
+ function bind(){
   window.addEventListener('scroll',requestUpdate,{passive:true,capture:true});
   document.addEventListener('scroll',requestUpdate,{passive:true,capture:true});
   document.addEventListener('touchmove',requestUpdate,{passive:true});
-  targets=Array.from(document.querySelectorAll('*')).filter(el=>el.scrollHeight>el.clientHeight+2 && getComputedStyle(el).overflowY!=='visible');
-  targets.forEach(el=>el.addEventListener('scroll',requestUpdate,{passive:true}));
+  scrollTargets=Array.from(document.querySelectorAll('*')).filter(el=>el.scrollHeight>el.clientHeight+2 && getComputedStyle(el).overflowY!=='visible');
+  scrollTargets.forEach(el=>el.addEventListener('scroll',requestUpdate,{passive:true}));
  }
  function init(){
   if(observer)observer.disconnect();
-  bindScrollers();
+  bind();
   const row=document.querySelector('#movie-row, #series-grid, .movie-row');
   if(row){observer=new MutationObserver(requestUpdate);observer.observe(row,{childList:true,subtree:true});}
   requestUpdate();
