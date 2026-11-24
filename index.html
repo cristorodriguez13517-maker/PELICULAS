@@ -945,6 +945,23 @@ startSharkTV();
  .movie-row .movie img{width:100%!important;height:100%!important;max-width:135px!important;object-fit:cover!important}
 }
 </style>
+<script>
+/* Ajusta la altura de la fila al cargar, sin seleccionar ni enfocar ninguna carátula. */
+(function(){
+  function fitInitialCatalogRow(){
+    const first=document.querySelector('.movie-row .movie:not([hidden])');
+    if(!first || typeof updateCatalogViewport!=='function') return false;
+    updateCatalogViewport(first);
+    return true;
+  }
+  if(!fitInitialCatalogRow()){
+    const observer=new MutationObserver(function(){
+      if(fitInitialCatalogRow()) observer.disconnect();
+    });
+    observer.observe(document.body,{childList:true,subtree:true});
+  }
+})();
+</script>
 </body>
 </html>
 
