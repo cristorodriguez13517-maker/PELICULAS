@@ -963,14 +963,6 @@ startSharkTV();
 })();
 </script>
 
-<style id="sharktv-mobile-synopsis-cover-overlay">
-@media screen and (max-width:600px) and (orientation:portrait){
-  /* La cabecera fija queda delante: las carátulas pasan por detrás de la sinopsis. */
-  .header{z-index:20!important;pointer-events:none!important}
-  .header-info{pointer-events:auto!important}
-  .content{position:relative!important;z-index:1!important}
-}
-</style>
 </body>
 </html>
 
@@ -1093,36 +1085,36 @@ startSharkTV();
 <script id="sharktv-mobile-first-row-fade-script">
 (function(){
  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
- let io=null, mo=null;
- const thresholds=Array.from({length:21},(_,i)=>i/20);
- function reset(){
-  if(io){io.disconnect();io=null;}
-  if(mo){mo.disconnect();mo=null;}
-  document.querySelectorAll('.movie-row .movie').forEach(el=>{
-   el.style.removeProperty('opacity');
-   el.style.removeProperty('transform');
+ let scheduled=false, mo=null;
+ function update(){
+  scheduled=false;
+  if(!mq.matches){document.querySelectorAll(".movie-row .movie").forEach(el=>el.style.removeProperty("opacity"));return;}
+  const synopsis=document.getElementById("overview");
+  if(!synopsis){return;}
+  const sr=synopsis.getBoundingClientRect();
+  document.querySelectorAll(".movie-row .movie").forEach(el=>{
+   const r=el.getBoundingClientRect();
+   const vertical=Math.max(0,Math.min(r.bottom,sr.bottom)-Math.max(r.top,sr.top));
+   const horizontal=Math.max(0,Math.min(r.right,sr.right)-Math.max(r.left,sr.left));
+   const overlap=(r.width>0&&r.height>0)?(vertical/r.height)*(horizontal/r.width):0;
+   el.style.opacity=String(Math.max(0,Math.min(1,1-overlap)));
   });
  }
+ function requestUpdate(){if(!scheduled){scheduled=true;requestAnimationFrame(update);}}
  function init(){
-  reset();
-  if(!mq.matches || !('IntersectionObserver' in window)) return;
-  io=new IntersectionObserver(entries=>{
-   entries.forEach(entry=>{
-    const ratio=entry.intersectionRatio;
-    entry.target.style.opacity=String(ratio);
-    entry.target.style.transform='translateY('+((1-ratio)*-10)+'px)';
-   });
-  },{root:null,rootMargin:'0px',threshold:thresholds});
-  function observe(root){
-   if(root.nodeType!==1)return;
-   if(root.matches('.movie-row .movie'))io.observe(root);
-   root.querySelectorAll('.movie-row .movie').forEach(el=>io.observe(el));
-  }
-  observe(document.documentElement);
-  mo=new MutationObserver(records=>records.forEach(rec=>rec.addedNodes.forEach(observe)));
-  mo.observe(document.body,{childList:true,subtree:true});
+  if(mo)mo.disconnect();
+  document.querySelectorAll(".movie-row .movie").forEach(el=>el.style.removeProperty("opacity"));
+  if(!mq.matches)return;
+  requestUpdate();
+  window.addEventListener("scroll",requestUpdate,{passive:true});
+  window.addEventListener("resize",requestUpdate);
+  mo=new MutationObserver(requestUpdate);
+  const row=document.getElementById("movie-row");
+  if(row)mo.observe(row,{childList:true,subtree:true});
  }
- if(mq.addEventListener)mq.addEventListener('change',init);else mq.addListener(init);
+ if(mq.addEventListener)mq.addEventListener("change",init);else mq.addListener(init);
+ window.addEventListener("scroll",requestUpdate,{passive:true});
+ window.addEventListener("resize",requestUpdate);
  init();
 })();
 </script>
