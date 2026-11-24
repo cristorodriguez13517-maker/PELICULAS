@@ -949,13 +949,25 @@ startSharkTV();
 </style>
 
 <style>
-/* TV: 6 carátulas. Tablet: 8 carátulas. Móvil conserva 3. */
-.movie-row{grid-template-columns:repeat(6,130px)!important;gap:8px!important}
-.movie-row .movie{width:130px!important;min-width:130px!important;max-width:130px!important}
-
+/* Carátulas adaptables: columnas fluidas y separación uniforme. */
+.movie-row{
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  column-gap:8px!important;
+  row-gap:8px!important;
+}
+.movie-row .movie{
+  width:100%!important;
+  min-width:0!important;
+  max-width:none!important;
+  height:auto!important;
+  aspect-ratio:2/3!important;
+}
+.movie-row .movie img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
 @media(max-width:600px){
- .movie-row{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
- .movie-row .movie{width:100%!important;min-width:0!important;max-width:130px!important;height:auto!important;aspect-ratio:2/3!important}
- .movie-row .movie img{width:100%!important;height:100%!important}
+  .movie-row{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
 }
 </style>
