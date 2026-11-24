@@ -1107,14 +1107,14 @@ startSharkTV();
   const synopsis=getSynopsis();
   if(!synopsis)return;
   const boundary=synopsis.getBoundingClientRect().top;
-  const fadeDistance=700;
+  const hideBefore=700;
   cards.forEach(card=>{
    const bottom=card.getBoundingClientRect().bottom;
-   // La sinopsis fija su propio límite: el banner no participa en el cálculo.
-   const opacity=Math.max(0,Math.min(1,(bottom-boundary)/fadeDistance));
-   card.style.setProperty('transition','opacity .10s linear');
-   card.style.setProperty('opacity',String(opacity),'important');
-   card.style.setProperty('pointer-events',opacity<=0.01?'none':'auto');
+   // Ocultación inmediata al entrar en el límite de 700 px antes de la sinopsis.
+   const visible=bottom>boundary+hideBefore?1:0;
+   card.style.setProperty('transition','none');
+   card.style.setProperty('opacity',String(visible),'important');
+   card.style.setProperty('pointer-events',visible===0?'none':'auto');
   });
  }
  function request(){
