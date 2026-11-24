@@ -963,6 +963,111 @@ startSharkTV();
 })();
 </script>
 
+
+<style id="sharktv-mobile-portrait-reference">
+@media screen and (max-width:600px) and (orientation:portrait){
+  .header::before,.header:before{
+    background:
+      linear-gradient(to right,rgba(0,0,0,.90) 0%,rgba(0,0,0,.55) 35%,transparent 100%),
+      linear-gradient(to bottom,rgba(0,0,0,.12) 48%,rgba(0,0,0,.58) 74%,#000 100%)!important;
+  }
+  .header{
+    height:430px!important;
+    min-height:430px!important;
+    padding:15px!important;
+    background-position:center center!important;
+    background-size:cover!important;
+    background-repeat:no-repeat!important;
+  }
+  .header-info,#header-info{
+    position:absolute!important;
+    top:160px!important;
+    left:15px!important;
+    right:15px!important;
+    transform:translateY(-50%)!important;
+    z-index:2!important;
+    width:auto!important;
+    max-width:500px!important;
+    max-height:calc(100% - 24px)!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    box-sizing:border-box!important;
+  }
+  .header-info img,.header h1 img,#header-info img{
+    display:block!important;
+    width:auto!important;
+    max-width:min(240px,76vw)!important;
+    max-height:70px!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+  }
+  .header h1,#header-info h1{margin:0!important}
+  .details,#header-info .details{
+    font-size:14px!important;
+    font-weight:bold!important;
+    margin:10px 0!important;
+    line-height:1.7!important;
+    max-width:480px!important;
+  }
+  .overview,#header-info .overview{
+    display:block!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+    max-width:450px!important;
+    max-height:none!important;
+    height:auto!important;
+    overflow:visible!important;
+    margin:8px 0 0!important;
+    white-space:normal!important;
+    -webkit-line-clamp:unset!important;
+    line-clamp:unset!important;
+  }
+  .content{
+    margin-top:320px!important;
+    padding:12px!important;
+    position:relative!important;
+    z-index:1!important;
+  }
+  .search-container{right:15px!important;top:15px!important}
+  .search-input.active{width:170px!important}
+  .movie-row,#movie-row,#series-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    grid-auto-flow:row!important;
+    grid-auto-rows:auto!important;
+    gap:14px 8px!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+    align-content:start!important;
+    align-items:start!important;
+    transform:none!important;
+    padding-bottom:18px!important;
+  }
+  .movie-row .movie,#movie-row .movie,#series-grid .movie{
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:2/3!important;
+    margin:0!important;
+    transform:none!important;
+  }
+  .movie-row .movie img,#movie-row .movie img,#series-grid .movie img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:cover!important;
+  }
+  .movie-row .movie,#movie-row .movie,#series-grid .movie{transition:none!important}
+}
+</style>
+
 </body>
 </html>
 
@@ -1110,7 +1215,7 @@ startSharkTV();
   const hideBefore=300;
   cards.forEach(card=>{
    const bottom=card.getBoundingClientRect().bottom;
-   // Ocultación inmediata al entrar en el límite de 700 px antes de la sinopsis.
+   // Ocultación inmediata al entrar en el límite configurado antes de la sinopsis.
    const visible=bottom>boundary+hideBefore?1:0;
    card.style.setProperty('transition','none');
    card.style.setProperty('opacity',String(visible),'important');
