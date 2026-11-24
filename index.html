@@ -715,6 +715,7 @@ function scrollToMovie(card) {
 
 function focusMovie(card) {
     if (!card) return;
+    document.querySelectorAll('.shark-no-initial-frame').forEach(el=>el.classList.remove('shark-no-initial-frame'));
     card.focus({ preventScroll: true });
     selectMovie(card);
 }
