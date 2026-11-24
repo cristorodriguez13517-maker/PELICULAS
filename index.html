@@ -1067,16 +1067,6 @@ startSharkTV();
 
 
 
-<script id="sharktv-mobile-scroll-fade-script">
-(function(){
-  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
-  let observer=null, mutation=null;
-  function stop(){
-    if(observer){observer.disconnect();observer=null;}
-    if(mutation){mutation.disconnect();mutation=null;}
-    document.querySelectorAll('.movie.shark-mobile-out-of-view').forEach(el=
-
-
 <style id="sharktv-mobile-first-row-fade">
 @media screen and (max-width:600px) and (orientation:portrait){
  .movie-row .movie{transition:opacity .12s linear,transform .12s linear!important}
@@ -1085,51 +1075,77 @@ startSharkTV();
 <script id="sharktv-mobile-first-row-fade-script">
 (function(){
  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
- let raf=0, mutation=null, resize=null, scrollNodes=[];
- function getCards(){return Array.from(document.querySelectorAll('#movie-row .movie, #series-grid .movie, .movie-row .movie'));}
- function getSynopsis(){return document.querySelector('#overview, .overview');}
+ let raf=0, observer=null, bound=new WeakSet();
+ function getRows(){
+  return Array.from(document.querySelectorAll('#movie-row, #series-grid, .movie-row'));
+ }
+ function getCards(){
+  const rows=getRows();
+  const cards=[];
+  rows.forEach(row=>{
+   Array.from(row.children).forEach(card=>{
+    if(!cards.includes(card)) cards.push(card);
+   });
+  });
+  return cards;
+ }
+ function getSynopsis(){
+  return document.querySelector('#overview, .overview, #header-info .synopsis, #header-info .description, #header-info p, #header-info .description-text')
+      || document.querySelector('#header-info');
+ }
  function update(){
   raf=0;
-  const all=getCards();
-  if(!mq.matches){all.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('transition');});return;}
+  const cards=getCards();
+  if(!mq.matches){
+   cards.forEach(card=>{
+    card.style.removeProperty('opacity');
+    card.style.removeProperty('transition');
+    card.style.removeProperty('pointer-events');
+   });
+   return;
+  }
   const synopsis=getSynopsis();
   if(!synopsis)return;
-  const sr=synopsis.getBoundingClientRect();
-  const boundary=sr.top;
-  const distance=Math.max(90,Math.min(150,window.innerHeight*0.18));
-  all.forEach(el=>{
-   const r=el.getBoundingClientRect();
-   // La tarjeta se desvanece antes de que su borde inferior alcance la sinopsis.
-   const opacity=Math.max(0,Math.min(1,(r.bottom-boundary)/distance));
-   el.style.setProperty('opacity',String(opacity),'important');
-   el.style.setProperty('transition','opacity .08s linear');
-   el.style.setProperty('pointer-events',opacity<=0.02?'none':'auto');
+  const boundary=synopsis.getBoundingClientRect().top;
+  const fadeDistance=110;
+  cards.forEach(card=>{
+   const bottom=card.getBoundingClientRect().bottom;
+   // La sinopsis fija su propio límite: el banner no participa en el cálculo.
+   const opacity=Math.max(0,Math.min(1,(bottom-boundary)/fadeDistance));
+   card.style.setProperty('transition','opacity .10s linear');
+   card.style.setProperty('opacity',String(opacity),'important');
+   card.style.setProperty('pointer-events',opacity<=0.01?'none':'auto');
   });
  }
- function request(){if(!raf)raf=requestAnimationFrame(update);}
+ function request(){
+  if(!raf)raf=requestAnimationFrame(update);
+ }
  function bindScroll(){
   window.addEventListener('scroll',request,{passive:true,capture:true});
   document.addEventListener('scroll',request,{passive:true,capture:true});
   document.addEventListener('touchmove',request,{passive:true});
   if(window.visualViewport)window.visualViewport.addEventListener('scroll',request,{passive:true});
-  scrollNodes=Array.from(document.querySelectorAll('*')).filter(el=>el.scrollHeight>el.clientHeight+2 && getComputedStyle(el).overflowY!=='visible');
-  scrollNodes.forEach(el=>el.addEventListener('scroll',request,{passive:true}));
+  getRows().forEach(row=>{
+   if(!bound.has(row)){row.addEventListener('scroll',request,{passive:true});bound.add(row);}
+  });
  }
  function init(){
   bindScroll();
-  const root=document.body;
-  if(mutation)mutation.disconnect();
-  mutation=new MutationObserver(request);
-  mutation.observe(root,{childList:true,subtree:true,characterData:true});
-  if(resize)resize.disconnect();
+  if(observer)observer.disconnect();
+  observer=new MutationObserver(()=>{bindScroll();request();});
+  observer.observe(document.body,{childList:true,subtree:true,characterData:true});
   if(window.ResizeObserver){
-   resize=new ResizeObserver(request);
-   const synopsis=getSynopsis();if(synopsis)resize.observe(synopsis);
+   const ro=new ResizeObserver(request);
+   const synopsis=getSynopsis();
+   if(synopsis)ro.observe(synopsis);
+   getRows().forEach(row=>ro.observe(row));
   }
   request();
  }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
- if(mq.addEventListener)mq.addEventListener('change',request);else mq.addListener(request);
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
+ else init();
+ if(mq.addEventListener)mq.addEventListener('change',request);
+ else mq.addListener(request);
  window.addEventListener('resize',request,{passive:true});
 })();
 </script>
