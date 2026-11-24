@@ -964,4 +964,19 @@ startSharkTV();
 <style>
 /* La primera carátula muestra el banner al iniciar, pero sin marco rojo. */
 .movie.shark-no-initial-frame img{border-color:transparent!important}
+
+/* Aumento ligero del tamaño de las carátulas */
+.movie-row .movie,
+.movie-row .movie img{width:140px!important;max-width:140px!important}
+.movie-row .movie{height:194px!important;min-width:140px!important}
+.movie-row .movie img{height:194px!important}
+@media(max-width:900px) and (min-width:601px){
+ .movie-row .movie,.movie-row .movie img{width:130px!important;max-width:130px!important}
+ .movie-row .movie{height:180px!important;min-width:130px!important}
+ .movie-row .movie img{height:180px!important}
+}
+@media(max-width:600px){
+ .movie-row .movie{width:100%!important;min-width:0!important;max-width:140px!important;height:auto!important;aspect-ratio:130/180!important}
+ .movie-row .movie img{width:100%!important;height:100%!important;max-width:140px!important}
+}
 </style>
