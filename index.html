@@ -654,6 +654,25 @@ function selectMovie(card){
     },320);
 }
 
+function appendYoutubeSourceIcon(){
+    const ns='http://www.w3.org/2000/svg';
+    const icon=document.createElementNS(ns,'svg');
+    icon.setAttribute('viewBox','0 0 24 18');
+    icon.setAttribute('class','youtube-source-icon');
+    icon.setAttribute('role','img');
+    icon.setAttribute('aria-label','YouTube');
+    const box=document.createElementNS(ns,'rect');
+    box.setAttribute('x','1');box.setAttribute('y','2');
+    box.setAttribute('width','22');box.setAttribute('height','14');
+    box.setAttribute('rx','4');box.setAttribute('fill','#ff0033');
+    const play=document.createElementNS(ns,'path');
+    play.setAttribute('d','M10 6 L16 9 L10 12 Z');
+    play.setAttribute('fill','#fff');
+    icon.append(box,play);
+    metaElement.append(' ');
+    metaElement.appendChild(icon);
+}
+
 function renderMovieHeader(card){
         const banner = card.dataset.banner;
     header.style.backgroundImage = banner
@@ -687,6 +706,7 @@ function renderMovieHeader(card){
         card.dataset.quality,
         card.dataset.age
     ].filter(Boolean).join(' | ');
+    appendYoutubeSourceIcon();
 
     overviewElement.textContent = card.dataset.overview || '';
     info.classList.add('visible');
@@ -1330,5 +1350,17 @@ startSharkTV();
    linear-gradient(to right,rgba(0,0,0,.96) 0%,rgba(0,0,0,.70) 48%,transparent 100%),
    linear-gradient(to bottom,rgba(0,0,0,.22) 48%,rgba(0,0,0,.72) 74%,#000 100%)!important;
  }
+}
+</style>
+
+<style>
+/* Icono de origen YouTube junto a los datos del banner */
+.youtube-source-icon{
+  display:inline-block!important;
+  width:23px!important;
+  height:17px!important;
+  margin-left:3px!important;
+  vertical-align:-3px!important;
+  flex:none!important;
 }
 </style>
