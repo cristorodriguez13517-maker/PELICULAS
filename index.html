@@ -637,7 +637,7 @@ function updateCatalogViewport(card){
     if(index<0)return;
     const targetRow=Math.floor(index/columns);
     const offset=card.getBoundingClientRect().top-first.getBoundingClientRect().top;
-    row.scrollTop+=offset;
+    row.scrollTop=offset;
 }
 function selectMovie(card){
     if(!card||card.hidden)return;
