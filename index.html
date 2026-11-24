@@ -620,8 +620,28 @@ function renderMovies() {
 
 /* BANNER Y LOGO */
 
+function updateCatalogViewport(card){
+    const row=card&&card.closest('.movie-row');
+    if(!row)return;
+    const cards=Array.from(row.querySelectorAll('.movie:not([hidden])'));
+    if(!cards.length)return;
+    const first=cards[0];
+    const rowHeight=first.getBoundingClientRect().height;
+    row.style.setProperty('--shark-row-height',rowHeight+'px');
+    row.style.height='var(--shark-row-height)';
+    row.style.maxHeight='var(--shark-row-height)';
+    row.style.overflowY='hidden';
+    row.style.overflowX='visible';
+    const columns=Math.max(1,getComputedStyle(row).gridTemplateColumns.split(' ').filter(Boolean).length);
+    const index=cards.indexOf(card);
+    if(index<0)return;
+    const targetRow=Math.floor(index/columns);
+    const offset=card.getBoundingClientRect().top-first.getBoundingClientRect().top;
+    row.scrollTop+=offset;
+}
 function selectMovie(card){
     if(!card||card.hidden)return;
+    updateCatalogViewport(card);
     if(selectedMovie!==card){
         if(selectedMovie)selectedMovie.classList.remove('selected');
         selectedMovie=card;
@@ -911,4 +931,18 @@ startSharkTV();
 </style>
 <style>
 /* Las carátulas que quedan atrás se desvanecen; reaparecen al retroceder */
+</style>
+
+<style>
+/* Mantener una sola fila de carátulas visible; las flechas verticales cambian la fila dentro del mismo espacio. */
+.movie-row{
+  height:var(--shark-row-height,180px)!important;
+  max-height:var(--shark-row-height,180px)!important;
+  overflow-x:visible!important;
+  overflow-y:hidden!important;
+  align-content:start!important;
+  scroll-behavior:auto!important;
+  scrollbar-width:none!important;
+}
+.movie-row::-webkit-scrollbar{display:none!important}
 </style>
