@@ -1107,7 +1107,7 @@ startSharkTV();
   const synopsis=getSynopsis();
   if(!synopsis)return;
   const boundary=synopsis.getBoundingClientRect().top;
-  const fadeDistance=300;
+  const fadeDistance=500;
   cards.forEach(card=>{
    const bottom=card.getBoundingClientRect().bottom;
    // La sinopsis fija su propio límite: el banner no participa en el cálculo.
