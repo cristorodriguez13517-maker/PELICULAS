@@ -731,6 +731,8 @@ function openSearch() {
     searchInput.focus();
 }
 
+function selectFirstSearchResult(){const card=getVisibleCards()[0];if(!card)return;searchInput.classList.remove('active');searchInput.blur();focusMovie(card);}
+
 function closeSearch() {
     searchInput.value = '';
     filterMovies();
@@ -772,13 +774,13 @@ document.addEventListener('keydown', function(event) {
 
         if (down) {
             event.preventDefault();
-            focusFirstMovie();
+            selectFirstSearchResult();
             return;
         }
 
         if (enter) {
             event.preventDefault();
-            focusFirstMovie();
+            selectFirstSearchResult();
             return;
         }
 
