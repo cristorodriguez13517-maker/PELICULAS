@@ -1107,7 +1107,7 @@ startSharkTV();
   const synopsis=getSynopsis();
   if(!synopsis)return;
   const boundary=synopsis.getBoundingClientRect().top;
-  const hideBefore=400;
+  const hideBefore=300;
   cards.forEach(card=>{
    const bottom=card.getBoundingClientRect().bottom;
    // Ocultación inmediata al entrar en el límite de 700 px antes de la sinopsis.
