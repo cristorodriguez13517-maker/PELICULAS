@@ -932,6 +932,19 @@ startSharkTV();
 .movie-row{transform:translateY(-120px)!important}
 @media(max-width:900px){.movie-row{transform:translateY(-70px)!important}}
 </style>
+<style>
+/* Reducción ligera del tamaño de las carátulas */
+.movie-row .movie{width:135px!important;min-width:135px!important;max-width:135px!important;height:187px!important}
+.movie-row .movie img{width:135px!important;height:187px!important;max-width:135px!important;object-fit:cover!important}
+@media(max-width:900px) and (min-width:601px){
+ .movie-row .movie{width:125px!important;min-width:125px!important;max-width:125px!important;height:173px!important}
+ .movie-row .movie img{width:125px!important;height:173px!important;max-width:125px!important}
+}
+@media(max-width:600px){
+ .movie-row .movie{width:100%!important;min-width:0!important;max-width:135px!important;height:auto!important;aspect-ratio:135/187!important}
+ .movie-row .movie img{width:100%!important;height:100%!important;max-width:135px!important;object-fit:cover!important}
+}
+</style>
 </body>
 </html>
 
