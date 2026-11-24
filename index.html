@@ -1108,3 +1108,46 @@ startSharkTV();
   start();
 })();
 </script>
+
+
+<style id="sharktv-mobile-first-row-fade">
+@media screen and (max-width:600px) and (orientation:portrait){
+ .movie-row .movie{transition:opacity .12s linear,transform .12s linear!important}
+}
+</style>
+<script id="sharktv-mobile-first-row-fade-script">
+(function(){
+ const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
+ let io=null, mo=null;
+ const thresholds=Array.from({length:21},(_,i)=>i/20);
+ function reset(){
+  if(io){io.disconnect();io=null;}
+  if(mo){mo.disconnect();mo=null;}
+  document.querySelectorAll('.movie-row .movie').forEach(el=>{
+   el.style.removeProperty('opacity');
+   el.style.removeProperty('transform');
+  });
+ }
+ function init(){
+  reset();
+  if(!mq.matches || !('IntersectionObserver' in window)) return;
+  io=new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{
+    const ratio=entry.intersectionRatio;
+    entry.target.style.opacity=String(ratio);
+    entry.target.style.transform='translateY('+((1-ratio)*-10)+'px)';
+   });
+  },{root:null,rootMargin:'0px',threshold:thresholds});
+  function observe(root){
+   if(root.nodeType!==1)return;
+   if(root.matches('.movie-row .movie'))io.observe(root);
+   root.querySelectorAll('.movie-row .movie').forEach(el=>io.observe(el));
+  }
+  observe(document.documentElement);
+  mo=new MutationObserver(records=>records.forEach(rec=>rec.addedNodes.forEach(observe)));
+  mo.observe(document.body,{childList:true,subtree:true});
+ }
+ if(mq.addEventListener)mq.addEventListener('change',init);else mq.addListener(init);
+ init();
+})();
+</script>
