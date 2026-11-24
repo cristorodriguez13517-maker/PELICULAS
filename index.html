@@ -1085,44 +1085,51 @@ startSharkTV();
 <script id="sharktv-mobile-first-row-fade-script">
 (function(){
  const mq=window.matchMedia('(max-width:600px) and (orientation:portrait)');
- let raf=false, observers=[];
- function cards(){return Array.from(document.querySelectorAll('#movie-row .movie, #series-grid .movie, .movie-row .movie'));}
+ let raf=0, mutation=null, resize=null, scrollNodes=[];
+ function getCards(){return Array.from(document.querySelectorAll('#movie-row .movie, #series-grid .movie, .movie-row .movie'));}
+ function getSynopsis(){return document.querySelector('#overview, .overview');}
  function update(){
-  raf=false;
-  const all=cards();
+  raf=0;
+  const all=getCards();
   if(!mq.matches){all.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('transition');});return;}
-  const header=document.querySelector('.header');
-  const info=document.querySelector('#info, .header-info');
-  if(!header||!info)return;
-  const hr=header.getBoundingClientRect();
-  const ir=info.getBoundingClientRect();
-  const top=Math.max(hr.top,ir.top);
-  const bottom=Math.min(hr.bottom,ir.bottom);
-  if(bottom<=top)return;
+  const synopsis=getSynopsis();
+  if(!synopsis)return;
+  const sr=synopsis.getBoundingClientRect();
+  const boundary=sr.top;
+  const distance=Math.max(90,Math.min(150,window.innerHeight*0.18));
   all.forEach(el=>{
    const r=el.getBoundingClientRect();
-   if(r.bottom<=top-2||r.top>=bottom+2){el.style.removeProperty('opacity');el.style.removeProperty('transition');return;}
-   const overlap=Math.max(0,Math.min(r.bottom,bottom)-Math.max(r.top,top));
-   const ratio=r.height>0?overlap/r.height:0;
-   el.style.opacity=String(Math.max(0,Math.min(1,1-ratio)));
-   el.style.transition='opacity .10s linear';
+   // La tarjeta se desvanece antes de que su borde inferior alcance la sinopsis.
+   const opacity=Math.max(0,Math.min(1,(r.bottom-boundary)/distance));
+   el.style.setProperty('opacity',String(opacity),'important');
+   el.style.setProperty('transition','opacity .08s linear');
+   el.style.setProperty('pointer-events',opacity<=0.02?'none':'auto');
   });
  }
- function request(){if(!raf){raf=true;requestAnimationFrame(update);}}
- function init(){
-  observers.forEach(o=>o.disconnect());observers=[];
+ function request(){if(!raf)raf=requestAnimationFrame(update);}
+ function bindScroll(){
   window.addEventListener('scroll',request,{passive:true,capture:true});
   document.addEventListener('scroll',request,{passive:true,capture:true});
   document.addEventListener('touchmove',request,{passive:true});
-  const row=document.querySelector('#movie-row, #series-grid, .movie-row');
-  const info=document.querySelector('#info, .header-info');
-  [row,info].filter(Boolean).forEach(node=>{
-   const o=new MutationObserver(request);o.observe(node,{childList:true,subtree:true,characterData:true});observers.push(o);
-  });
+  if(window.visualViewport)window.visualViewport.addEventListener('scroll',request,{passive:true});
+  scrollNodes=Array.from(document.querySelectorAll('*')).filter(el=>el.scrollHeight>el.clientHeight+2 && getComputedStyle(el).overflowY!=='visible');
+  scrollNodes.forEach(el=>el.addEventListener('scroll',request,{passive:true}));
+ }
+ function init(){
+  bindScroll();
+  const root=document.body;
+  if(mutation)mutation.disconnect();
+  mutation=new MutationObserver(request);
+  mutation.observe(root,{childList:true,subtree:true,characterData:true});
+  if(resize)resize.disconnect();
+  if(window.ResizeObserver){
+   resize=new ResizeObserver(request);
+   const synopsis=getSynopsis();if(synopsis)resize.observe(synopsis);
+  }
   request();
  }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
  if(mq.addEventListener)mq.addEventListener('change',request);else mq.addListener(request);
  window.addEventListener('resize',request,{passive:true});
- init();
 })();
 </script>
