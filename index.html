@@ -825,7 +825,7 @@ document.addEventListener('keydown', function(event) {
     if (right) {
         next = Math.min(index + 1, cards.length - 1);
     } else if (left) {
-        next = index % columns === 0 ? index : index - 1;
+        next = index > 0 ? index - 1 : index;
     } else if (down) {
         next = Math.min(index + columns, cards.length - 1);
     } else if (up) {
