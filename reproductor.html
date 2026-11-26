@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Reproductor · SHARKTV</title>
+<script src="https://www.youtube.com/iframe_api"></script><script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#050505;color:#fff;font-family:Arial,sans-serif}body{display:flex;flex-direction:column;min-height:100vh}.top{display:flex;align-items:center;gap:16px;padding:14px 18px;background:#111;border-bottom:1px solid #292929}.brand{font-size:20px;font-weight:900;letter-spacing:2px}.brand span{color:#e50914}.back{color:#fff;text-decoration:none;border:1px solid #444;border-radius:6px;padding:8px 12px}.name{margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#ddd;font-size:14px}main{width:min(1100px,100%);margin:auto;padding:18px}.stage{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 10px 40px #000}video,iframe{width:100%;height:100%;border:0;display:block;background:#000}#status{padding:18px 4px;color:#ddd;text-align:center;line-height:1.5}.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}button{background:#e50914;color:white;border:0;border-radius:6px;padding:11px 18px;font-weight:bold;cursor:pointer}button.secondary{background:#333}#turnstile-host{position:fixed;left:-10000px;top:-10000px}#retry{display:none}.hint{color:#999;text-align:center;font-size:12px;margin-top:14px}
+</style></head><body>
+<header class="top"><a class="back" id="back" href="./">‹ Volver</a><div class="brand">SHARK<span>TV</span></div><div class="name" id="name">Reproductor interno</div></header>
+<main><div class="stage" id="stage"></div><div id="status">Preparando reproducción…</div><div class="controls"><button class="secondary" id="retry">Reintentar</button></div><div class="hint">El progreso se guarda automáticamente en este dispositivo.</div></main>
+<script>
+(function(){
+'use strict';
+const p=new URLSearchParams(location.search),repo=location.pathname.split('/').filter(Boolean)[0]||'',itemId=p.get('item')||'',title=p.get('title')||'SHARKTV',source=p.get('source')||'',magnet=p.get('magnet')||'',file=p.get('path')||'',kind=p.get('kind')||'movie';
+const KEY='sharktv_seguir_viendo_v1',WORKER='https://alldebrid-vlc.cristorodriguez13517.workers.dev/',SITEKEY='0x4AAAAAAGK-CFVW1ivlcFRe';
+const stage=document.getElementById('stage'),status=document.getElementById('status'),retry=document.getElementById('retry'),name=document.getElementById('name');
+name.textContent=title;
+let yt=null,video=null,turnWidget=null,tokenResolve=null,tokenReject=null,saving=false,lastSaved=0;
+function say(t,err=false){status.textContent=t;retry.style.display=err?'inline-block':'none'}
+function updateProgress(seconds,duration){
+ if(!itemId||!Number.isFinite(seconds)||seconds<0)return;
+ const now=Date.now();if(now-lastSaved<4000&&seconds>0)return;lastSaved=now;
+ try{const a=JSON.parse(localStorage.getItem(KEY)||'[]');const i=a.findIndex(x=>String(x.id)===itemId);if(i<0)return;const item=a[i];item.position=Math.floor(seconds);item.duration=Number.isFinite(duration)&&duration>0?Math.floor(duration):item.duration||0;item.percent=item.duration?Math.min(99,Math.round(item.position/item.duration*100)):0;item.updatedAt=now;localStorage.setItem(KEY,JSON.stringify(a));}catch(e){}
+}
+function saveFinal(){if(video&&!video.paused)video.pause();if(video)updateProgress(video.currentTime,video.duration);if(yt&&typeof yt.getCurrentTime==='function'){try{updateProgress(yt.getCurrentTime(),yt.getDuration())}catch(e){}}}
+window.addEventListener('pagehide',saveFinal);document.addEventListener('visibilitychange',()=>{if(document.hidden)saveFinal()});
+function youtubeId(raw){try{const u=new URL(raw);if(u.hostname.includes('youtu.be'))return u.pathname.split('/').filter(Boolean)[0]||'';if(u.searchParams.get('v'))return u.searchParams.get('v');const m=u.pathname.match(/\/(?:embed|shorts|live)\/([^/?]+)/);return m?m[1]:''}catch(e){return /^[\w-]{11}$/.test(raw)?raw:''}}
+function startYoutube(){
+ const id=youtubeId(source);if(!id)throw new Error('No se ha encontrado un identificador de vídeo de YouTube.');
+ stage.innerHTML='<div id="yt-player" style="width:100%;height:100%"></div>';
+ const start=()=>{yt=new YT.Player('yt-player',{videoId:id,playerVars:{autoplay:1,playsinline:1,rel:0,enablejsapi:1,origin:location.origin},events:{onReady:e=>{const saved=getSavedPosition();if(saved>0)e.target.seekTo(saved,true);e.target.playVideo();say('Reproduciendo en YouTube integrado.')},onStateChange:e=>{if(e.data===YT.PlayerState.PLAYING) say('Reproduciendo en YouTube integrado.');if(e.data===YT.PlayerState.PAUSED||e.data===YT.PlayerState.ENDED)saveFinal()},onError:e=>say('YouTube no permite reproducir este vídeo integrado (código '+e.data+').',true)}})};
+ if(window.YT&&YT.Player)start();else window.onYouTubeIframeAPIReady=start;
+}
+function getSavedPosition(){try{const a=JSON.parse(localStorage.getItem(KEY)||'[]');const x=a.find(v=>String(v.id)===itemId);return Number(x&&x.position)||0}catch(e){return 0}}
+async function getToken(){
+ const end=Date.now()+15000;while(!window.turnstile&&Date.now()<end)await new Promise(r=>setTimeout(r,100));if(!window.turnstile)throw new Error('No se pudo cargar Cloudflare Turnstile.');
+ let host=document.getElementById('turnstile-host');if(!host){host=document.createElement('div');host.id='turnstile-host';document.body.appendChild(host)}
+ if(turnWidget===null)turnWidget=window.turnstile.render(host,{sitekey:SITEKEY,action:'reproducir',execution:'execute',size:'invisible',appearance:'interaction-only',callback:t=>{if(tokenResolve){const f=tokenResolve;tokenResolve=null;tokenReject=null;f(t)}},'error-callback':c=>{if(tokenReject){const f=tokenReject;tokenResolve=null;tokenReject=null;f(new Error('Cloudflare Turnstile: '+(c||'error')))}},'unsupported-callback':()=>{if(tokenReject){const f=tokenReject;tokenResolve=null;tokenReject=null;f(new Error('Navegador incompatible con Cloudflare'))}},'timeout-callback':()=>{if(tokenReject){const f=tokenReject;tokenResolve=null;tokenReject=null;f(new Error('Tiempo de verificación agotado'))}},'expired-callback':()=>{if(tokenReject){const f=tokenReject;tokenResolve=null;tokenReject=null;f(new Error('Verificación caducada'))}}});
+ return new Promise((resolve,reject)=>{tokenResolve=resolve;tokenReject=reject;window.turnstile.reset(turnWidget);window.turnstile.execute(turnWidget);setTimeout(()=>{if(tokenReject===reject){tokenResolve=null;tokenReject=null;reject(new Error('Cloudflare está tardando demasiado'))}},30000)});
+}
+function findFile(x){if(!x||typeof x!=='object')return null;if(String(x.magnet_id||'')===magnet&&String(x.file_path||'')===file)return x;for(const v of Object.values(x)){const f=findFile(v);if(f)return f}return null}
+async function locate(){if(!/^\d+$/.test(magnet)||!file)throw new Error('Faltan los identificadores AllDebrid. Inicia una reproducción desde el catálogo para registrar este archivo.');const files=kind==='episode'?['episodios.json','series.json','peliculas.json']:['peliculas.json','series.json','episodios.json'];for(const f of files){try{const r=await fetch('./'+f+'?t='+Date.now(),{cache:'no-store'});if(r.ok){const x=findFile(await r.json());if(x)return x}}catch(e){}}throw new Error('El archivo ya no aparece en el catálogo AllDebrid.')}
+async function startAllDebrid(){
+ if(saving)return;saving=true;retry.style.display='none';
+ try{say('Localizando archivo en AllDebrid…');await locate();say('Verificando Cloudflare y solicitando un enlace de reproducción…');const token=await getToken();const r=await fetch(WORKER,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({tipo:kind==='episode'?'episode':'movie',magnet_id:magnet,file_path:file,token})});const data=await r.json().catch(()=>({}));if(!r.ok||!data.url)throw new Error(data.error||'AllDebrid no pudo generar el enlace.');stage.replaceChildren();video=document.createElement('video');video.controls=true;video.autoplay=true;video.playsInline=true;video.preload='auto';video.src=data.url;stage.append(video);video.addEventListener('loadedmetadata',()=>{const pos=getSavedPosition();if(pos>0&&pos<video.duration)video.currentTime=pos;say('Reproduciendo AllDebrid en SHARKTV.')});video.addEventListener('timeupdate',()=>updateProgress(video.currentTime,video.duration));video.addEventListener('pause',saveFinal);video.addEventListener('ended',()=>updateProgress(video.duration,video.duration));video.addEventListener('error',()=>say('El navegador no ha podido reproducir este formato o enlace.',true));const play=video.play();if(play&&play.catch)play.catch(()=>say('Pulsa reproducir para iniciar el vídeo.',true));}
+ catch(e){console.error(e);say(e.message||'No se pudo iniciar AllDebrid.',true)}finally{saving=false;if(window.turnstile&&turnWidget!==null)window.turnstile.reset(turnWidget)}
+}
+retry.addEventListener('click',()=>source?startYoutube():startAllDebrid());
+if(source){try{startYoutube()}catch(e){say(e.message,true)}}else{startAllDebrid()}
+})();
+</script></body></html>
