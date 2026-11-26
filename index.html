@@ -1114,6 +1114,7 @@ startSharkTV();
   save({id:card.dataset.id||sourceUrl,title,poster,sourceUrl,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
  }
  // Registrar tanto el clic como la confirmación con Enter/OK del mando.
+ document.addEventListener('pointerdown',function(e){recordCard(e.target.closest('.movie'))},true);
  document.addEventListener('click',function(e){recordCard(e.target.closest('.movie'))},true);
  document.addEventListener('keydown',function(e){
   const k=e.key,c=e.keyCode||e.which;
