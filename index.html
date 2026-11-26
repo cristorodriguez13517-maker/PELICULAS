@@ -577,8 +577,11 @@ function renderMovies() {
         card.className = 'movie';
         card.tabIndex = 0;
         const youtubeSource = getYoutubeUrl(movie);
+        const continueId = String(movie.id || movie.tmdb_id || youtubeSource);
+        card.dataset.id = continueId;
         card.dataset.sourceUrl = youtubeSource;
-        card.href = 'reproductor.html?source=' + encodeURIComponent(youtubeSource) + '&title=' + encodeURIComponent(getTitle(movie));
+        const playerParams = new URLSearchParams({source:youtubeSource,item:"PELICULAS"+'|'+continueId,title:getTitle(movie)});
+        card.href = 'reproductor.html?' + playerParams.toString();
         card.target = '_self';
         card.rel = 'noopener';
 
