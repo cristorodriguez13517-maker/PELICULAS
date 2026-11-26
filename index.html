@@ -1090,6 +1090,34 @@ startSharkTV();
 }
 </style>
 
+<script id="SHARKTV_CONTINUE_INTEGRATION_V1">
+(function(){
+ const KEY='sharktv_seguir_viendo_v1',REPO='PELICULAS';
+ function read(){try{const a=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(a)?a:[]}catch(e){return[]}}
+ function save(data){
+  try{
+   const list=read(),id=String(data.id||data.sourceUrl||data.title||Date.now());
+   const key=REPO+'|'+id;
+   const item={id:key,title:data.title||'Contenido',poster:data.poster||'',url:data.player==='SmartTube'?(data.sourceUrl||data.resumeUrl||''):(data.resumeUrl||''),sourceUrl:data.sourceUrl||'',player:data.player||'SmartTube',repo:REPO,kind:data.kind||'movie',percent:0,updatedAt:Date.now()};
+   const next=[item,...list.filter(x=>String(x.id)!==key)].slice(0,80);
+   localStorage.setItem(KEY,JSON.stringify(next));
+  }catch(e){console.warn('No se pudo guardar Seguir viendo:',e)}
+ }
+ window.SHARKTVContinue={save};
+ 
+ document.addEventListener('click',function(e){
+  const card=e.target.closest('.movie');
+  if(!card)return;
+  const row=card.closest('.movie-row');
+  if(!row||!card.href||card.dataset.type==='shortcut'||card.classList.contains('youtube-catalog-card'))return;
+  const title=card.dataset.title||card.getAttribute('aria-label')||'Contenido';
+  const poster=card.dataset.poster||(card.querySelector('img')&&card.querySelector('img').src)||'';
+  save({id:card.dataset.id||card.href,title,poster,sourceUrl:card.href,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
+ },true);
+ 
+ 
+ })();
+</script>
 </body>
 </html>
 
