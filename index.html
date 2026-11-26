@@ -576,9 +576,11 @@ function renderMovies() {
         const card = document.createElement('a');
         card.className = 'movie';
         card.tabIndex = 0;
-        card.href = getYoutubeUrl(movie);
-        card.target = '_blank';
-        card.rel = 'noopener noreferrer';
+        const youtubeSource = getYoutubeUrl(movie);
+        card.dataset.sourceUrl = youtubeSource;
+        card.href = 'reproductor.html?source=' + encodeURIComponent(youtubeSource) + '&title=' + encodeURIComponent(getTitle(movie));
+        card.target = '_self';
+        card.rel = 'noopener';
 
         card.dataset.title = getTitle(movie);
         card.dataset.logo = movie.logo_manual || movie.logo ||
@@ -1109,7 +1111,7 @@ startSharkTV();
   if(!card||!card.matches('.movie')||card.dataset.type==='shortcut'||card.classList.contains('youtube-catalog-card'))return;
   const title=card.dataset.title||card.getAttribute('aria-label')||'Contenido';
   const poster=card.dataset.poster||(card.querySelector('img')&&card.querySelector('img').src)||'';
-  const sourceUrl=card.href||'';
+  const sourceUrl=card.dataset.sourceUrl||card.href||'';
   if(!sourceUrl||sourceUrl==='#')return;
   save({id:card.dataset.id||sourceUrl,title,poster,sourceUrl,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
  }
