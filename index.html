@@ -1105,14 +1105,21 @@ startSharkTV();
  }
  window.SHARKTVContinue={save};
  
- document.addEventListener('click',function(e){
-  const card=e.target.closest('.movie');
-  if(!card)return;
-  const row=card.closest('.movie-row');
-  if(!row||!card.href||card.dataset.type==='shortcut'||card.classList.contains('youtube-catalog-card'))return;
+ function recordCard(card){
+  if(!card||!card.matches('.movie')||card.dataset.type==='shortcut'||card.classList.contains('youtube-catalog-card'))return;
   const title=card.dataset.title||card.getAttribute('aria-label')||'Contenido';
   const poster=card.dataset.poster||(card.querySelector('img')&&card.querySelector('img').src)||'';
-  save({id:card.dataset.id||card.href,title,poster,sourceUrl:card.href,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
+  const sourceUrl=card.href||'';
+  if(!sourceUrl||sourceUrl==='#')return;
+  save({id:card.dataset.id||sourceUrl,title,poster,sourceUrl,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
+ }
+ // Registrar tanto el clic como la confirmación con Enter/OK del mando.
+ document.addEventListener('click',function(e){recordCard(e.target.closest('.movie'))},true);
+ document.addEventListener('keydown',function(e){
+  const k=e.key,c=e.keyCode||e.which;
+  if(k!=='Enter'&&c!==13&&c!==23&&c!==66)return;
+  const card=document.activeElement&&document.activeElement.closest?document.activeElement.closest('.movie'):null;
+  if(card)recordCard(card);
  },true);
  
  
