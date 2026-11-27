@@ -1102,7 +1102,7 @@ startSharkTV();
   try{
    const list=read(),id=String(data.id||data.sourceUrl||data.title||Date.now());
    const key=REPO+'|'+id;
-   const item={id:key,title:data.title||'Contenido',poster:data.poster||'',url:data.sourceUrl||data.resumeUrl||'',sourceUrl:data.sourceUrl||'',player:data.player||'SmartTube',repo:REPO,kind:data.kind||'movie',percent:0,updatedAt:Date.now()};
+   const item={id:key,title:data.title||'Contenido',poster:data.poster||'',logo:data.logo||'',url:data.sourceUrl||data.resumeUrl||'',sourceUrl:data.sourceUrl||'',player:data.player||'SmartTube',repo:REPO,kind:data.kind||'movie',percent:0,updatedAt:Date.now()};
    const next=[item,...list.filter(x=>String(x.id)!==key)].slice(0,80);
    localStorage.setItem(KEY,JSON.stringify(next));
   }catch(e){console.warn('No se pudo guardar Seguir viendo:',e)}
@@ -1113,9 +1113,10 @@ startSharkTV();
   if(!card||!card.matches('.movie')||card.dataset.type==='shortcut'||card.classList.contains('youtube-catalog-card'))return;
   const title=card.dataset.title||card.getAttribute('aria-label')||'Contenido';
   const poster=card.dataset.poster||(card.querySelector('img')&&card.querySelector('img').src)||'';
+  const logo=card.dataset.logo||'';
   const sourceUrl=card.dataset.sourceUrl||card.href||'';
   if(!sourceUrl||sourceUrl==='#')return;
-  save({id:card.dataset.id||sourceUrl,title,poster,sourceUrl,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
+  save({id:card.dataset.id||sourceUrl,title,poster,logo,sourceUrl,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
  }
  // Registrar tanto el clic como la confirmación con Enter/OK del mando.
  document.addEventListener('pointerdown',function(e){recordCard(e.target.closest('.movie'))},true);
