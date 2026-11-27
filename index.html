@@ -1160,6 +1160,33 @@ startSharkTV();
  };
 })();
 </script>
+<script id="sharktv-open-catalog-card-from-continue">
+(function(){
+ const params=new URLSearchParams(location.search);
+ const wanted=params.get('shark_ficha');
+ if(!wanted)return;
+ let attempts=0;
+ function findAndShow(){
+  const cards=Array.from(document.querySelectorAll('.movie[data-id],.movie[data-tmdb-id]'));
+  const card=cards.find(el=>String(el.dataset.id||'')===wanted||String(el.dataset.tmdbId||'')===wanted);
+  if(card){
+   if(typeof window.selectMovie==='function')window.selectMovie(card);
+   else if(typeof window.renderMovieHeader==='function')window.renderMovieHeader(card);
+   card.focus({preventScroll:true});
+   card.scrollIntoView({block:'center',behavior:'auto'});
+   params.delete('shark_ficha');
+   const query=params.toString();
+   history.replaceState(null,'',location.pathname+(query?'?'+query:'')+location.hash);
+   return true;
+  }
+  return false;
+ }
+ if(findAndShow())return;
+ const observer=new MutationObserver(()=>{if(findAndShow())observer.disconnect()});
+ observer.observe(document.documentElement,{childList:true,subtree:true});
+ const timer=setInterval(()=>{attempts++;if(findAndShow()||attempts>60){clearInterval(timer);observer.disconnect()}},250);
+})();
+</script>
 </body>
 </html>
 
