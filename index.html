@@ -1130,8 +1130,35 @@ startSharkTV();
  
  })();
 </script>
-<script id="sharktv-player-routing-v2">
-(()=>{const base='https://cristorodriguez13517-maker.github.io/SHARKTV-PLAYER/';function youtube(value){try{const h=new URL(value,location.href).hostname.toLowerCase();return h==='youtube.com'||h.endsWith('.youtube.com')||h==='youtu.be'||h.endsWith('.youtu.be')}catch{return false}}function go(url,title){const p=new URL(base);p.searchParams.set('source','youtube');p.searchParams.set('url',url);if(title)p.searchParams.set('title',title);location.href=p.href}document.addEventListener('click',e=>{const card=e.target&&e.target.closest&&e.target.closest('.movie');if(!card)return;const url=card.dataset.sourceUrl||card.getAttribute('href')||'';if(!youtube(url))return;e.preventDefault();e.stopImmediatePropagation();go(url,card.dataset.title||document.title)},true)})();
+<script id="sharktv-smarttube-routing-v3">
+(()=> {
+ const PACKAGE='com.liskovsoft.smartyoutubetv2.tv';
+ function youtube(value){
+  try{const u=new URL(value,location.href);const h=u.hostname.toLowerCase();return h==='youtube.com'||h.endsWith('.youtube.com')||h==='youtu.be'||h.endsWith('.youtu.be')}
+  catch{return false}
+ }
+ function openSmartTube(value){
+  const u=new URL(value,location.href);
+  if(!/^https?:$/.test(u.protocol))return;
+  const fallback=encodeURIComponent(u.href);
+  const intent='intent://'+u.host+u.pathname+u.search+'#Intent;scheme='+u.protocol.slice(0,-1)+';package='+PACKAGE+';S.browser_fallback_url='+fallback+';end';
+  if(/Android/i.test(navigator.userAgent))location.href=intent;
+  else window.open(u.href,'_blank','noopener');
+ }
+ document.addEventListener('click',e=>{
+  const card=e.target&&e.target.closest&&e.target.closest('.movie');
+  const anchor=e.target&&e.target.closest&&e.target.closest('a[href]');
+  const url=(card&&(card.dataset.sourceUrl||card.getAttribute('href')))||(anchor&&anchor.href)||'';
+  if(!youtube(url))return;
+  e.preventDefault();e.stopImmediatePropagation();
+  openSmartTube(url);
+ },true);
+ const nativeOpen=window.open;
+ window.open=function(url,...args){
+  if(youtube(url)){openSmartTube(url);return null}
+  return nativeOpen.call(window,url,...args);
+ };
+})();
 </script>
 </body>
 </html>
