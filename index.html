@@ -580,6 +580,7 @@ function renderMovies() {
         const continueId = String(movie.id || movie.tmdb_id || youtubeSource);
         card.dataset.id = continueId;
         card.dataset.sourceUrl = youtubeSource;
+        card.href = youtubeSource;
         card.target = '_blank';
         card.rel = 'noopener noreferrer';
 
@@ -1129,8 +1130,8 @@ startSharkTV();
  
  })();
 </script>
-<script id="sharktv-player-youtube-bridge">
-(()=>{const base='https://cristorodriguez13517-maker.github.io/SHARKTV-PLAYER/';function isYouTube(value){try{const u=new URL(value,location.href);return /(^|\\.)youtube\\.com$|(^|\\.)youtu\\.be$/.test(u.hostname)}catch{return false}}function openPlayer(value,title){const p=new URL(base);p.searchParams.set('source','youtube');p.searchParams.set('url',String(value));if(title)p.searchParams.set('title',title);location.href=p.href}document.addEventListener('click',e=>{const a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||!isYouTube(a.href))return;e.preventDefault();e.stopImmediatePropagation();openPlayer(a.href,a.dataset.title||a.getAttribute('aria-label')||document.title)},true);const nativeOpen=window.open;window.open=function(url,...args){if(isYouTube(url)){openPlayer(url,document.title);return null}return nativeOpen.call(window,url,...args)}})();
+<script id="sharktv-player-routing-v2">
+(()=>{const base='https://cristorodriguez13517-maker.github.io/SHARKTV-PLAYER/';function youtube(value){try{const h=new URL(value,location.href).hostname.toLowerCase();return h==='youtube.com'||h.endsWith('.youtube.com')||h==='youtu.be'||h.endsWith('.youtu.be')}catch{return false}}function go(url,title){const p=new URL(base);p.searchParams.set('source','youtube');p.searchParams.set('url',url);if(title)p.searchParams.set('title',title);location.href=p.href}document.addEventListener('click',e=>{const card=e.target&&e.target.closest&&e.target.closest('.movie');if(!card)return;const url=card.dataset.sourceUrl||card.getAttribute('href')||'';if(!youtube(url))return;e.preventDefault();e.stopImmediatePropagation();go(url,card.dataset.title||document.title)},true)})();
 </script>
 </body>
 </html>
