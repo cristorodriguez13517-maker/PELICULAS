@@ -1105,7 +1105,7 @@ startSharkTV();
    const rawId=String(data.id||'');
    const seriesKey=kind==='episode'?String(data.seriesId||rawId.split('|S')[0].split('|')[0]||data.title):'';
    const key=REPO+'|'+(seriesKey?'SERIES|'+seriesKey:id);
-   const item={id:key,title:data.title||'Contenido',poster:data.poster||'',logo:data.logo||'',url:data.sourceUrl||data.resumeUrl||'',sourceUrl:data.sourceUrl||'',player:data.player||'SmartTube',repo:REPO,kind,episodeLabel:data.episodeLabel||'',season:data.season??null,episode:data.episode??null,magnetId:data.magnetId||'',filePath:data.filePath||'',seriesId:data.seriesId||seriesKey||'',catalogId:data.catalogId||'',percent:0,updatedAt:Date.now()};
+   const item={id:key,title:data.title||'Contenido',poster:data.poster||'',logo:data.logo||'',url:data.sourceUrl||data.resumeUrl||'',sourceUrl:data.sourceUrl||'',player:data.player||'MPV',repo:REPO,kind,episodeLabel:data.episodeLabel||'',season:data.season??null,episode:data.episode??null,magnetId:data.magnetId||'',filePath:data.filePath||'',seriesId:data.seriesId||seriesKey||'',catalogId:data.catalogId||'',percent:0,updatedAt:Date.now()};
    const next=[item,...list.filter(x=>String(x.id)!==key&&!(seriesKey&&x.repo===REPO&&x.kind==='episode'&&(String(x.seriesId||'')===seriesKey||String(x.id||'').startsWith(REPO+'|'+seriesKey+'|S')||String(x.id||'').startsWith(REPO+'|'+seriesKey+'|'))))].slice(0,80);
    localStorage.setItem(KEY,JSON.stringify(next));
   }catch(e){console.warn('No se pudo guardar Seguir viendo:',e)}
@@ -1119,7 +1119,7 @@ startSharkTV();
   const logo=card.dataset.logo||'';
   const sourceUrl=card.dataset.sourceUrl||card.href||'';
   if(!sourceUrl||sourceUrl==='#')return;
-  save({id:card.dataset.id||sourceUrl,title,poster,logo,sourceUrl,player:'SmartTube',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
+  save({id:card.dataset.id||sourceUrl,title,poster,logo,sourceUrl,player:'MPV',kind:'movie',resumeUrl:location.origin+'/PELICULAS/'});
  }
  // Guardar únicamente al activar la carátula: clic o clic nativo generado por Enter/OK.
  // El foco, el movimiento del mando y el paso del ratón no guardan contenido.
@@ -1128,18 +1128,18 @@ startSharkTV();
  
  })();
 </script>
-<script id="sharktv-smarttube-routing-v3">
+<script id="sharktv-mpv-routing-v1">
 (()=> {
- const PACKAGE='com.liskovsoft.smartyoutubetv2.tv';
+ const PACKAGE='is.xyz.mpv';
  function youtube(value){
   try{const u=new URL(value,location.href);const h=u.hostname.toLowerCase();return h==='youtube.com'||h.endsWith('.youtube.com')||h==='youtu.be'||h.endsWith('.youtu.be')}
   catch{return false}
  }
- function openSmartTube(value){
+ function openMPV(value){
   const u=new URL(value,location.href);
   if(!/^https?:$/.test(u.protocol))return;
   const fallback=encodeURIComponent(u.href);
-  const intent='intent://'+u.host+u.pathname+u.search+'#Intent;scheme='+u.protocol.slice(0,-1)+';package='+PACKAGE+';S.browser_fallback_url='+fallback+';end';
+  const intent='intent://'+u.host+u.pathname+u.search+'#Intent;scheme='+u.protocol.slice(0,-1)+';package='+PACKAGE+';type=video/any;S.browser_fallback_url='+fallback+';end';
   if(/Android/i.test(navigator.userAgent))location.href=intent;
   else window.open(u.href,'_blank','noopener');
  }
@@ -1149,11 +1149,11 @@ startSharkTV();
   const url=(card&&(card.dataset.sourceUrl||card.getAttribute('href')))||(anchor&&anchor.href)||'';
   if(!youtube(url))return;
   e.preventDefault();e.stopImmediatePropagation();
-  openSmartTube(url);
+  openMPV(url);
  },true);
  const nativeOpen=window.open;
  window.open=function(url,...args){
-  if(youtube(url)){openSmartTube(url);return null}
+  if(youtube(url)){openMPV(url);return null}
   return nativeOpen.call(window,url,...args);
  };
 })();
